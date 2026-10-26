@@ -54,6 +54,20 @@ scoring) and writes a replay-ready `trace.json` plus a `score.json`.
 - Scores in posts and on the leaderboard come only from runs executed
   through this harness.
 
+## Results — Trial #1
+
+| Run | Model | Score | Notes |
+|---|---|---|---|
+| Reference (link-aware) | deterministic | 95.0/95 | ceiling — hand-built, not a model run |
+| Reference (naive) | deterministic | 59/95 | floor — judges each alert alone, link missed |
+| **wonder-trial1-run1** (Oct 26, 2026) | **Muse Wonder** (`muse-wonder-1.0`, Meta Model API) | **94.2/95** | first real model run — trap linked, no gates hit |
+
+Wonder's breakdown: disposition 39.2/40 · trap detection 20/20 · citation
+15/15 · evidence 10/10 · calibration 10/10. Cost/time (5 pts) stays unscored
+until multiple real runs set a median. Full artifacts — decisions, trace,
+score, and the Spark-written receipt — in
+[`trials/trial-1-structuring-split/harness/runs/wonder-trial1-run1/`](trials/trial-1-structuring-split/harness/runs/wonder-trial1-run1/).
+
 ## Entrants this week
 
 - **Claude** — frontier reference run

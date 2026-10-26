@@ -130,10 +130,18 @@ def call_api(key, model, messages, max_tokens, use_schema):
     req = urllib.request.Request(
         API_URL,
         data=json.dumps(payload).encode(),
-        headers={"Authorization": f"Bearer {key}",
-                 "Content-Type": "application/json"},
+        headers={"Content-Type": "application/json"},
         method="POST",
     )
+    if key:
+        req.add_header("Authorization", f"Bearer {key}")
+    else:
+        # Secure Vault connection: Muse swaps in the real credential on the
+        # approved request to api.meta.ai. The key itself never appears here.
+        sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+        from dynamic_credentials import add_surrogate_to_request
+        add_surrogate_to_request(req, "custom.meta-model-api",
+                                 allowed_hosts=["api.meta.ai"])
     try:
         with urllib.request.urlopen(req, timeout=600) as resp:
             return json.loads(resp.read().decode()), None
@@ -227,6 +235,8 @@ def main():
     ap.add_argument("--run-name", default=None)
     ap.add_argument("--agent", default="meta-model-api")
     ap.add_argument("--max-tokens", type=int, default=8000)
+    ap.add_argument("--no-schema", action="store_true",
+                    help="skip response_format json_schema; rely on JSON-only instruction")
     ap.add_argument("--dry-run", action="store_true")
     a = ap.parse_args()
 
@@ -248,12 +258,11 @@ def main():
 
     key = os.environ.get("MODEL_API_KEY")
     if not key:
-        print("ERROR: MODEL_API_KEY is not set. Export it first (never hardcode it).",
-              file=sys.stderr)
-        return 1
+        print("NOTE: MODEL_API_KEY not set — using the Secure Vault connection "
+              "(custom.meta-model-api) via surrogate credential exchange.")
 
     model = a.model
-    use_schema = True
+    use_schema = not a.no_schema
     resp, err = call_api(key, model, messages, a.max_tokens, use_schema)
     if err is not None and schema_unsupported(err):
         print("NOTE: structured output (response_format json_schema) was rejected; "
@@ -271,6 +280,10 @@ def main():
               file=sys.stderr)
         return 1
 
+    try:
+        print(f"finish_reason: {resp['choices'][0].get('finish_reason')}")
+    except Exception:
+        pass
     usage = resp.get("usage") or {}
     prompt_tokens = usage.get("prompt_tokens")
     completion_tokens = usage.get("completion_tokens")

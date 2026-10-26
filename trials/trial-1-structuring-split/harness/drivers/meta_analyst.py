@@ -73,14 +73,22 @@ def est_tokens(text: str) -> int:
     return max(1, round(len(text) / 4))
 
 
-def call_api(key, model, messages, max_tokens=2500):
+def call_api(key, model, messages, max_tokens=8000):
     payload = {"model": model, "messages": messages,
                "temperature": 0.2, "max_tokens": max_tokens}
     req = urllib.request.Request(
         API_URL, data=json.dumps(payload).encode(),
-        headers={"Authorization": f"Bearer {key}",
-                 "Content-Type": "application/json"},
+        headers={"Content-Type": "application/json"},
         method="POST")
+    if key:
+        req.add_header("Authorization", f"Bearer {key}")
+    else:
+        # Secure Vault connection: Muse swaps in the real credential on the
+        # approved request to api.meta.ai. The key itself never appears here.
+        sys.path.insert(0, "/opt/muse/skills/custom-connector-setup/bin")
+        from dynamic_credentials import add_surrogate_to_request
+        add_surrogate_to_request(req, "custom.meta-model-api",
+                                 allowed_hosts=["api.meta.ai"])
     try:
         with urllib.request.urlopen(req, timeout=600) as resp:
             return json.loads(resp.read().decode()), None
@@ -122,9 +130,8 @@ def main():
 
     key = os.environ.get("MODEL_API_KEY")
     if not key:
-        print("ERROR: MODEL_API_KEY is not set. Export it first (never hardcode it).",
-              file=sys.stderr)
-        return 1
+        print("NOTE: MODEL_API_KEY not set — using the Secure Vault connection "
+              "(custom.meta-model-api) via surrogate credential exchange.")
 
     resp, err = call_api(key, a.model, messages)
     if err is not None:
@@ -133,7 +140,14 @@ def main():
               file=sys.stderr)
         return 1
 
-    content = resp["choices"][0]["message"]["content"].strip()
+    choice = resp["choices"][0]
+    print(f"finish_reason: {choice.get('finish_reason')}")
+    content = (choice["message"].get("content") or "").strip()
+    if not content:
+        print("ERROR: analyst returned empty content "
+              "(reasoning may have consumed the token budget).",
+              file=sys.stderr)
+        return 1
     if content.startswith("```"):
         content = content.strip("`")
         if content.lower().startswith("markdown"):
