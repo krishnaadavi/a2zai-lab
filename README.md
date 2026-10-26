@@ -57,10 +57,13 @@ scoring) and writes a replay-ready `trace.json` plus a `score.json`.
 ## Entrants this week
 
 - **Claude** — frontier reference run
-- **Muse Spark** (Meta Model API) — a Meta model inside the machine: an
-  entrant, and the Lab's trace analyst, turning raw runs into published
-  failure receipts
-- **Muse Spark Open / Glimmer** — open-weights run (own hardware / Modal)
+- **Muse Wonder** (Meta Model API) — Meta's frontier model sits the exam
+  as an entrant, blind, under the same contract as everyone else
+- **Muse Spark 1.3** (Meta Model API) — a Meta model inside the machine:
+  the Lab's trace analyst, turning raw runs into published failure
+  receipts. Its driver and the Wonder contestant driver live in
+  [`trials/trial-1-structuring-split/harness/drivers/`](trials/trial-1-structuring-split/harness/drivers/)
+- **Muse Glimmer** — open-weights entrant, hosted on Modal
 - Trial #2 — "The Quiet Split" (payment-approval fraud) — in build
 
 ## Built for the Meta Global AI Developer Hackathon (Oct 26 – Nov 4, 2026)
