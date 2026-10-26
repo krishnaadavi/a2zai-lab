@@ -1,0 +1,468 @@
+{
+  "trial": "trial1-structuring-split",
+  "run": {
+    "agent": "verify-watchlist-clear",
+    "model": null,
+    "tokens": null,
+    "scorer_elapsed_s": 0.0001
+  },
+  "steps": [
+    {
+      "alert_id": "A01",
+      "card": {
+        "date": "2026-10-05",
+        "amount": 4820,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A02",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 6210,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A03",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 1840,
+        "txn_type": "Cash deposit",
+        "branch": "Frisco Main",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A04",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 5415,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A05",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 4275,
+        "txn_type": "Check deposit",
+        "branch": "McKinney",
+        "trigger": "Large check monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A06",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 5905,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A07",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 3980,
+        "txn_type": "Check deposit",
+        "branch": "Richardson",
+        "trigger": "Large check monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A08",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 4120,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A09",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 1230,
+        "txn_type": "Cash deposit",
+        "branch": "Plano West",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A10",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 5100,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A11",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 11240,
+        "txn_type": "Card settlement",
+        "branch": "\u2014",
+        "trigger": "Large deposit monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A12",
+      "card": {
+        "date": "2026-10-11",
+        "amount": 28500,
+        "txn_type": "Wire credit",
+        "branch": "\u2014",
+        "trigger": "Large wire monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A13",
+      "card": {
+        "date": "2026-10-11",
+        "amount": 2650,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A14",
+      "card": {
+        "date": "2026-10-12",
+        "amount": 4610,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "amount consistent with customer's stated expected activity",
+        "counterparty matches stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A15",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 48000,
+        "txn_type": "Wire debit",
+        "branch": "\u2014",
+        "trigger": "High-risk jurisdiction wire"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "$48,000 wire far above expected $2,000-$5,000 occasional wires",
+        "counterparty in high-risk jurisdiction, no stated purpose"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A16",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 19750,
+        "txn_type": "Wire credit",
+        "branch": "\u2014",
+        "trigger": "Watchlist name screening"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "sender name appears similar to a common name",
+        "wire from an established sender"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A17",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 15600,
+        "txn_type": "Cash deposit",
+        "branch": "Dallas Central",
+        "trigger": "Third-party funding monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-1",
+      "evidence_fields": [
+        "cash deposit $15,600 over $10,000 CTR threshold",
+        "unknown third party deposited on customer's behalf"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A18",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 22400,
+        "txn_type": "Cash deposit",
+        "branch": "Irving",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-1",
+      "evidence_fields": [
+        "cash deposit $22,400 over $10,000 CTR threshold",
+        "no bill of sale on file for stated vehicle sale"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A19",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 31200,
+        "txn_type": "Wire credit",
+        "branch": "\u2014",
+        "trigger": "Profile inconsistency monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "$31,200 credit from unrelated third party",
+        "inconsistent with stated household-only profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A20",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 9200,
+        "txn_type": "Cash deposit",
+        "branch": "Dallas Central",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "shared phone 214-555-0140 across C020-C023",
+        "shared address 4820 Maple Ave, Dallas, TX",
+        "common linked account CHK-020",
+        "four cash deposits $9,200-$9,850 on Oct 6-8 at two branches, aggregate $38,200"
+      ],
+      "linked_case_id": "CASE-STRUCTURING-1"
+    },
+    {
+      "alert_id": "A21",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 9450,
+        "txn_type": "Cash deposit",
+        "branch": "Dallas Central",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "shared phone 214-555-0140 across C020-C023",
+        "shared address 4820 Maple Ave, Dallas, TX",
+        "common linked account CHK-020",
+        "four cash deposits $9,200-$9,850 on Oct 6-8 at two branches, aggregate $38,200"
+      ],
+      "linked_case_id": "CASE-STRUCTURING-1"
+    },
+    {
+      "alert_id": "A22",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 9700,
+        "txn_type": "Cash deposit",
+        "branch": "Oak Cliff",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "shared phone 214-555-0140 across C020-C023",
+        "shared address 4820 Maple Ave, Dallas, TX",
+        "common linked account CHK-020",
+        "four cash deposits $9,200-$9,850 on Oct 6-8 at two branches, aggregate $38,200"
+      ],
+      "linked_case_id": "CASE-STRUCTURING-1"
+    },
+    {
+      "alert_id": "A23",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 9850,
+        "txn_type": "Cash deposit",
+        "branch": "Oak Cliff",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "shared phone 214-555-0140 across C020-C023",
+        "shared address 4820 Maple Ave, Dallas, TX",
+        "common linked account CHK-020",
+        "four cash deposits $9,200-$9,850 on Oct 6-8 at two branches, aggregate $38,200"
+      ],
+      "linked_case_id": "CASE-STRUCTURING-1"
+    },
+    {
+      "alert_id": "A24",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 9300,
+        "txn_type": "Cash deposit",
+        "branch": "Garland",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "MONITOR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "documented deposit pattern in 90-day ledger: $9,100 / $9,600 / $9,450 monthly",
+        "consistent with laundromat's stated multi-location cash profile; monitor, do not escalate as structuring"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A25",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 4380,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "KYC status check"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-4",
+      "evidence_fields": [
+        "KYC status expired 2026-06-30",
+        "escalate for information only; no wrongdoing alleged"
+      ],
+      "linked_case_id": null
+    }
+  ],
+  "trap_rewind": {
+    "linked_alerts": [
+      "A20",
+      "A21",
+      "A22",
+      "A23"
+    ],
+    "total_amount": 38200,
+    "note": "replay moment: the linked cards merge into one case"
+  },
+  "score_reveal": {
+    "subtotal_of_95": 39,
+    "cost_time_5pts": "UNSCORED (needs median across runs)",
+    "components": {
+      "disposition_40": 38.4,
+      "trap_20": 20.0,
+      "citation_15": 15.0,
+      "evidence_10": 10.0,
+      "calibration_10": 10
+    },
+    "hard_gates_triggered": [
+      "Watchlist alert A16 cleared (P-3): capped at 39"
+    ]
+  }
+}

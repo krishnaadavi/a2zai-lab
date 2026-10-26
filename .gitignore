@@ -1,0 +1,9 @@
+# Examiner-side material — never published. The scorer and answer keys
+# live outside this repo by design (see "Integrity" in README.md).
+private/
+**/private/
+.env
+.env.*
+__pycache__/
+*.pyc
+node_modules/

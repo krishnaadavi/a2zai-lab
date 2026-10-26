@@ -1,0 +1,40 @@
+date,customer_id,txn_type,amount,note
+2026-07-28,C024,Cash deposit,9100,Location 1 shift deposit - documented laundromat pattern since 2019
+2026-08-15,C001,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C002,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C003,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C004,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C005,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C006,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C007,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C008,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C009,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C010,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C011,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C012,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C013,ACH credit,4500,Regular income consistent with profile
+2026-08-15,C014,ACH credit,4500,Regular income consistent with profile
+2026-08-20,C003,Cash deposit,1950,Register sales - in line with stated cash pattern
+2026-08-27,C024,Cash deposit,9600,Location 2 shift deposit - documented laundromat pattern since 2019
+2026-09-10,C025,ACH credit,4210,Wages - KYC expired 2026-06-30 per customers.json
+2026-09-15,C001,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C002,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C003,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C004,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C005,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C006,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C007,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C008,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C009,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C010,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C011,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C012,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C013,ACH credit,4600,Regular income consistent with profile
+2026-09-15,C014,ACH credit,4600,Regular income consistent with profile
+2026-09-20,C009,Cash deposit,1410,Register sales - in line with stated cash pattern
+2026-09-26,C024,Cash deposit,9450,Location 3 shift deposit - documented laundromat pattern since 2019
+2026-10-06,C020,Cash deposit,9200,ALERT A20 transaction
+2026-10-07,C021,Cash deposit,9450,ALERT A21 transaction
+2026-10-07,C022,Cash deposit,9700,ALERT A22 transaction
+2026-10-08,C023,Cash deposit,9850,ALERT A23 transaction
+2026-10-09,C024,Cash deposit,9300,ALERT A24 transaction - Location 2 shift deposit

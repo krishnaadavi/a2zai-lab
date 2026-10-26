@@ -1,0 +1,14 @@
+{
+  "subtotal_of_95": 59,
+  "cost_time_5pts": "UNSCORED (needs median across runs)",
+  "components": {
+    "disposition_40": 33.6,
+    "trap_20": 0,
+    "citation_15": 15.0,
+    "evidence_10": 10.0,
+    "calibration_10": 10
+  },
+  "hard_gates_triggered": [
+    "Structuring link missed entirely: capped at 59"
+  ]
+}

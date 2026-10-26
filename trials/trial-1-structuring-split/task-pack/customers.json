@@ -1,0 +1,331 @@
+[
+  {
+    "customer_id": "C001",
+    "name": "Maria Delgado",
+    "occupation_or_business": "School teacher",
+    "expected_activity": "Monthly salary credit ~$4,800, household spending",
+    "address": "1120 Elm St, Plano, TX",
+    "phone": "214-555-0101",
+    "linked_accounts": [
+      "CHK-001"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C002",
+    "name": "James Whitfield",
+    "occupation_or_business": "Software engineer",
+    "expected_activity": "Biweekly salary ~$6,200, investments",
+    "address": "88 Preston Rd, Dallas, TX",
+    "phone": "214-555-0102",
+    "linked_accounts": [
+      "CHK-002"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C003",
+    "name": "Sunrise Bakery LLC",
+    "occupation_or_business": "Bakery (cash business)",
+    "expected_activity": "Daily cash deposits $800-$2,500 from register sales",
+    "address": "410 Main St, Frisco, TX",
+    "phone": "214-555-0103",
+    "linked_accounts": [
+      "CHK-003"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C004",
+    "name": "Priya Nair",
+    "occupation_or_business": "Registered nurse",
+    "expected_activity": "Monthly salary ~$5,400",
+    "address": "2210 Legacy Dr, Plano, TX",
+    "phone": "214-555-0104",
+    "linked_accounts": [
+      "CHK-004"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C005",
+    "name": "Tom Becker",
+    "occupation_or_business": "Auto repair shop owner",
+    "expected_activity": "Weekly deposits $3,000-$6,000, parts payments",
+    "address": "77 Industrial Pkwy, McKinney, TX",
+    "phone": "214-555-0105",
+    "linked_accounts": [
+      "CHK-005"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C006",
+    "name": "Aisha Khan",
+    "occupation_or_business": "Pharmacist",
+    "expected_activity": "Biweekly salary ~$5,900",
+    "address": "330 Coit Rd, Dallas, TX",
+    "phone": "214-555-0106",
+    "linked_accounts": [
+      "CHK-006"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C007",
+    "name": "GreenLeaf Landscaping LLC",
+    "occupation_or_business": "Landscaping services",
+    "expected_activity": "Seasonal deposits $2,000-$5,500, payroll out",
+    "address": "19 Belt Line Rd, Richardson, TX",
+    "phone": "214-555-0107",
+    "linked_accounts": [
+      "CHK-007"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C008",
+    "name": "David Osei",
+    "occupation_or_business": "University lecturer",
+    "expected_activity": "Monthly salary ~$4,100, tuition payments",
+    "address": "600 Campbell Rd, Richardson, TX",
+    "phone": "214-555-0108",
+    "linked_accounts": [
+      "CHK-008"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C009",
+    "name": "Linda Tran",
+    "occupation_or_business": "Nail salon owner (cash business)",
+    "expected_activity": "Daily cash deposits $600-$1,800",
+    "address": "145 Spring Creek Pkwy, Plano, TX",
+    "phone": "214-555-0109",
+    "linked_accounts": [
+      "CHK-009"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C010",
+    "name": "Robert Hale",
+    "occupation_or_business": "Retired, pensioner",
+    "expected_activity": "Monthly pension $3,200, Social Security $1,900",
+    "address": "9 Meadow Ln, Allen, TX",
+    "phone": "214-555-0110",
+    "linked_accounts": [
+      "CHK-010"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C011",
+    "name": "Fatima Al-Sayed",
+    "occupation_or_business": "Dentist",
+    "expected_activity": "Practice receipts $8,000-$15,000/mo, supplier payments",
+    "address": "2750 Dallas Pkwy, Frisco, TX",
+    "phone": "214-555-0111",
+    "linked_accounts": [
+      "CHK-011"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C012",
+    "name": "Kevin Doyle",
+    "occupation_or_business": "Construction contractor",
+    "expected_activity": "Project payments $10,000-$40,000, subcontractor out",
+    "address": "820 Greenville Ave, Dallas, TX",
+    "phone": "214-555-0112",
+    "linked_accounts": [
+      "CHK-012"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C013",
+    "name": "Grace Liu",
+    "occupation_or_business": "Graphic designer (freelance)",
+    "expected_activity": "Client invoices $1,500-$4,000, irregular",
+    "address": "311 Abrams Rd, Dallas, TX",
+    "phone": "214-555-0113",
+    "linked_accounts": [
+      "CHK-013"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C014",
+    "name": "Omar Farouk",
+    "occupation_or_business": "Restaurant manager",
+    "expected_activity": "Monthly salary ~$4,600",
+    "address": "52 Park Blvd, Plano, TX",
+    "phone": "214-555-0114",
+    "linked_accounts": [
+      "CHK-014"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C015",
+    "name": "Viktor Petrov",
+    "occupation_or_business": "Import/export consultant",
+    "expected_activity": "Occasional wires $2,000-$5,000, EU counterparties",
+    "address": "400 Ross Ave, Dallas, TX",
+    "phone": "214-555-0115",
+    "linked_accounts": [
+      "CHK-015"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 2
+  },
+  {
+    "customer_id": "C016",
+    "name": "Nikolai Sorokin",
+    "occupation_or_business": "Self-employed, occupation unclear",
+    "expected_activity": "Low activity expected",
+    "address": "17 Live Oak St, Dallas, TX",
+    "phone": "214-555-0116",
+    "linked_accounts": [
+      "CHK-016"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 1
+  },
+  {
+    "customer_id": "C017",
+    "name": "Dana Whitmore",
+    "occupation_or_business": "Unemployed (stated)",
+    "expected_activity": "No regular income expected",
+    "address": "733 Floyd St, Dallas, TX",
+    "phone": "214-555-0117",
+    "linked_accounts": [
+      "CHK-017"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 3
+  },
+  {
+    "customer_id": "C018",
+    "name": "Carlos Mendes",
+    "occupation_or_business": "Used-car dealer",
+    "expected_activity": "Vehicle sale deposits $5,000-$20,000",
+    "address": "1900 Irving Blvd, Dallas, TX",
+    "phone": "214-555-0118",
+    "linked_accounts": [
+      "CHK-018"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 2
+  },
+  {
+    "customer_id": "C019",
+    "name": "Helen Brooks",
+    "occupation_or_business": "Homemaker",
+    "expected_activity": "Household spending only expected",
+    "address": "64 Preston Hollow, Dallas, TX",
+    "phone": "214-555-0119",
+    "linked_accounts": [
+      "CHK-019"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C020",
+    "name": "R. Alvarez",
+    "occupation_or_business": "Day laborer (stated)",
+    "expected_activity": "Wages ~$2,800/mo expected",
+    "address": "4820 Maple Ave, Dallas, TX",
+    "phone": "214-555-0140",
+    "linked_accounts": [
+      "CHK-020",
+      "SAV-020"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C021",
+    "name": "Rafael Alvarez",
+    "occupation_or_business": "Day laborer (stated)",
+    "expected_activity": "Wages ~$2,800/mo expected",
+    "address": "4820 Maple Ave, Dallas, TX",
+    "phone": "214-555-0140",
+    "linked_accounts": [
+      "CHK-020",
+      "SAV-020"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C022",
+    "name": "R Alvarez",
+    "occupation_or_business": "Day laborer (stated)",
+    "expected_activity": "Wages ~$2,800/mo expected",
+    "address": "4820 Maple Ave, Dallas, TX",
+    "phone": "214-555-0140",
+    "linked_accounts": [
+      "CHK-020",
+      "SAV-020"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C023",
+    "name": "Rafael A. Alvarez",
+    "occupation_or_business": "Day laborer (stated)",
+    "expected_activity": "Wages ~$2,800/mo expected",
+    "address": "4820 Maple Ave, Dallas, TX",
+    "phone": "214-555-0140",
+    "linked_accounts": [
+      "CHK-020",
+      "SAV-020"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 0
+  },
+  {
+    "customer_id": "C024",
+    "name": "Golden Laundry LLC",
+    "occupation_or_business": "Laundromat chain (cash business)",
+    "expected_activity": "Daily cash deposits $7,000-$10,500 across 3 locations, documented since 2019; deposits often split by location/shift",
+    "address": "1200 Jupiter Rd, Garland, TX",
+    "phone": "214-555-0124",
+    "linked_accounts": [
+      "CHK-024"
+    ],
+    "kyc_status": "current",
+    "prior_alerts": 1
+  },
+  {
+    "customer_id": "C025",
+    "name": "Samuel Ortiz",
+    "occupation_or_business": "Electrician",
+    "expected_activity": "Wages and side-job payments $3,000-$5,000/mo",
+    "address": "210 Walnut St, Denton, TX",
+    "phone": "214-555-0125",
+    "linked_accounts": [
+      "CHK-025"
+    ],
+    "kyc_status": "expired 2026-06-30",
+    "prior_alerts": 0
+  }
+]

@@ -1,0 +1,26 @@
+alert_id,date,customer_id,txn_type,amount,channel,branch,counterparty,alert_rule_triggered
+A01,2026-10-05,C001,ACH credit,4820,ACH,—,Frisco ISD (employer),Velocity check
+A02,2026-10-06,C002,ACH credit,6210,ACH,—,Employer payroll,Velocity check
+A03,2026-10-06,C003,Cash deposit,1840,Branch,Frisco Main,Register sales,Cash threshold monitor
+A04,2026-10-07,C004,ACH credit,5415,ACH,—,Hospital payroll,Velocity check
+A05,2026-10-07,C005,Check deposit,4275,Branch,McKinney,Customer payment,Large check monitor
+A06,2026-10-08,C006,ACH credit,5905,ACH,—,Pharmacy chain payroll,Velocity check
+A07,2026-10-08,C007,Check deposit,3980,Branch,Richardson,HOA client,Large check monitor
+A08,2026-10-09,C008,ACH credit,4120,ACH,—,University payroll,Velocity check
+A09,2026-10-09,C009,Cash deposit,1230,Branch,Plano West,Register sales,Cash threshold monitor
+A10,2026-10-10,C010,ACH credit,5100,ACH,—,Pension + Social Security,Velocity check
+A11,2026-10-10,C011,Card settlement,11240,ACH,—,Practice card receipts,Large deposit monitor
+A12,2026-10-11,C012,Wire credit,28500,Wire,—,GC project payment (contract on file),Large wire monitor
+A13,2026-10-11,C013,ACH credit,2650,ACH,—,Client invoice #221,Velocity check
+A14,2026-10-12,C014,ACH credit,4610,ACH,—,Restaurant group payroll,Velocity check
+A15,2026-10-06,C015,Wire debit,48000,Wire,—,"Counterparty in high-risk jurisdiction, no stated purpose",High-risk jurisdiction wire
+A16,2026-10-07,C016,Wire credit,19750,Wire,—,"Third-party sender, name fuzzy-matches watchlist entry 'Nikolay Sorokin'",Watchlist name screening
+A17,2026-10-08,C017,Cash deposit,15600,Branch,Dallas Central,Unknown third party deposited on customer's behalf,Third-party funding monitor
+A18,2026-10-09,C018,Cash deposit,22400,Branch,Irving,"Cash vehicle sale, no bill of sale on file",Cash threshold monitor
+A19,2026-10-10,C019,Wire credit,31200,Wire,—,Unrelated third party; inconsistent with stated profile (household only),Profile inconsistency monitor
+A20,2026-10-06,C020,Cash deposit,9200,Branch,Dallas Central,Self,Cash threshold monitor
+A21,2026-10-07,C021,Cash deposit,9450,Branch,Dallas Central,Self,Cash threshold monitor
+A22,2026-10-07,C022,Cash deposit,9700,Branch,Oak Cliff,Self,Cash threshold monitor
+A23,2026-10-08,C023,Cash deposit,9850,Branch,Oak Cliff,Self,Cash threshold monitor
+A24,2026-10-09,C024,Cash deposit,9300,Branch,Garland,Location 2 shift deposit,Cash threshold monitor
+A25,2026-10-10,C025,ACH credit,4380,ACH,—,Employer + side jobs,KYC status check

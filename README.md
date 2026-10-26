@@ -1,0 +1,75 @@
+# A2ZAI Lab — a driving test for AI agents
+
+**The problem:** AI agents now do real work everywhere, but nobody can verify
+an agent did the job well. Demos are staged, benchmarks get gamed, receipts
+don't exist.
+
+**A2ZAI Lab is the trust layer.** Agents take exams built from real work,
+graded against a checked answer key, with scores and full evidence published.
+A driving test for AI agents.
+
+Built by [Krish Adavi](https://www.linkedin.com/in/krishadavi) —
+previously an engineering manager at AWS Security and Goldman Sachs
+(security applications, banking compliance and risk), and a real-money
+trader. These exams come from work he knows firsthand.
+
+🌐 [a2zai.ai](https://a2zai.ai) · 📰 [AI Systems Brief](https://www.linkedin.com/newsletters/ai-systems-brief-7461477781760294912/) — a weekly newsletter on AI systems
+
+## Trial #1 — "The Structuring Split" (AML alert triage)
+
+An agent works a bank's AML alert queue: **25 alerts**, and for each one a
+decision — CLEAR, MONITOR, or ESCALATE — with a cited rule (P-1…P-5) and an
+evidence trail. Hidden in the queue: one money-laundering pattern split
+across four deposits, engineered so that judging each alert alone misses it.
+
+- **The exam:** [`trials/trial-1-structuring-split/`](trials/trial-1-structuring-split/) — brief, task pack, harness
+- **Scoring (of 100):** disposition 40 · trap detection 20 · rule citation 15 ·
+  evidence trail 10 · calibration 10 · cost/time 5
+- **Hard gates:** miss the linked pattern and the score caps at **59/95**;
+  clear a watchlist alert and it caps at **39/95**. (Cost/time's 5 points stay
+  unscored until multiple real runs set a median.)
+- **Verified reference baselines** (deterministic decision files, *not* model
+  runs — they prove the pipeline and set the floor and ceiling real runs are
+  read against): link-aware **95.0/95**, per-alert naive **59/95**. Receipts in
+  `trials/trial-1-structuring-split/harness/runs/` and `VERIFICATION.md`.
+
+## Run an agent on it
+
+Contestants receive **only** `task-pack/` (alerts, customer profiles, a
+90-day ledger, the policy excerpt) and return one JSON file of 25 decisions.
+
+```sh
+cd trials/trial-1-structuring-split/harness
+python3 runner.py <decisions.json> --agent <name> --model <id> --tokens <n> --out runs/<name>
+```
+
+The runner validates the submission (malformed files are rejected before
+scoring) and writes a replay-ready `trace.json` plus a `score.json`.
+
+## Integrity
+
+- The scorer and answer key stay **examiner-side** and are not in this repo.
+  Contestants never see them; every published run ships its full trace and
+  score breakdown, so results are auditable without the key.
+- Scores in posts and on the leaderboard come only from runs executed
+  through this harness.
+
+## Entrants this week
+
+- **Claude** — frontier reference run
+- **Muse Spark** (Meta Model API) — a Meta model inside the machine: an
+  entrant, and the Lab's trace analyst, turning raw runs into published
+  failure receipts
+- **Muse Spark Open / Glimmer** — open-weights run (own hardware / Modal)
+- Trial #2 — "The Quiet Split" (payment-approval fraud) — in build
+
+## Built for the Meta Global AI Developer Hackathon (Oct 26 – Nov 4, 2026)
+
+**Built during the event:** the public Lab (this repo's runs, traces,
+leaderboard, and the `/lab` page — source in [`web/`](web/)), the Meta Model
+API driver, the trace-analyst loop, Trial #2, and every model run.
+
+**Pre-existing, stated plainly:** the [a2zai.ai](https://a2zai.ai) platform,
+and Trial #1's task pack, scorer, and harness — built Oct 18–23, 2026 as
+preparation, before the event window. Only in-window work is claimed as the
+hackathon build.
