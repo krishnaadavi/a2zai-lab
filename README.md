@@ -60,18 +60,24 @@ scoring) and writes a replay-ready `trace.json` plus a `score.json`.
 |---|---|---|---|
 | Reference (link-aware) | deterministic | 95.0/95 | ceiling — hand-built, not a model run |
 | Reference (naive) | deterministic | 59/95 | floor — judges each alert alone, link missed |
-| **wonder-trial1-run1** (Oct 26, 2026) | **Muse Wonder** (`muse-wonder-1.0`, Meta Model API) | **94.2/95** | first real model run — trap linked, no gates hit |
-| **spark-trial1-run1** (Oct 26, 2026) | **Muse Spark** (`muse-spark-1.3`, Meta Model API) | **91.8/95** | trap linked, no gates hit — at ~1/5 of Wonder's cost |
+| **wonder-trial1-run1** (Oct 26, 2026) | **Muse Wonder** (`muse-wonder-1.0`, Meta Model API) | **97.2/100** (94.2/95 + 3.0 cost/time) | first real model run — trap linked, no gates hit |
+| **spark-trial1-run1** (Oct 26, 2026) | **Muse Spark** (`muse-spark-1.3`, Meta Model API) | **96.8/100** (91.8/95 + 5.0 cost/time) | trap linked, no gates hit — at ~1/5 of Wonder's cost |
 
 Head-to-head, same exam, same conditions: Wonder 94.2 (disposition 39.2/40)
-vs Spark 91.8 (disposition 36.8/40). Both linked the structuring trap for
-20/20 and maxed citation, evidence and calibration. The whole gap is
-disposition judgment on routine alerts. Spark's run cost ~$0.05 against
-Wonder's ~$0.27 — the workhorse is nearly as accurate for a fifth of the
-price. Cost/time (5 pts) is still formally unscored: the two runs give a
-median to score against, and the exact rule gets pinned in writing here
-before any points are awarded. Full artifacts — decisions, trace, score,
-run meta, and the Spark-written receipt — in
+vs Spark 91.8 (disposition 36.8/40) on the 95 scorable points. Both linked
+the structuring trap for 20/20 and maxed citation, evidence and calibration.
+The whole quality gap is disposition judgment on routine alerts. Spark's run
+cost ~$0.05 against Wonder's ~$0.27 — the workhorse is nearly as accurate
+for a fifth of the price.
+
+**Cost/time rule — pinned Oct 26, 2026, before any points were awarded:**
+points = 5 × min(1, median run cost ÷ this run's cost), with cost estimated
+from published per-token rates and the median taken across real model runs
+of the trial (here: $0.1628). Wonder earns 3.0, Spark the full 5.0 — so the
+final totals land at **Wonder 97.2/100, Spark 96.8/100**: the cheap run
+nearly closes the gap, which is the honest economics of the thing. Each
+run's `final_score.json` shows its own arithmetic. Full artifacts —
+decisions, trace, score, run meta, and the Spark-written receipt — in
 [`trials/trial-1-structuring-split/harness/runs/`](trials/trial-1-structuring-split/harness/runs/).
 
 ## Entrants this week
