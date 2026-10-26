@@ -1,0 +1,10 @@
+{
+  "model": "muse-wonder-1.0",
+  "agent": "Muse Wonder (Meta Model API)",
+  "model_wall_time_s": null,
+  "prompt_tokens": 5904,
+  "completion_tokens": 12362,
+  "total_tokens": 18266,
+  "est_cost_usd": 0.2709,
+  "note": "backfilled Oct 26: wall time was not instrumented for the first two runs; cost from published per-token rates"
+}

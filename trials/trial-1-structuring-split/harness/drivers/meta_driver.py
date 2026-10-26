@@ -263,6 +263,7 @@ def main():
 
     model = a.model
     use_schema = not a.no_schema
+    t0 = time.time()
     resp, err = call_api(key, model, messages, a.max_tokens, use_schema)
     if err is not None and schema_unsupported(err):
         print("NOTE: structured output (response_format json_schema) was rejected; "
@@ -332,6 +333,18 @@ def main():
         return proc.returncode
 
     score = json.loads((run_dir / "score.json").read_text())
+    prices = {"muse-wonder-1.0": (4.00, 20.00), "muse-spark-1.3": (1.25, 4.25)}
+    est_cost = None
+    if model in prices and prompt_tokens is not None and completion_tokens is not None:
+        pin, pout = prices[model]
+        est_cost = round(prompt_tokens * pin / 1e6 + completion_tokens * pout / 1e6, 4)
+    meta = {"model": model, "agent": a.agent,
+            "model_wall_time_s": round(time.time() - t0, 1),
+            "prompt_tokens": prompt_tokens, "completion_tokens": completion_tokens,
+            "total_tokens": total_tokens, "est_cost_usd": est_cost,
+            "note": "wall time covers API call(s) plus local parse; cost from published per-token rates"}
+    (run_dir / "run_meta.json").write_text(json.dumps(meta, indent=2))
+    print(f"Run meta:         wall={meta['model_wall_time_s']}s est_cost=${est_cost}")
     print("\n===== RUN COMPLETE =====")
     print(f"Model:            {model}")
     print(f"Run directory:    {run_dir}")

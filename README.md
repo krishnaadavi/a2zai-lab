@@ -61,12 +61,18 @@ scoring) and writes a replay-ready `trace.json` plus a `score.json`.
 | Reference (link-aware) | deterministic | 95.0/95 | ceiling — hand-built, not a model run |
 | Reference (naive) | deterministic | 59/95 | floor — judges each alert alone, link missed |
 | **wonder-trial1-run1** (Oct 26, 2026) | **Muse Wonder** (`muse-wonder-1.0`, Meta Model API) | **94.2/95** | first real model run — trap linked, no gates hit |
+| **spark-trial1-run1** (Oct 26, 2026) | **Muse Spark** (`muse-spark-1.3`, Meta Model API) | **91.8/95** | trap linked, no gates hit — at ~1/5 of Wonder's cost |
 
-Wonder's breakdown: disposition 39.2/40 · trap detection 20/20 · citation
-15/15 · evidence 10/10 · calibration 10/10. Cost/time (5 pts) stays unscored
-until multiple real runs set a median. Full artifacts — decisions, trace,
-score, and the Spark-written receipt — in
-[`trials/trial-1-structuring-split/harness/runs/wonder-trial1-run1/`](trials/trial-1-structuring-split/harness/runs/wonder-trial1-run1/).
+Head-to-head, same exam, same conditions: Wonder 94.2 (disposition 39.2/40)
+vs Spark 91.8 (disposition 36.8/40). Both linked the structuring trap for
+20/20 and maxed citation, evidence and calibration. The whole gap is
+disposition judgment on routine alerts. Spark's run cost ~$0.05 against
+Wonder's ~$0.27 — the workhorse is nearly as accurate for a fifth of the
+price. Cost/time (5 pts) is still formally unscored: the two runs give a
+median to score against, and the exact rule gets pinned in writing here
+before any points are awarded. Full artifacts — decisions, trace, score,
+run meta, and the Spark-written receipt — in
+[`trials/trial-1-structuring-split/harness/runs/`](trials/trial-1-structuring-split/harness/runs/).
 
 ## Entrants this week
 
