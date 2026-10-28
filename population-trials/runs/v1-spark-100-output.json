@@ -1,0 +1,52 @@
+{
+ "run": "v1-spark-100-tx-2025-26",
+ "agents": 100,
+ "score": {
+  "calibration_score": 21.1,
+  "components": {
+   "curve_shape_40": 0.0,
+   "peak_timing_30": 0.0,
+   "magnitude_30": 21.1
+  },
+  "pearson_r": -0.529,
+  "peak_week_error": 9,
+  "magnitude_ratio_sim_over_real": 0.506,
+  "gate_applied": "peak timing off by 9 weeks (>=3) \u2014 capped at 49",
+  "may_publish_whatifs": false,
+  "publication_threshold": 70
+ },
+ "sim": [
+  3.0,
+  13.5,
+  10.2,
+  2.1,
+  0.3,
+  0.3,
+  0.0,
+  0.0,
+  0.0,
+  0.3,
+  0.3,
+  0.3,
+  0.3,
+  0.3,
+  0.3
+ ],
+ "real": [
+  2.06582,
+  1.77178,
+  1.75033,
+  2.10847,
+  2.78917,
+  3.05709,
+  3.09635,
+  3.79627,
+  4.16328,
+  5.9703,
+  8.32273,
+  6.58236,
+  4.97632,
+  4.09998,
+  7.08567
+ ]
+}

@@ -1,0 +1,58 @@
+{
+ "epiweeks": [
+  202242,
+  202243,
+  202244,
+  202245,
+  202246,
+  202247,
+  202248,
+  202249,
+  202250,
+  202251,
+  202252,
+  202301
+ ],
+ "real_wili": [
+  6.0281,
+  7.72925,
+  8.54895,
+  9.8796,
+  9.87538,
+  9.18269,
+  8.16427,
+  7.90764,
+  7.05818,
+  6.69468,
+  6.58356,
+  5.28723
+ ],
+ "sim_ili_pct": [
+  6.6,
+  17.4,
+  3.0,
+  0.9,
+  0.3,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "score": {
+  "calibration_score": 24.5,
+  "components": {
+   "curve_shape_40": 0.0,
+   "peak_timing_30": 10.0,
+   "magnitude_30": 14.5
+  },
+  "pearson_r": -0.08,
+  "peak_week_error": 2,
+  "magnitude_ratio_sim_over_real": 0.303,
+  "gate_applied": null,
+  "may_publish_whatifs": false,
+  "publication_threshold": 70
+ }
+}
