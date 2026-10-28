@@ -19,3 +19,7 @@ The submission itself. Together AI returned HTTP 200 with max_tokens set to 16,0
 No gates were triggered or evaluated. The score caps (59 for a missed structuring link, 39 for clearing a watchlist alert) apply to scored submissions; this run never reached the scorer.
 ## The one-line verdict — a single sentence a reader could quote.
 The Lab's first open-weights entrant never finished the exam — its answer sheet tore off a third of the way through, and the harness published the tear instead of a grade.
+
+
+---
+**Correction (Oct 28, 2026):** the run's finish_reason was `length` — the 16,000-token completion budget ran out with only ~870 visible tokens emitted, most plausibly spent on reasoning tokens before the JSON finished (the Day 1 Meta API pitfall, on Together's serving). The rejection stands as recorded; this note only sharpens the cause.

@@ -1,1 +1,30 @@
-{"agent":"glimmer-together","alert_partial":"A09","alerts_completed_before_truncation":["A01","A02","A03","A04","A05","A06","A07","A08"],"endpoint":"https://api.together.xyz/v1 (Together AI serverless, FP8)","final_score":null,"gates_note":"No gates evaluated — gates apply to scored submissions; this run never reached scoring.","hard_gates_triggered":[],"max_tokens_requested":16000,"model":"meta-models/Muse-Glimmer-30B","parse_error":"JSONDecodeError: Expecting ',' delimiter: line 65 column 4 (char 3198)","raw_response_chars":3481,"raw_response_file":"raw_response.txt","reason":"The model's response was truncated mid-JSON: 3,481 characters covering complete decisions for A01-A08 and a partial A09, cut off inside A09's evidence_fields (\"ledger 202...). The harness could not parse a decisions array (JSONDecodeError: Expecting ',' delimiter at char 3198), so no decisions file was written and the run was never scored.","run":"glimmer-trial1-run1","score":null,"status":"REJECTED_PRE_SCORING","transport":"HTTP 200 from Together AI; not a transport failure. Per Lab rules this is a malformed submission, not a retryable error: the model's answers were not hand-fixed and no second attempt was made."}
+{
+ "agent": "glimmer-together",
+ "alert_partial": "A09",
+ "alerts_completed_before_truncation": [
+  "A01",
+  "A02",
+  "A03",
+  "A04",
+  "A05",
+  "A06",
+  "A07",
+  "A08"
+ ],
+ "endpoint": "https://api.together.xyz/v1 (Together AI serverless, FP8)",
+ "final_score": null,
+ "gates_note": "No gates evaluated \u2014 gates apply to scored submissions; this run never reached scoring.",
+ "hard_gates_triggered": [],
+ "max_tokens_requested": 16000,
+ "model": "meta-models/Muse-Glimmer-30B",
+ "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 65 column 4 (char 3198)",
+ "raw_response_chars": 3481,
+ "raw_response_file": "raw_response.txt",
+ "reason": "The model's response was truncated mid-JSON: 3,481 characters covering complete decisions for A01-A08 and a partial A09, cut off inside A09's evidence_fields (\"ledger 202...). The harness could not parse a decisions array (JSONDecodeError: Expecting ',' delimiter at char 3198), so no decisions file was written and the run was never scored.",
+ "run": "glimmer-trial1-run1",
+ "score": null,
+ "status": "REJECTED_PRE_SCORING",
+ "transport": "HTTP 200 from Together AI; not a transport failure. Per Lab rules this is a malformed submission, not a retryable error: the model's answers were not hand-fixed and no second attempt was made.",
+ "finish_reason": "length",
+ "finish_reason_note": "Correction added Oct 28, 2026: the API response's finish_reason was 'length' (reported in the driver's delayed stdout after the run record was first written). The 16,000-token completion budget was exhausted with only ~870 visible tokens emitted, most plausibly consumed by reasoning tokens before the JSON answer finished \u2014 the same pitfall recorded for the Meta Model API on Day 1. The rejection stands: the submission as returned was incomplete and unparseable."
+}
