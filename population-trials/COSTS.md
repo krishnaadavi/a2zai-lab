@@ -35,6 +35,9 @@ cost, from receipts). Estimates never wear the clothes of actuals.
 | Oct 27 | Population v0 — 100 agents, mock | local kernel | **$0.00** | calibration 24.5/100 |
 | Oct 27 | Population v0 — 1,000 agents, mock, TX fall 2025 | local kernel | **$0.00** | calibration 19.5/100; kernel wall time 0.19s |
 | Oct 27 | Population v1 — Spark, batched, 100 agents, TX fall 2025 | cohort-week calls | **$0.3404** | 60 calls, 0 fallbacks; 13,935 in / 75,996 out tokens (reasoning dominates); calibration 21.1/100 |
+| Oct 28 | Population v2 — mock, 100 agents, TX fall 2025 | local kernel | **$0.00** | seed-window fit froze base_transmission at 0.025 (seed weeks only); calibration 18.5/100 |
+| Oct 28 | Population v2 — Spark, batched, 100 agents, TX fall 2025 | cohort-week calls | **$0.3158** | 52 calls, 0 fallbacks; 12,077 in / 70,746 out tokens; fitted β=0.025 frozen; calibration 17.2/100 |
+| Oct 28 | Population v2 — Spark, batched, 1,000 agents, TX fall 2025 | cohort-week calls | **$0.3286** | 52 calls, 0 fallbacks; 12,077 in / 73,767 out tokens; fitted β=0.022 frozen (fit is pool-size-specific); calibration 17.3/100 |
 
 ## What we still don't know (measure, don't guess)
 Per-call token distribution once agents carry memory; API wall-clock at

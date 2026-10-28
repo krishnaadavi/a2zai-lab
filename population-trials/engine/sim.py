@@ -69,7 +69,8 @@ class SimResult:
 def run_sim(n_agents: int, seed_weeks_ili: float, n_weeks: int,
             model=mock_model, seed: int = 42,
             intervention: dict | None = None,
-            import_rate: float = 0.0, waning_weeks: int | None = None) -> SimResult:
+            import_rate: float = 0.0, waning_weeks: int | None = None,
+            base_transmission: float = 0.055) -> SimResult:
     """Seed: initial infected share = last observed real %ILI / 100.
     Intervention (optional): {"close_schools_week": k} — forces
     attend_school=False for school households that week (the what-if lever).
@@ -96,7 +97,10 @@ def run_sim(n_agents: int, seed_weeks_ili: float, n_weeks: int,
     for a in rng.sample(agents, n_seed):
         a.state, a.weeks_infected = "I", 1
 
-    base_transmission = 0.055      # per-contact weekly infection pressure (kernel param)
+    # base_transmission: per-contact weekly infection pressure (kernel param).
+    # Default 0.055 reproduces v0/v1 exactly; v2 passes a value FIT on the
+    # seed window only (see run_v2.py) — the parameter is caller-supplied so
+    # the fit is explicit in every trace, never a silent kernel edit.
     weekly, trace, weekly_states, planner_trace = [], [], [], []
     prev_ili = seed_weeks_ili
     planner = getattr(model, "plan_week", None)

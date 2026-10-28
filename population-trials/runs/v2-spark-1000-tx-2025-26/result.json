@@ -1,0 +1,83 @@
+{
+ "season": "ilinet_tx_2025-26",
+ "epiweeks": [
+  202544,
+  202545,
+  202546,
+  202547,
+  202548,
+  202549,
+  202550,
+  202551,
+  202552,
+  202553,
+  202601,
+  202602,
+  202603
+ ],
+ "real_wili": [
+  1.75033,
+  2.10847,
+  2.78917,
+  3.05709,
+  3.09635,
+  3.79627,
+  4.16328,
+  5.9703,
+  8.32273,
+  6.58236,
+  4.97632,
+  4.09998,
+  7.08567
+ ],
+ "sim_ili_pct": [
+  0.99,
+  1.77,
+  3.48,
+  4.44,
+  4.08,
+  3.3,
+  1.92,
+  0.96,
+  0.42,
+  0.21,
+  0.12,
+  0.06,
+  0.09
+ ],
+ "score": {
+  "calibration_score": 17.3,
+  "components": {
+   "curve_shape_40": 0.0,
+   "peak_timing_30": 0.0,
+   "magnitude_30": 17.3
+  },
+  "pearson_r": -0.587,
+  "peak_week_error": 5,
+  "magnitude_ratio_sim_over_real": 0.378,
+  "gate_applied": "peak timing off by 5 weeks (>=3) \u2014 capped at 49",
+  "may_publish_whatifs": false,
+  "publication_threshold": 70
+ },
+ "fit": {
+  "base_transmission": 0.022,
+  "sse": 2.2982,
+  "seed_window_epiweeks": [
+   202540,
+   202541,
+   202542,
+   202543
+  ],
+  "seed_window_wili": [
+   2.07906,
+   2.06636,
+   2.06582,
+   1.77178
+  ],
+  "sim_seed_window": [
+   0.81,
+   1.41,
+   2.31
+  ]
+ }
+}

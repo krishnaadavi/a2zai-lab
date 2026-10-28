@@ -23,6 +23,20 @@ the failure — never conclusions.
   loop. Nothing was tuned to the holdout; kernel parameters are a priori
   and printed in every trace.
 
+## V2 (Day 3, Oct 28) — seed-window transmission fit
+
+`run_v2.py`: the pool sees 4 seed weeks; the kernel's base_transmission —
+and only that parameter — is grid-fit on those seed weeks (mock behavior as
+the fitting instrument), frozen, and the untouched holdout is forecast with
+the Spark planner. Fitted β: 0.025 (100 agents) / 0.022 (1,000), vs the
+a priori 0.055. The instant-explosion pathology is gone (v1 hit 13.5%ILI in
+week 2; v2 peaks at a plausible ~5) and the peak miss narrowed 9 → 5 weeks,
+but the pool still peaks early and burns out while the real season climbs:
+**Spark 100 → 17.2/100, Spark 1,000 → 17.3/100, mock 100 → 18.5/100** — gate
+applied, `may_publish_whatifs: false`, receipts in `runs/v2-*`. A flat seed
+window cannot tell the kernel the season accelerates later; that is the v3
+question, and it will be answered with seed-window information only.
+
 ## Next (v1)
 1. Spark-tier caller behind the same model contract (~$14/suite at prototype
    scale per the cost model in the problem statement).
