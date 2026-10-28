@@ -1,0 +1,70 @@
+{"decisions": [
+  {
+    "alert_id": "A01",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C001 occupation School teacher", "expected_activity Monthly salary credit ~$4,800", "alert amount 4820", "counterparty Frisco ISD (employer)", "ledger 2026-09-15 ACH credit 4600 Regular income consistent with profile"],
+    "linked_case_id": null,
+    "one_sentence_reason": "Salary credit matches stated occupation and expected amount."
+  },
+  {
+    "alert_id": "A02",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C002 occupation Software engineer", "expected_activity Biweekly salary ~$6,200", "alert amount 6210", "counterparty Employer payroll"],
+    "linked_case_id": null,
+    "one_sentence_reason": "ACH credit is consistent with biweekly software engineer salary."
+  },
+  {
+    "alert_id": "A03",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C003 occupation Bakery (cash business)", "expected_activity Daily cash deposits $800-$2,500 from register sales", "alert amount 1840", "counterparty Register sales", "ledger 2026-08-20 Cash deposit 1950 Register sales - in line with stated cash pattern"],
+    "linked_case_id": null,
+    "one_sentence_reason": "Cash deposit falls within documented register sales range."
+  },
+  {
+    "alert_id": "A04",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C004 occupation Registered nurse", "expected_activity Monthly salary ~$5,400", "alert amount 5415", "counterparty Hospital payroll"],
+    "linked_case_id": null,
+    "one_sentence_reason": "Payroll credit matches nurse salary expectation."
+  },
+  {
+    "alert_id": "A05",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C005 occupation Auto repair shop owner", "expected_activity Weekly deposits $3,000-$6,000", "alert amount 4275", "counterparty Customer payment", "txn_type Check deposit"],
+    "linked_case_id": null,
+    "one_sentence_reason": "Check deposit is within expected weekly business receipts."
+  },
+  {
+    "alert_id": "A06",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C006 occupation Pharmacist", "expected_activity Biweekly salary ~$5,900", "alert amount 5905", "counterparty Pharmacy chain payroll"],
+    "linked_case_id": null,
+    "one_sentence_reason": "Payroll credit aligns with pharmacist salary."
+  },
+  {
+    "alert_id": "A07",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C007 occupation Landscaping services", "expected_activity Seasonal deposits $2,000-$5,500", "alert amount 3980", "counterparty HOA client"],
+    "linked_case_id": null,
+    "one_sentence_reason": "Check deposit fits seasonal landscaping revenue range."
+  },
+  {
+    "alert_id": "A08",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C008 occupation University lecturer", "expected_activity Monthly salary ~$4,100", "alert amount 4120", "counterparty University payroll"],
+    "linked_case_id": null,
+    "one_sentence_reason": "Salary credit matches lecturer pay expectation."
+  },
+  {
+    "alert_id": "A09",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": ["customer C009 occupation Nail salon owner (cash business)", "expected_activity Daily cash deposits $600-$1,800", "alert amount 1230", "counterparty Register sales", "ledger 202

@@ -62,6 +62,7 @@ scoring) and writes a replay-ready `trace.json` plus a `score.json`.
 | Reference (naive) | deterministic | 59/95 | floor — judges each alert alone, link missed |
 | **wonder-trial1-run1** (Oct 26, 2026) | **Muse Wonder** (`muse-wonder-1.0`, Meta Model API) | **97.2/100** (94.2/95 + 3.0 cost/time) | first real model run — trap linked, no gates hit |
 | **spark-trial1-run1** (Oct 26, 2026) | **Muse Spark** (`muse-spark-1.3`, Meta Model API) | **96.8/100** (91.8/95 + 5.0 cost/time) | trap linked, no gates hit — at ~1/5 of Wonder's cost |
+| **glimmer-trial1-run1** (Oct 28, 2026) | **Muse Glimmer 30B** (open weights, via Together AI) | **rejected pre-scoring** | response truncated mid-JSON at A09 (3,481 chars of a 25-alert answer); harness published the rejection, not a grade — raw output + receipt in the run folder |
 
 Head-to-head, same exam, same conditions: Wonder 94.2 (disposition 39.2/40)
 vs Spark 91.8 (disposition 36.8/40) on the 95 scorable points. Both linked
@@ -89,7 +90,11 @@ decisions, trace, score, run meta, and the Spark-written receipt — in
   the Lab's trace analyst, turning raw runs into published failure
   receipts. Its driver and the Wonder contestant driver live in
   [`trials/trial-1-structuring-split/harness/drivers/`](trials/trial-1-structuring-split/harness/drivers/)
-- **Muse Glimmer** — open-weights entrant, hosted on Modal
+- **Muse Glimmer 30B** — open-weights entrant, served by Together AI
+  (serverless FP8). Sat Trial #1 on Oct 28, 2026: its submission was
+  rejected pre-scoring (truncated response) — the rejection receipt is
+  published with the other runs, because a lab that only publishes passes
+  is a demo
 - Trial #2 — "The Quiet Split" (payment-approval fraud) — in build
 
 ## Built for the Meta Global AI Developer Hackathon (Oct 26 – Nov 4, 2026)
