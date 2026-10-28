@@ -5,7 +5,7 @@
   "cost_time_points": 5.0,
   "total_of_100": 96.8,
   "run_cost_usd": 0.0548,
-  "median_cost_usd": 0.1628,
+  "median_cost_usd": 0.0548,
   "rule": "5 x min(1, median run cost / run cost), costs from published per-token rates",
   "ratified": "Krish, 2026-10-26"
 }

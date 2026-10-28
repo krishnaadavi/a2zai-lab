@@ -1,0 +1,519 @@
+{
+  "trial": "trial1-structuring-split",
+  "run": {
+    "agent": "glimmer-together",
+    "model": "meta-models/Muse-Glimmer-30B",
+    "tokens": 23810,
+    "scorer_elapsed_s": 0.0001
+  },
+  "steps": [
+    {
+      "alert_id": "A01",
+      "card": {
+        "date": "2026-10-05",
+        "amount": 4820,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C001 occupation School teacher",
+        "expected_activity Monthly salary credit ~$4,800 household spending",
+        "alert amount 4820 ACH credit",
+        "counterparty Frisco ISD employer"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A02",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 6210,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C002 occupation Software engineer",
+        "expected_activity Biweekly salary ~$6,200 investments",
+        "alert amount 6210 ACH credit",
+        "counterparty Employer payroll"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A03",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 1840,
+        "txn_type": "Cash deposit",
+        "branch": "Frisco Main",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C003 Sunrise Bakery LLC cash business",
+        "expected_activity Daily cash deposits $800-$2,500 from register sales",
+        "alert amount 1840 Cash deposit",
+        "counterparty Register sales",
+        "ledger 2026-08-20 Cash deposit 1950 Register sales in line"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A04",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 5415,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C004 occupation Registered nurse",
+        "expected_activity Monthly salary ~$5,400",
+        "alert amount 5415 ACH credit",
+        "counterparty Hospital payroll"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A05",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 4275,
+        "txn_type": "Check deposit",
+        "branch": "McKinney",
+        "trigger": "Large check monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C005 Auto repair shop owner",
+        "expected_activity Weekly deposits $3,000-$6,000 parts payments",
+        "alert amount 4275 Check deposit",
+        "counterparty Customer payment"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A06",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 5905,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C006 occupation Pharmacist",
+        "expected_activity Biweekly salary ~$5,900",
+        "alert amount 5905 ACH credit",
+        "counterparty Pharmacy chain payroll"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A07",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 3980,
+        "txn_type": "Check deposit",
+        "branch": "Richardson",
+        "trigger": "Large check monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C007 GreenLeaf Landscaping LLC",
+        "expected_activity Seasonal deposits $2,000-$5,500 payroll out",
+        "alert amount 3980 Check deposit",
+        "counterparty HOA client"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A08",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 4120,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C008 occupation University lecturer",
+        "expected_activity Monthly salary ~$4,100 tuition payments",
+        "alert amount 4120 ACH credit",
+        "counterparty University payroll"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A09",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 1230,
+        "txn_type": "Cash deposit",
+        "branch": "Plano West",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C009 Nail salon owner cash business",
+        "expected_activity Daily cash deposits $600-$1,800",
+        "alert amount 1230 Cash deposit",
+        "counterparty Register sales",
+        "ledger 2026-09-20 Cash deposit 1410 Register sales in line"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A10",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 5100,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C010 Retired pensioner",
+        "expected_activity Monthly pension $3,200 Social Security $1,900",
+        "alert amount 5100 ACH credit",
+        "counterparty Pension + Social Security"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A11",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 11240,
+        "txn_type": "Card settlement",
+        "branch": "\u2014",
+        "trigger": "Large deposit monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C011 Dentist",
+        "expected_activity Practice receipts $8,000-$15,000/mo supplier payments",
+        "alert amount 11240 Card settlement",
+        "counterparty Practice card receipts"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A12",
+      "card": {
+        "date": "2026-10-11",
+        "amount": 28500,
+        "txn_type": "Wire credit",
+        "branch": "\u2014",
+        "trigger": "Large wire monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C012 Construction contractor",
+        "expected_activity Project payments $10,000-$40,000 subcontractor out",
+        "alert amount 28500 Wire credit",
+        "counterparty GC project payment contract on file"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A13",
+      "card": {
+        "date": "2026-10-11",
+        "amount": 2650,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C013 Graphic designer freelance",
+        "expected_activity Client invoices $1,500-$4,000 irregular",
+        "alert amount 2650 ACH credit",
+        "counterparty Client invoice #221"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A14",
+      "card": {
+        "date": "2026-10-12",
+        "amount": 4610,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "Velocity check"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C014 Restaurant manager",
+        "expected_activity Monthly salary ~$4,600",
+        "alert amount 4610 ACH credit",
+        "counterparty Restaurant group payroll"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A15",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 48000,
+        "txn_type": "Wire debit",
+        "branch": "\u2014",
+        "trigger": "High-risk jurisdiction wire"
+      },
+      "disposition": "MONITOR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C015 Import/export consultant",
+        "expected_activity Occasional wires $2,000-$5,000 EU counterparties",
+        "alert amount 48000 Wire debit",
+        "counterparty Counterparty in high-risk jurisdiction no stated purpose",
+        "prior_alerts 2"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A16",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 19750,
+        "txn_type": "Wire credit",
+        "branch": "\u2014",
+        "trigger": "Watchlist name screening"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-3",
+      "evidence_fields": [
+        "customer_id C016 Nikolai Sorokin",
+        "alert counterparty Third-party sender name fuzzy-matches watchlist entry Nikolay Sorokin",
+        "alert_rule_triggered Watchlist name screening"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A17",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 15600,
+        "txn_type": "Cash deposit",
+        "branch": "Dallas Central",
+        "trigger": "Third-party funding monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-1",
+      "evidence_fields": [
+        "customer_id C017 Unemployed stated",
+        "expected_activity No regular income expected",
+        "alert amount 15600 Cash deposit",
+        "counterparty Unknown third party deposited on customer's behalf",
+        "prior_alerts 3"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A18",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 22400,
+        "txn_type": "Cash deposit",
+        "branch": "Irving",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "MONITOR",
+      "rule_cited": "P-1",
+      "evidence_fields": [
+        "customer_id C018 Used-car dealer",
+        "expected_activity Vehicle sale deposits $5,000-$20,000",
+        "alert amount 22400 Cash deposit",
+        "counterparty Cash vehicle sale no bill of sale on file",
+        "prior_alerts 2"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A19",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 31200,
+        "txn_type": "Wire credit",
+        "branch": "\u2014",
+        "trigger": "Profile inconsistency monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C019 Homemaker",
+        "expected_activity Household spending only expected",
+        "alert amount 31200 Wire credit",
+        "counterparty Unrelated third party inconsistent with stated profile"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A20",
+      "card": {
+        "date": "2026-10-06",
+        "amount": 9200,
+        "txn_type": "Cash deposit",
+        "branch": "Dallas Central",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "customer_id C020 R. Alvarez",
+        "address 4820 Maple Ave Dallas TX",
+        "phone 214-555-0140",
+        "linked_accounts CHK-020 SAV-020",
+        "alert amount 9200 Cash deposit 2026-10-06",
+        "same address/phone/linked accounts as C021 C022 C023"
+      ],
+      "linked_case_id": "CASE-STRUCTURE-1"
+    },
+    {
+      "alert_id": "A21",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 9450,
+        "txn_type": "Cash deposit",
+        "branch": "Dallas Central",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "customer_id C021 Rafael Alvarez",
+        "address 4820 Maple Ave Dallas TX",
+        "phone 214-555-0140",
+        "linked_accounts CHK-020 SAV-020",
+        "alert amount 9450 Cash deposit 2026-10-07"
+      ],
+      "linked_case_id": "CASE-STRUCTURE-1"
+    },
+    {
+      "alert_id": "A22",
+      "card": {
+        "date": "2026-10-07",
+        "amount": 9700,
+        "txn_type": "Cash deposit",
+        "branch": "Oak Cliff",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "customer_id C022 R Alvarez",
+        "address 4820 Maple Ave Dallas TX",
+        "phone 214-555-0140",
+        "linked_accounts CHK-020 SAV-020",
+        "alert amount 9700 Cash deposit 2026-10-07"
+      ],
+      "linked_case_id": "CASE-STRUCTURE-1"
+    },
+    {
+      "alert_id": "A23",
+      "card": {
+        "date": "2026-10-08",
+        "amount": 9850,
+        "txn_type": "Cash deposit",
+        "branch": "Oak Cliff",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-2",
+      "evidence_fields": [
+        "customer_id C023 Rafael A. Alvarez",
+        "address 4820 Maple Ave Dallas TX",
+        "phone 214-555-0140",
+        "linked_accounts CHK-020 SAV-020",
+        "alert amount 9850 Cash deposit 2026-10-08"
+      ],
+      "linked_case_id": "CASE-STRUCTURE-1"
+    },
+    {
+      "alert_id": "A24",
+      "card": {
+        "date": "2026-10-09",
+        "amount": 9300,
+        "txn_type": "Cash deposit",
+        "branch": "Garland",
+        "trigger": "Cash threshold monitor"
+      },
+      "disposition": "CLEAR",
+      "rule_cited": "P-5",
+      "evidence_fields": [
+        "customer_id C024 Golden Laundry LLC",
+        "expected_activity Daily cash deposits $7,000-$10,500 across 3 locations documented since 2019 deposits often split",
+        "alert amount 9300 Cash deposit Location 2 shift deposit",
+        "ledger 2026-07-28 9100 Location1 shift deposit",
+        "ledger 2026-08-27 9600 Location2 shift deposit",
+        "ledger 2026-09-26 9450 Location3 shift deposit"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "alert_id": "A25",
+      "card": {
+        "date": "2026-10-10",
+        "amount": 4380,
+        "txn_type": "ACH credit",
+        "branch": "\u2014",
+        "trigger": "KYC status check"
+      },
+      "disposition": "ESCALATE",
+      "rule_cited": "P-4",
+      "evidence_fields": [
+        "customer_id C025 Samuel Ortiz",
+        "kyc_status expired 2026-06-30",
+        "alert amount 4380 ACH credit Employer + side jobs",
+        "expected_activity Wages and side-job payments $3,000-$5,000/mo"
+      ],
+      "linked_case_id": null
+    }
+  ],
+  "trap_rewind": {
+    "linked_alerts": [
+      "A20",
+      "A21",
+      "A22",
+      "A23"
+    ],
+    "total_amount": 38200,
+    "note": "replay moment: the linked cards merge into one case"
+  },
+  "score_reveal": {
+    "subtotal_of_95": 93.4,
+    "cost_time_5pts": "UNSCORED (needs median across runs)",
+    "components": {
+      "disposition_40": 38.4,
+      "trap_20": 20.0,
+      "citation_15": 15.0,
+      "evidence_10": 10.0,
+      "calibration_10": 10
+    },
+    "hard_gates_triggered": []
+  }
+}

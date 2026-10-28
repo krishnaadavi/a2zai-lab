@@ -1,0 +1,11 @@
+{
+  "run": "glimmer-trial1-run2",
+  "model": "meta-models/Muse-Glimmer-30B",
+  "subtotal_of_95": 93.4,
+  "cost_time_points": 5.0,
+  "total_of_100": 98.4,
+  "run_cost_usd": 0.0289,
+  "median_cost_usd": 0.0548,
+  "rule": "5 x min(1, median run cost / run cost), costs from published per-token rates",
+  "ratified": "Krish, 2026-10-26"
+}

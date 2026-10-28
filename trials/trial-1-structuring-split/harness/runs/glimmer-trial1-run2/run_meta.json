@@ -1,0 +1,11 @@
+{
+  "trial": "trial1-structuring-split",
+  "model": "meta-models/Muse-Glimmer-30B",
+  "agent": "Muse Glimmer 30B (open weights, via Together AI)",
+  "model_wall_time_s": 251.4,
+  "prompt_tokens": 5951,
+  "completion_tokens": 17859,
+  "total_tokens": 23810,
+  "est_cost_usd": 0.0289,
+  "note": "Budget-fix rerun of glimmer-trial1-run1 (Day 1 harness-truncation precedent: both records stay published). max_tokens raised 16,000 -> 64,000; Together AI accepted 64,000 as-is (verified by probe + this run). finish_reason: stop. Cost from Together AI's published Glimmer rates ($0.35/1M input, $1.50/1M output) on the API-reported usage. Token counts are Together's tokenizer (prompt 5,951 vs 5,904 on Meta's counter \u2014 same assembled prompt). Note: the first invocation of this run died on a transport error before any model output was recorded (no run directory, no raw response \u2014 no submission existed); it was rerun once at identical settings per the Lab rule that retries are for transport failures, and that second invocation is this run."
+}

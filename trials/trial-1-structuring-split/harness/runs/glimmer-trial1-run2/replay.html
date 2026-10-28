@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>Replay — glimmer-together on Trial #1</title><style>
+body{background:#030712;color:#e5e7eb;font-family:ui-sans-serif,system-ui,sans-serif;margin:0}
+.wrap{max-width:880px;margin:0 auto;padding:32px 20px 64px}
+.kicker{color:#22d3ee;font-size:12px;font-weight:700;letter-spacing:.2em}
+h1{color:#fff;font-size:32px;margin:8px 0 4px}
+.sub{color:#9ca3af;margin:0 0 24px}
+.counters{display:flex;gap:12px;flex-wrap:wrap;margin:0 0 28px}
+.counter{background:#111827;border:1px solid #1f2937;border-radius:12px;padding:10px 16px}
+.counter b{color:#fff;font-size:20px;display:block}
+.counter span{color:#9ca3af;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
+.card{background:#111827;border:1px solid #1f2937;border-radius:14px;padding:14px 16px;transition:outline-color .3s}
+.card.trap{border-color:#7c3aed}
+.card.lit{outline:2px solid #22d3ee}
+.card .top{display:flex;justify-content:space-between;align-items:baseline}
+.card .amt{color:#fff;font-weight:700;font-size:18px}
+.chip{font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;border:1px solid}
+.meta{color:#9ca3af;font-size:12px;margin:6px 0}
+.ev{color:#6b7280;font-size:11px;margin:6px 0 0;padding-left:14px}
+.rule{color:#d1d5db;font-size:12px}
+.trapbox{background:#1e1b4b;border:1px solid #7c3aed;border-radius:16px;padding:20px;margin:32px 0}
+.trapbox h2{color:#fff;margin:0 0 8px}
+.scorebox{background:#111827;border:1px solid #1f2937;border-radius:16px;padding:20px;margin:32px 0}
+.bar{height:8px;background:#1f2937;border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:#22d3ee}
+.srow{display:flex;justify-content:space-between;color:#d1d5db;font-size:14px;margin:10px 0 4px}
+.total{color:#22d3ee;font-size:40px;font-weight:900}
+button{background:#164e63;color:#fff;border:1px solid #22d3ee;border-radius:10px;padding:8px 18px;font-size:14px;cursor:pointer}
+.foot{color:#6b7280;font-size:12px;margin-top:24px}
+a{color:#22d3ee}
+</style></head>
+<body><div class="wrap">
+<p class="kicker">A2ZAI LAB — RUN REPLAY</p>
+<h1>glimmer-together</h1>
+<p class="sub">Trial #1 — The Structuring Split · model meta-models/Muse-Glimmer-30B · every card below is from the run's published trace, in the order the agent worked them.</p>
+<div class="counters">
+  <div class="counter"><b>25</b><span>alerts worked</span></div>
+  <div class="counter"><b>8</b><span>escalated</span></div>
+  <div class="counter"><b>2</b><span>monitored</span></div>
+  <div class="counter"><b>15</b><span>cleared</span></div>
+  <div class="counter"><b>23810</b><span>tokens · est. cost $0.03</span></div>
+</div>
+<p><button id="play">▶ Play the run</button></p>
+<div class="grid">
+<div class="card" id="card-A01">
+  <div class="top"><span style="color:#fff;font-weight:700">A01</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$4,820</div>
+  <div class="meta">ACH credit · 2026-10-05 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C001 occupation School teacher</li><li>expected_activity Monthly salary credit ~$4,800 household spending</li><li>alert amount 4820 ACH credit</li><li>counterparty Frisco ISD employer</li></ul>
+</div>
+<div class="card" id="card-A02">
+  <div class="top"><span style="color:#fff;font-weight:700">A02</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$6,210</div>
+  <div class="meta">ACH credit · 2026-10-06 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C002 occupation Software engineer</li><li>expected_activity Biweekly salary ~$6,200 investments</li><li>alert amount 6210 ACH credit</li><li>counterparty Employer payroll</li></ul>
+</div>
+<div class="card" id="card-A03">
+  <div class="top"><span style="color:#fff;font-weight:700">A03</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$1,840</div>
+  <div class="meta">Cash deposit · 2026-10-06 · Frisco Main<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C003 Sunrise Bakery LLC cash business</li><li>expected_activity Daily cash deposits $800-$2,500 from register sales</li><li>alert amount 1840 Cash deposit</li><li>counterparty Register sales</li><li>ledger 2026-08-20 Cash deposit 1950 Register sales in line</li></ul>
+</div>
+<div class="card" id="card-A04">
+  <div class="top"><span style="color:#fff;font-weight:700">A04</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$5,415</div>
+  <div class="meta">ACH credit · 2026-10-07 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C004 occupation Registered nurse</li><li>expected_activity Monthly salary ~$5,400</li><li>alert amount 5415 ACH credit</li><li>counterparty Hospital payroll</li></ul>
+</div>
+<div class="card" id="card-A05">
+  <div class="top"><span style="color:#fff;font-weight:700">A05</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$4,275</div>
+  <div class="meta">Check deposit · 2026-10-07 · McKinney<br>Trigger: Large check monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C005 Auto repair shop owner</li><li>expected_activity Weekly deposits $3,000-$6,000 parts payments</li><li>alert amount 4275 Check deposit</li><li>counterparty Customer payment</li></ul>
+</div>
+<div class="card" id="card-A06">
+  <div class="top"><span style="color:#fff;font-weight:700">A06</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$5,905</div>
+  <div class="meta">ACH credit · 2026-10-08 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C006 occupation Pharmacist</li><li>expected_activity Biweekly salary ~$5,900</li><li>alert amount 5905 ACH credit</li><li>counterparty Pharmacy chain payroll</li></ul>
+</div>
+<div class="card" id="card-A07">
+  <div class="top"><span style="color:#fff;font-weight:700">A07</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$3,980</div>
+  <div class="meta">Check deposit · 2026-10-08 · Richardson<br>Trigger: Large check monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C007 GreenLeaf Landscaping LLC</li><li>expected_activity Seasonal deposits $2,000-$5,500 payroll out</li><li>alert amount 3980 Check deposit</li><li>counterparty HOA client</li></ul>
+</div>
+<div class="card" id="card-A08">
+  <div class="top"><span style="color:#fff;font-weight:700">A08</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$4,120</div>
+  <div class="meta">ACH credit · 2026-10-09 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C008 occupation University lecturer</li><li>expected_activity Monthly salary ~$4,100 tuition payments</li><li>alert amount 4120 ACH credit</li><li>counterparty University payroll</li></ul>
+</div>
+<div class="card" id="card-A09">
+  <div class="top"><span style="color:#fff;font-weight:700">A09</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$1,230</div>
+  <div class="meta">Cash deposit · 2026-10-09 · Plano West<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C009 Nail salon owner cash business</li><li>expected_activity Daily cash deposits $600-$1,800</li><li>alert amount 1230 Cash deposit</li><li>counterparty Register sales</li><li>ledger 2026-09-20 Cash deposit 1410 Register sales in line</li></ul>
+</div>
+<div class="card" id="card-A10">
+  <div class="top"><span style="color:#fff;font-weight:700">A10</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$5,100</div>
+  <div class="meta">ACH credit · 2026-10-10 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C010 Retired pensioner</li><li>expected_activity Monthly pension $3,200 Social Security $1,900</li><li>alert amount 5100 ACH credit</li><li>counterparty Pension + Social Security</li></ul>
+</div>
+<div class="card" id="card-A11">
+  <div class="top"><span style="color:#fff;font-weight:700">A11</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$11,240</div>
+  <div class="meta">Card settlement · 2026-10-10 · —<br>Trigger: Large deposit monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C011 Dentist</li><li>expected_activity Practice receipts $8,000-$15,000/mo supplier payments</li><li>alert amount 11240 Card settlement</li><li>counterparty Practice card receipts</li></ul>
+</div>
+<div class="card" id="card-A12">
+  <div class="top"><span style="color:#fff;font-weight:700">A12</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$28,500</div>
+  <div class="meta">Wire credit · 2026-10-11 · —<br>Trigger: Large wire monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C012 Construction contractor</li><li>expected_activity Project payments $10,000-$40,000 subcontractor out</li><li>alert amount 28500 Wire credit</li><li>counterparty GC project payment contract on file</li></ul>
+</div>
+<div class="card" id="card-A13">
+  <div class="top"><span style="color:#fff;font-weight:700">A13</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$2,650</div>
+  <div class="meta">ACH credit · 2026-10-11 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C013 Graphic designer freelance</li><li>expected_activity Client invoices $1,500-$4,000 irregular</li><li>alert amount 2650 ACH credit</li><li>counterparty Client invoice #221</li></ul>
+</div>
+<div class="card" id="card-A14">
+  <div class="top"><span style="color:#fff;font-weight:700">A14</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$4,610</div>
+  <div class="meta">ACH credit · 2026-10-12 · —<br>Trigger: Velocity check</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C014 Restaurant manager</li><li>expected_activity Monthly salary ~$4,600</li><li>alert amount 4610 ACH credit</li><li>counterparty Restaurant group payroll</li></ul>
+</div>
+<div class="card" id="card-A15">
+  <div class="top"><span style="color:#fff;font-weight:700">A15</span>
+  <span class="chip" style="color:#fbbf24;border-color:#fbbf24">MONITOR</span></div>
+  <div class="amt">$48,000</div>
+  <div class="meta">Wire debit · 2026-10-06 · —<br>Trigger: High-risk jurisdiction wire</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C015 Import/export consultant</li><li>expected_activity Occasional wires $2,000-$5,000 EU counterparties</li><li>alert amount 48000 Wire debit</li><li>counterparty Counterparty in high-risk jurisdiction no stated purpose</li><li>prior_alerts 2</li></ul>
+</div>
+<div class="card" id="card-A16">
+  <div class="top"><span style="color:#fff;font-weight:700">A16</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$19,750</div>
+  <div class="meta">Wire credit · 2026-10-07 · —<br>Trigger: Watchlist name screening</div>
+  <div class="rule">Rule cited: P-3</div>
+  <ul class="ev"><li>customer_id C016 Nikolai Sorokin</li><li>alert counterparty Third-party sender name fuzzy-matches watchlist entry Nikolay Sorokin</li><li>alert_rule_triggered Watchlist name screening</li></ul>
+</div>
+<div class="card" id="card-A17">
+  <div class="top"><span style="color:#fff;font-weight:700">A17</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$15,600</div>
+  <div class="meta">Cash deposit · 2026-10-08 · Dallas Central<br>Trigger: Third-party funding monitor</div>
+  <div class="rule">Rule cited: P-1</div>
+  <ul class="ev"><li>customer_id C017 Unemployed stated</li><li>expected_activity No regular income expected</li><li>alert amount 15600 Cash deposit</li><li>counterparty Unknown third party deposited on customer&#x27;s behalf</li><li>prior_alerts 3</li></ul>
+</div>
+<div class="card" id="card-A18">
+  <div class="top"><span style="color:#fff;font-weight:700">A18</span>
+  <span class="chip" style="color:#fbbf24;border-color:#fbbf24">MONITOR</span></div>
+  <div class="amt">$22,400</div>
+  <div class="meta">Cash deposit · 2026-10-09 · Irving<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-1</div>
+  <ul class="ev"><li>customer_id C018 Used-car dealer</li><li>expected_activity Vehicle sale deposits $5,000-$20,000</li><li>alert amount 22400 Cash deposit</li><li>counterparty Cash vehicle sale no bill of sale on file</li><li>prior_alerts 2</li></ul>
+</div>
+<div class="card" id="card-A19">
+  <div class="top"><span style="color:#fff;font-weight:700">A19</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$31,200</div>
+  <div class="meta">Wire credit · 2026-10-10 · —<br>Trigger: Profile inconsistency monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C019 Homemaker</li><li>expected_activity Household spending only expected</li><li>alert amount 31200 Wire credit</li><li>counterparty Unrelated third party inconsistent with stated profile</li></ul>
+</div>
+<div class="card trap" id="card-A20">
+  <div class="top"><span style="color:#fff;font-weight:700">A20</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$9,200</div>
+  <div class="meta">Cash deposit · 2026-10-06 · Dallas Central<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-2 · Case: CASE-STRUCTURE-1</div>
+  <ul class="ev"><li>customer_id C020 R. Alvarez</li><li>address 4820 Maple Ave Dallas TX</li><li>phone 214-555-0140</li><li>linked_accounts CHK-020 SAV-020</li><li>alert amount 9200 Cash deposit 2026-10-06</li><li>same address/phone/linked accounts as C021 C022 C023</li></ul>
+</div>
+<div class="card trap" id="card-A21">
+  <div class="top"><span style="color:#fff;font-weight:700">A21</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$9,450</div>
+  <div class="meta">Cash deposit · 2026-10-07 · Dallas Central<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-2 · Case: CASE-STRUCTURE-1</div>
+  <ul class="ev"><li>customer_id C021 Rafael Alvarez</li><li>address 4820 Maple Ave Dallas TX</li><li>phone 214-555-0140</li><li>linked_accounts CHK-020 SAV-020</li><li>alert amount 9450 Cash deposit 2026-10-07</li></ul>
+</div>
+<div class="card trap" id="card-A22">
+  <div class="top"><span style="color:#fff;font-weight:700">A22</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$9,700</div>
+  <div class="meta">Cash deposit · 2026-10-07 · Oak Cliff<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-2 · Case: CASE-STRUCTURE-1</div>
+  <ul class="ev"><li>customer_id C022 R Alvarez</li><li>address 4820 Maple Ave Dallas TX</li><li>phone 214-555-0140</li><li>linked_accounts CHK-020 SAV-020</li><li>alert amount 9700 Cash deposit 2026-10-07</li></ul>
+</div>
+<div class="card trap" id="card-A23">
+  <div class="top"><span style="color:#fff;font-weight:700">A23</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$9,850</div>
+  <div class="meta">Cash deposit · 2026-10-08 · Oak Cliff<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-2 · Case: CASE-STRUCTURE-1</div>
+  <ul class="ev"><li>customer_id C023 Rafael A. Alvarez</li><li>address 4820 Maple Ave Dallas TX</li><li>phone 214-555-0140</li><li>linked_accounts CHK-020 SAV-020</li><li>alert amount 9850 Cash deposit 2026-10-08</li></ul>
+</div>
+<div class="card" id="card-A24">
+  <div class="top"><span style="color:#fff;font-weight:700">A24</span>
+  <span class="chip" style="color:#34d399;border-color:#34d399">CLEAR</span></div>
+  <div class="amt">$9,300</div>
+  <div class="meta">Cash deposit · 2026-10-09 · Garland<br>Trigger: Cash threshold monitor</div>
+  <div class="rule">Rule cited: P-5</div>
+  <ul class="ev"><li>customer_id C024 Golden Laundry LLC</li><li>expected_activity Daily cash deposits $7,000-$10,500 across 3 locations documented since 2019 deposits often split</li><li>alert amount 9300 Cash deposit Location 2 shift deposit</li><li>ledger 2026-07-28 9100 Location1 shift deposit</li><li>ledger 2026-08-27 9600 Location2 shift deposit</li><li>ledger 2026-09-26 9450 Location3 shift deposit</li></ul>
+</div>
+<div class="card" id="card-A25">
+  <div class="top"><span style="color:#fff;font-weight:700">A25</span>
+  <span class="chip" style="color:#f87171;border-color:#f87171">ESCALATE</span></div>
+  <div class="amt">$4,380</div>
+  <div class="meta">ACH credit · 2026-10-10 · —<br>Trigger: KYC status check</div>
+  <div class="rule">Rule cited: P-4</div>
+  <ul class="ev"><li>customer_id C025 Samuel Ortiz</li><li>kyc_status expired 2026-06-30</li><li>alert amount 4380 ACH credit Employer + side jobs</li><li>expected_activity Wages and side-job payments $3,000-$5,000/mo</li></ul>
+</div></div>
+<div class="trapbox"><h2>The trap rewind</h2>
+<p style="color:#c4b5fd;margin:0">Four deposits, each harmless alone: A20, A21, A22, A23 — together $38,200. replay moment: the linked cards merge into one case Purple cards above are the linked set.</p></div>
+<div class="scorebox"><div class="srow"><span style="color:#fff;font-weight:700">Score</span><span class="total">93.4 / 95</span></div>
+<div class="srow"><span>Disposition accuracy</span><span>38.4 / 40</span></div><div class="bar"><i style="width:96%"></i></div><div class="srow"><span>Trap detection</span><span>20.0 / 20</span></div><div class="bar"><i style="width:100%"></i></div><div class="srow"><span>Rule citation</span><span>15.0 / 15</span></div><div class="bar"><i style="width:100%"></i></div><div class="srow"><span>Evidence trail</span><span>10.0 / 10</span></div><div class="bar"><i style="width:100%"></i></div><div class="srow"><span>Calibration</span><span>10 / 10</span></div><div class="bar"><i style="width:100%"></i></div>
+<p style="color:#9ca3af">No hard gates hit. Cost/time (5 pts): UNSCORED (needs median across runs)</p></div>
+<p class="foot">Generated from trace.json + score.json by the Lab's replay template. Full artifacts: github.com/krishnaadavi/a2zai-lab</p>
+</div><script>
+let idx=-1,timer=null;
+const cards=[...document.querySelectorAll('.card')];
+function step(){ if(idx>=0&&cards[idx])cards[idx].classList.remove('lit');
+  idx++; if(idx>=cards.length){stop();return;}
+  cards[idx].classList.add('lit'); cards[idx].scrollIntoView({block:'center',behavior:'smooth'}); }
+function play(){ if(timer)return; timer=setInterval(step,900); step(); }
+function stop(){ clearInterval(timer); timer=null; }
+document.getElementById('play').addEventListener('click',()=>{idx=-1;play();});
+</script></body></html>
