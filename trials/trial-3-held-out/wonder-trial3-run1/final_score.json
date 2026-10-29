@@ -1,0 +1,11 @@
+{
+  "run": "wonder-trial3-run1",
+  "model": "muse-wonder-1.0",
+  "subtotal_of_95": 95.0,
+  "cost_time_points": 0.9,
+  "total_of_100": 95.9,
+  "run_cost_usd": 0.2184,
+  "median_cost_usd": 0.0381,
+  "rule": "5 x min(1, median run cost / run cost), costs from published per-token rates",
+  "ratified": "Krish, 2026-10-26"
+}

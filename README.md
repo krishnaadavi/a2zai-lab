@@ -90,6 +90,37 @@ shows its own arithmetic. Full artifacts —
 decisions, trace, score, run meta, and the Spark-written receipt — in
 [`trials/trial-1-structuring-split/harness/runs/`](trials/trial-1-structuring-split/harness/runs/).
 
+## Results — Trial #3 (held-out)
+
+Trial #3 is the Lab's first **held-out** exam — a trade-surveillance alert
+queue, in a domain neither prior trial touched. Its task pack and answer
+key **never publish**: a held-out score is one a contestant could not
+prepare for, which is exactly what makes it the paid tier of the Lab.
+What publishes is the score record — run meta, final score, and a redacted
+receipt per entrant in
+[`trials/trial-3-held-out/`](trials/trial-3-held-out/) — with no alert
+identifiers, instruments, accounts, queue amounts, or rule-by-rule mapping.
+
+Same rubric and gates as every Lab trial (disposition 40 · trap 20 ·
+citation 15 · evidence 10 · calibration 10 · cost/time 5; miss the linked
+pattern → cap 59; clear the never-clear alert → cap 39). Examiner-side
+reference points, verified before any model ran: link-aware **95.0/95**,
+per-alert naive **capped at 59**, restricted-clear variant **capped at 39**.
+
+| Run | Model | Score | Notes |
+|---|---|---|---|
+| **glimmer-trial3-run1** (Oct 28, 2026) | **Muse Glimmer 30B** (open weights, via Together AI) | **100.0/100** (95.0/95 + 5.0 cost/time) | trap linked 20/20, no gates — cheapest run of the three at $0.0170 |
+| **spark-trial3-run1** (Oct 28, 2026) | **Muse Spark** (`muse-spark-1.3`, Meta Model API) | **100.0/100** (95.0/95 + 5.0 cost/time) | trap linked 20/20, no gates — $0.0381, the three-run median |
+| **wonder-trial3-run1** (Oct 28, 2026) | **Muse Wonder** (`muse-wonder-1.0`, Meta Model API) | **95.9/100** (95.0/95 + 0.9 cost/time) | trap linked 20/20, no gates — same perfect rubric, priced at $0.2184 |
+
+The honest read: all three entrants maxed the 95 — every disposition,
+the link, citations, evidence, calibration. On a held-out queue none of
+them had seen, quality did not separate them; cost did, and the pinned
+cost/time rule (median $0.0381) is the whole difference between 95.9 and
+100.0. A rubric that three model classes all max is a rubric due for a
+harder revision — that is a finding about the exam, published the same
+way as the scores.
+
 ## Entrants this week
 
 - **Claude** — frontier reference run
