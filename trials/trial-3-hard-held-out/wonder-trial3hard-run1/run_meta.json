@@ -1,0 +1,11 @@
+{
+  "trial": "trial3-hard-held-out",
+  "model": "muse-wonder-1.0",
+  "agent": "Muse Wonder (Meta Model API)",
+  "model_wall_time_s": 107.3,
+  "prompt_tokens": 10562,
+  "completion_tokens": 14953,
+  "total_tokens": 25515,
+  "est_cost_usd": 0.3413,
+  "note": "wall time covers API call(s) plus local parse; cost from published per-token rates"
+}

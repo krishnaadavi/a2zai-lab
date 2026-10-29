@@ -1,0 +1,11 @@
+{
+  "trial": "trial3-hard-held-out",
+  "model": "meta-models/Muse-Glimmer-30B",
+  "agent": "Muse Glimmer 30B (open weights, via Together AI)",
+  "model_wall_time_s": 158.7,
+  "prompt_tokens": 10577,
+  "completion_tokens": 15221,
+  "total_tokens": 25798,
+  "est_cost_usd": 0.0265,
+  "note": "Cost amended in by the examiner from the API-reported usage at Together AI's published Glimmer rates ($0.35/1M input, $1.50/1M output); the driver priced the run at Meta Model API rates under its default model label, so the model label and cost were corrected here. Token counts are Together's tokenizer (prompt 10,577 vs 10,562 on Meta's counter \u2014 same assembled prompt). finish_reason: stop at the 64,000 cap."
+}
