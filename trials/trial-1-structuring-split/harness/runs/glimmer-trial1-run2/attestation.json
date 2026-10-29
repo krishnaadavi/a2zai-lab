@@ -1,0 +1,16 @@
+{
+  "attestation_version": 1,
+  "type": "scored",
+  "run": "glimmer-trial1-run2",
+  "model": "meta-models/Muse-Glimmer-30B",
+  "status": "SCORED",
+  "final_score": 98.4,
+  "files": {
+    "decisions.json": "1e73da0593e9297fb566312d8b1adbfc14e3d885b1daa40b541f860456c035a5",
+    "score.json": "9f95f81c4f221182dbe99415d6bdff54510956c4bf33345875515aa0c7823304",
+    "final_score.json": "b923f4f7a0eb74008c7ed9f5a22084e06cfcb5f67a7de06685412c55dea7eec9",
+    "run_meta.json": "c225d29c99fdb393585c4f1a1f449a61a905151ae08dd42d2fd3535e920277dd"
+  },
+  "attestation_hash": "7dc5f65dc6dec4935dfd9a2d2754dedb9fd226f8663d1d309687e4497f2ad4da",
+  "timestamp": "2026-10-29T01:17:40.720674+00:00"
+}

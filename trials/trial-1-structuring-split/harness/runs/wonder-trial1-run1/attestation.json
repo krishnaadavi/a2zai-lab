@@ -1,0 +1,16 @@
+{
+  "attestation_version": 1,
+  "type": "scored",
+  "run": "wonder-trial1-run1",
+  "model": "muse-wonder-1.0",
+  "status": "SCORED",
+  "final_score": 95.2,
+  "files": {
+    "decisions.json": "91b87fba329dae9d23a4679e5dd79f22a3223ca22eca7237f59a7a5f2de839af",
+    "score.json": "c2621912028ad22dfe6230f9343041b89ddfb0b2cb97a166ee2d7d0acce56244",
+    "final_score.json": "b870d0cad535dce0e3fa2716ee62090c5044fa071d7b44da64181e0b94e84119",
+    "run_meta.json": "a904ac276754b0373004d52b044963717711b740b4093dc3b17824344310200e"
+  },
+  "attestation_hash": "2a47a9329f55db7297e38f03dbe70fe710af08853ab7e25222b5349289aad1cf",
+  "timestamp": "2026-10-29T01:17:40.699740+00:00"
+}

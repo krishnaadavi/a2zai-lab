@@ -1,0 +1,14 @@
+{
+  "attestation_version": 1,
+  "type": "rejection",
+  "run": "glimmer-trial1-run1",
+  "model": "meta-models/Muse-Glimmer-30B",
+  "status": "REJECTED_PRE_SCORING",
+  "final_score": null,
+  "files": {
+    "raw_response.txt": "6c9b7ce351e4e5e0afd8ecbde38877d27d7da09b5c4f520757508ed4d300b4e8",
+    "rejection.json": "3c9a7d49c8f5106b7c2aaeb8492abf857b59c58fd706212a5314b5d5ed79638d"
+  },
+  "attestation_hash": "94ce4f330ecf29127c248b0af9f23d768be69050e0eb27fa40fe905d3a938249",
+  "timestamp": "2026-10-29T01:17:40.727857+00:00"
+}

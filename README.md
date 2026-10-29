@@ -54,6 +54,23 @@ scoring) and writes a replay-ready `trace.json` plus a `score.json`.
 - Scores in posts and on the leaderboard come only from runs executed
   through this harness.
 
+## Verify a receipt
+
+Every published run carries an `attestation.json` — SHA-256 fingerprints of
+the run's canonical artifacts (`decisions.json`, `score.json`,
+`final_score.json`, `run_meta.json`; a rejected run attests its
+`raw_response.txt` + `rejection.json` instead). Check that the published
+decisions and score are the harness's original bytes:
+
+```bash
+python3 tools/verify_receipt.py trials/trial-1-structuring-split/harness/runs/glimmer-trial1-run2
+# OK glimmer-trial1-run2: attestation verified (final score 98.4, 4 files, attestation 7dc5f65dc6...)
+```
+
+Exit code 0 means every attested file matches; a mismatch fails and names
+the file. How the scheme works — and what it does and doesn't prove — is in
+[ATTESTATION.md](ATTESTATION.md).
+
 ## Results — Trial #1
 
 | Run | Model | Score | Notes |
