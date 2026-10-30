@@ -184,3 +184,13 @@ in every scored sitting.
   any published run. Canonical run dirs live in
   `trial1-structuring-split/harness/runs/*-trial1-study-2026-10-30-*`;
   per-sitting artifacts are mirrored in this folder.
+
+---
+
+## Publication note — 2026-10-30
+
+This study was published to this public repo on 2026-10-30 (commit
+c04c9bc) as part of the Day 5 record. The "EXAMINER-SIDE ONLY —
+unpublished" header above reflects its status when the report was
+written, before publication was approved. The report's text is
+otherwise unchanged.
