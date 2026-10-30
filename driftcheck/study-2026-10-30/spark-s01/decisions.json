@@ -1,0 +1,321 @@
+[
+  {
+    "alert_id": "A01",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 4820 from Frisco ISD employer",
+      "expected monthly salary ~$4,800 school teacher Maria Delgado",
+      "KYC current prior alerts 0"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Salary credit matches the teacher profile and expected pay."
+  },
+  {
+    "alert_id": "A02",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 6210 Employer payroll",
+      "expected biweekly salary ~$6,200 software engineer James Whitfield",
+      "KYC current prior alerts 0"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Payroll amount aligns with the software engineer expected income."
+  },
+  {
+    "alert_id": "A03",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Cash deposit 1840 Register sales Branch Frisco Main",
+      "expected daily cash $800-$2,500 Sunrise Bakery LLC",
+      "ledger 2026-08-20 cash 1950 register sales consistent"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Cash deposit falls within the bakery register sales range."
+  },
+  {
+    "alert_id": "A04",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 5415 Hospital payroll",
+      "expected monthly salary ~$5,400 registered nurse Priya Nair",
+      "KYC current prior alerts 0"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Hospital payroll matches the nurse salary expectation."
+  },
+  {
+    "alert_id": "A05",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Check deposit 4275 Customer payment Branch McKinney",
+      "expected weekly deposits $3,000-$6,000 auto repair shop owner Tom Becker",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Check amount fits the auto repair expected deposit range."
+  },
+  {
+    "alert_id": "A06",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 5905 Pharmacy chain payroll",
+      "expected biweekly salary ~$5,900 pharmacist Aisha Khan",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Payroll matches the pharmacist expected salary."
+  },
+  {
+    "alert_id": "A07",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Check deposit 3980 HOA client Branch Richardson",
+      "expected seasonal deposits $2,000-$5,500 GreenLeaf Landscaping LLC",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Check fits the landscaping seasonal deposit range."
+  },
+  {
+    "alert_id": "A08",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 4120 University payroll",
+      "expected monthly salary ~$4,100 university lecturer David Osei",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "University payroll matches the lecturer salary expectation."
+  },
+  {
+    "alert_id": "A09",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Cash deposit 1230 Register sales Branch Plano West",
+      "expected daily cash $600-$1,800 nail salon Linda Tran",
+      "ledger 2026-09-20 cash 1410 register sales consistent"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Cash deposit is within the nail salon daily sales range."
+  },
+  {
+    "alert_id": "A10",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 5100 Pension + Social Security",
+      "expected pension $3,200 + Social Security $1,900 retired Robert Hale",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Credit equals the expected pension plus Social Security total."
+  },
+  {
+    "alert_id": "A11",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Card settlement 11240 Practice card receipts",
+      "expected practice receipts $8,000-$15,000/mo dentist Fatima Al-Sayed",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Receipts fall within the dental practice expected range."
+  },
+  {
+    "alert_id": "A12",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Wire credit 28500 GC project payment contract on file",
+      "expected project payments $10,000-$40,000 construction contractor Kevin Doyle",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Project payment with contract on file fits contractor expectations."
+  },
+  {
+    "alert_id": "A13",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 2650 Client invoice #221",
+      "expected client invoices $1,500-$4,000 freelance graphic designer Grace Liu",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Invoice amount fits the freelance expected range."
+  },
+  {
+    "alert_id": "A14",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "ACH credit 4610 Restaurant group payroll",
+      "expected monthly salary ~$4,600 restaurant manager Omar Farouk",
+      "KYC current"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Payroll matches the restaurant manager salary expectation."
+  },
+  {
+    "alert_id": "A15",
+    "disposition": "MONITOR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Wire debit 48000 counterparty in high-risk jurisdiction no stated purpose 2026-10-06",
+      "expected occasional wires $2,000-$5,000 EU counterparties import/export consultant Viktor Petrov",
+      "prior alerts 2"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Wire far exceeds expected activity with high-risk jurisdiction and no purpose and needs monitoring."
+  },
+  {
+    "alert_id": "A16",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-3",
+    "evidence_fields": [
+      "Wire credit 19750 third-party sender fuzzy-matches watchlist entry Nikolay Sorokin",
+      "customer Nikolai Sorokin self-employed occupation unclear low activity expected",
+      "prior alerts 1"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Watchlist name match requires immediate escalation."
+  },
+  {
+    "alert_id": "A17",
+    "disposition": "MONITOR",
+    "rule_cited": "P-1",
+    "evidence_fields": [
+      "Cash deposit 15600 Branch Dallas Central unknown third party deposited on behalf",
+      "expected no regular income unemployed Dana Whitmore",
+      "prior alerts 3",
+      "amount >$10,000 triggers CTR"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Large third-party cash inconsistent with unemployed profile requires CTR and monitoring."
+  },
+  {
+    "alert_id": "A18",
+    "disposition": "MONITOR",
+    "rule_cited": "P-1",
+    "evidence_fields": [
+      "Cash deposit 22400 Branch Irving cash vehicle sale no bill of sale on file",
+      "expected vehicle sale deposits $5,000-$20,000 used-car dealer Carlos Mendes",
+      "prior alerts 2",
+      "amount >$10,000 triggers CTR"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Large cash sale above expected range without bill of sale needs document collection and monitoring."
+  },
+  {
+    "alert_id": "A19",
+    "disposition": "MONITOR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Wire credit 31200 unrelated third party",
+      "expected household spending only homemaker Helen Brooks",
+      "inconsistent with stated profile household only"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Unexplained large third-party wire inconsistent with household profile needs monitoring."
+  },
+  {
+    "alert_id": "A20",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Cash deposit 9200 just under $10,000 Branch Dallas Central Self 2026-10-06",
+      "shared address 4820 Maple Ave Dallas TX with C021 C022 C023",
+      "shared phone 214-555-0140",
+      "shared linked accounts CHK-020 SAV-020",
+      "name variant R. Alvarez vs Rafael Alvarez",
+      "expected wages ~$2,800/mo day laborer vs 9200 deposit",
+      "aggregates with A21 9450 A22 9700 A23 9850 total ~38200 in 3 days"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Just-under-threshold cash deposit is part of a linked structuring pattern aggregating over $10,000."
+  },
+  {
+    "alert_id": "A21",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Cash deposit 9450 just under $10,000 Branch Dallas Central Self 2026-10-07",
+      "shared address 4820 Maple Ave Dallas TX with C020 C022 C023",
+      "shared phone 214-555-0140",
+      "shared linked accounts CHK-020 SAV-020",
+      "name variant Rafael Alvarez vs R. Alvarez",
+      "expected wages ~$2,800/mo day laborer vs 9450 deposit",
+      "aggregates with A20 9200 A22 9700 A23 9850 total ~38200 in 3 days"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Just-under-threshold cash deposit is part of a linked structuring pattern aggregating over $10,000."
+  },
+  {
+    "alert_id": "A22",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Cash deposit 9700 just under $10,000 Branch Oak Cliff Self 2026-10-07",
+      "shared address 4820 Maple Ave Dallas TX with C020 C021 C023",
+      "shared phone 214-555-0140",
+      "shared linked accounts CHK-020 SAV-020",
+      "name variant R Alvarez vs Rafael Alvarez",
+      "expected wages ~$2,800/mo day laborer vs 9700 deposit",
+      "aggregates with A20 9200 A21 9450 A23 9850 total ~38200 in 3 days"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Just-under-threshold cash deposit is part of a linked structuring pattern aggregating over $10,000."
+  },
+  {
+    "alert_id": "A23",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Cash deposit 9850 just under $10,000 Branch Oak Cliff Self 2026-10-08",
+      "shared address 4820 Maple Ave Dallas TX with C020 C021 C022",
+      "shared phone 214-555-0140",
+      "shared linked accounts CHK-020 SAV-020",
+      "name variant Rafael A. Alvarez vs R. Alvarez",
+      "expected wages ~$2,800/mo day laborer vs 9850 deposit",
+      "aggregates with A20 9200 A21 9450 A22 9700 total ~38200 in 3 days"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Just-under-threshold cash deposit is part of a linked structuring pattern aggregating over $10,000."
+  },
+  {
+    "alert_id": "A24",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "Cash deposit 9300 Location 2 shift deposit Branch Garland",
+      "expected daily cash $7,000-$10,500 across 3 locations documented since 2019 split by location/shift Golden Laundry LLC",
+      "ledger 2026-07-28 9100 Location 1 2026-08-27 9600 Location 2 2026-09-26 9450 Location 3",
+      "distinct address 1200 Jupiter Rd Garland vs 4820 Maple Ave structuring cluster"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Deposit fits the long-documented laundromat split-deposit pattern."
+  },
+  {
+    "alert_id": "A25",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-4",
+    "evidence_fields": [
+      "ACH credit 4380 Employer + side jobs within expected $3,000-$5,000 electrician Samuel Ortiz",
+      "KYC expired 2026-06-30 per customers.json",
+      "ledger 2026-09-10 wages 4210 notes KYC expired"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Activity is plausible but expired KYC requires escalation for updated information."
+  }
+]

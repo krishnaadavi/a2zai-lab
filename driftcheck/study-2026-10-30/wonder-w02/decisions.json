@@ -1,0 +1,325 @@
+[
+  {
+    "alert_id": "A01",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C001 occupation: School teacher",
+      "C001 expected_activity: Monthly salary credit ~$4,800",
+      "A01 ACH credit $4,820 from Frisco ISD (employer)",
+      "Ledger C001 regular income entries consistent with profile"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Employer salary credit matches the teacher profile and expected monthly amount."
+  },
+  {
+    "alert_id": "A02",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C002 occupation: Software engineer",
+      "C002 expected_activity: Biweekly salary ~$6,200",
+      "A02 ACH credit $6,210 from Employer payroll"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Payroll credit matches the stated occupation and expected salary."
+  },
+  {
+    "alert_id": "A03",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C003 business: Bakery (cash business)",
+      "C003 expected_activity: Daily cash deposits $800-$2,500 from register sales",
+      "A03 cash deposit $1,840 from Register sales at Frisco Main",
+      "Ledger 2026-08-20 C003 cash deposit $1,950 register sales in line with stated pattern"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Register-sales cash deposit is within the bakery's documented expected range."
+  },
+  {
+    "alert_id": "A04",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C004 occupation: Registered nurse",
+      "C004 expected_activity: Monthly salary ~$5,400",
+      "A04 ACH credit $5,415 from Hospital payroll"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Hospital payroll matches the nurse profile and expected monthly salary."
+  },
+  {
+    "alert_id": "A05",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C005 occupation: Auto repair shop owner",
+      "C005 expected_activity: Weekly deposits $3,000-$6,000",
+      "A05 check deposit $4,275 from Customer payment at McKinney"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Customer check deposit is within the auto repair shop's expected weekly range."
+  },
+  {
+    "alert_id": "A06",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C006 occupation: Pharmacist",
+      "C006 expected_activity: Biweekly salary ~$5,900",
+      "A06 ACH credit $5,905 from Pharmacy chain payroll"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Pharmacy payroll matches the pharmacist profile and expected salary."
+  },
+  {
+    "alert_id": "A07",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C007 business: Landscaping services",
+      "C007 expected_activity: Seasonal deposits $2,000-$5,500",
+      "A07 check deposit $3,980 from HOA client at Richardson"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "HOA client check is within the landscaping business's expected seasonal range."
+  },
+  {
+    "alert_id": "A08",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C008 occupation: University lecturer",
+      "C008 expected_activity: Monthly salary ~$4,100",
+      "A08 ACH credit $4,120 from University payroll"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "University payroll matches the lecturer profile and expected monthly salary."
+  },
+  {
+    "alert_id": "A09",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C009 business: Nail salon owner (cash business)",
+      "C009 expected_activity: Daily cash deposits $600-$1,800",
+      "A09 cash deposit $1,230 from Register sales at Plano West",
+      "Ledger 2026-09-20 C009 cash deposit $1,410 register sales in line with stated pattern"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Register-sales cash deposit is within the nail salon's expected daily range."
+  },
+  {
+    "alert_id": "A10",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C010 occupation: Retired, pensioner",
+      "C010 expected_activity: Monthly pension $3,200 and Social Security $1,900 totaling $5,100",
+      "A10 ACH credit $5,100 from Pension + Social Security"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Pension and Social Security credit exactly matches the retiree's expected income."
+  },
+  {
+    "alert_id": "A11",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C011 occupation: Dentist",
+      "C011 expected_activity: Practice receipts $8,000-$15,000/mo",
+      "A11 card settlement $11,240 from Practice card receipts"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Practice card receipts are within the dentist's expected monthly range."
+  },
+  {
+    "alert_id": "A12",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C012 occupation: Construction contractor",
+      "C012 expected_activity: Project payments $10,000-$40,000",
+      "A12 wire credit $28,500 for GC project payment (contract on file)"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Documented contract project payment is within the contractor's expected range."
+  },
+  {
+    "alert_id": "A13",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C013 occupation: Graphic designer (freelance)",
+      "C013 expected_activity: Client invoices $1,500-$4,000, irregular",
+      "A13 ACH credit $2,650 from Client invoice #221"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Client invoice payment is within the freelance designer's expected range."
+  },
+  {
+    "alert_id": "A14",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C014 occupation: Restaurant manager",
+      "C014 expected_activity: Monthly salary ~$4,600",
+      "A14 ACH credit $4,610 from Restaurant group payroll"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Restaurant payroll matches the manager profile and expected monthly salary."
+  },
+  {
+    "alert_id": "A15",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C015 expected_activity: Occasional wires $2,000-$5,000, EU counterparties",
+      "A15 wire debit $48,000 with counterparty in high-risk jurisdiction and no stated purpose",
+      "C015 prior_alerts: 2",
+      "A15 amount is far above expected wire range and inconsistent with profile under P-5"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "The $48,000 high-risk wire with no purpose is inconsistent with the expected $2,000-$5,000 EU wire profile and must be escalated."
+  },
+  {
+    "alert_id": "A16",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-3",
+    "evidence_fields": [
+      "A16 alert_rule_triggered: Watchlist name screening",
+      "A16 counterparty: Third-party sender, name fuzzy-matches watchlist entry 'Nikolay Sorokin'",
+      "C016 name: Nikolai Sorokin",
+      "A16 wire credit $19,750"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "The watchlist name match requires immediate escalation under P-3 and must never be cleared."
+  },
+  {
+    "alert_id": "A17",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-1",
+    "evidence_fields": [
+      "A17 cash deposit $15,600 exceeds $10,000 cash threshold",
+      "A17 counterparty: Unknown third party deposited on customer's behalf",
+      "C017 occupation: Unemployed (stated) with no regular income expected",
+      "C017 prior_alerts: 3"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "The over-$10,000 cash deposit by an unknown third party for an unemployed customer with prior alerts must be escalated."
+  },
+  {
+    "alert_id": "A18",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-1",
+    "evidence_fields": [
+      "A18 cash deposit $22,400 exceeds $10,000 cash threshold",
+      "A18 counterparty: Cash vehicle sale, no bill of sale on file",
+      "C018 expected_activity: Vehicle sale deposits $5,000-$20,000",
+      "C018 prior_alerts: 2"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "The over-$10,000 undocumented cash vehicle sale above the expected range with no bill of sale must be escalated."
+  },
+  {
+    "alert_id": "A19",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C019 occupation: Homemaker",
+      "C019 expected_activity: Household spending only expected",
+      "A19 wire credit $31,200 from unrelated third party inconsistent with stated profile",
+      "A19 fails P-5 profile consistency"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "The $31,200 unrelated third-party wire is inconsistent with a household-only homemaker profile and must be escalated."
+  },
+  {
+    "alert_id": "A20",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Shared linkers across C020-C023: same address 4820 Maple Ave, Dallas, TX",
+      "Shared linkers across C020-C023: same phone 214-555-0140",
+      "Shared linkers across C020-C023: same linked_accounts CHK-020 and SAV-020",
+      "Name variants across C020-C023: R. Alvarez, Rafael Alvarez, R Alvarez, Rafael A. Alvarez",
+      "Cash deposits just under $10,000: $9,200 on 2026-10-06, $9,450 on 2026-10-07, $9,700 on 2026-10-07, $9,850 on 2026-10-08 aggregating $38,200",
+      "A20 cash deposit $9,200 at Dallas Central, wages expected only ~$2,800/mo for C020"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "This just-under-$10,000 cash deposit is part of a same-person split pattern aggregating $38,200 and must be escalated as one structuring case."
+  },
+  {
+    "alert_id": "A21",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Shared linkers across C020-C023: same address 4820 Maple Ave, Dallas, TX",
+      "Shared linkers across C020-C023: same phone 214-555-0140",
+      "Shared linkers across C020-C023: same linked_accounts CHK-020 and SAV-020",
+      "Name variants across C020-C023: R. Alvarez, Rafael Alvarez, R Alvarez, Rafael A. Alvarez",
+      "Cash deposits just under $10,000: $9,200 on 2026-10-06, $9,450 on 2026-10-07, $9,700 on 2026-10-07, $9,850 on 2026-10-08 aggregating $38,200",
+      "A21 cash deposit $9,450 at Dallas Central, wages expected only ~$2,800/mo for C021"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "This just-under-$10,000 cash deposit is part of a same-person split pattern aggregating $38,200 and must be escalated as one structuring case."
+  },
+  {
+    "alert_id": "A22",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Shared linkers across C020-C023: same address 4820 Maple Ave, Dallas, TX",
+      "Shared linkers across C020-C023: same phone 214-555-0140",
+      "Shared linkers across C020-C023: same linked_accounts CHK-020 and SAV-020",
+      "Name variants across C020-C023: R. Alvarez, Rafael Alvarez, R Alvarez, Rafael A. Alvarez",
+      "Cash deposits just under $10,000: $9,200 on 2026-10-06, $9,450 on 2026-10-07, $9,700 on 2026-10-07, $9,850 on 2026-10-08 aggregating $38,200",
+      "A22 cash deposit $9,700 at Oak Cliff branch, wages expected only ~$2,800/mo for C022"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "This just-under-$10,000 cash deposit at a different branch is part of a same-person split pattern aggregating $38,200 and must be escalated as one structuring case."
+  },
+  {
+    "alert_id": "A23",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-2",
+    "evidence_fields": [
+      "Shared linkers across C020-C023: same address 4820 Maple Ave, Dallas, TX",
+      "Shared linkers across C020-C023: same phone 214-555-0140",
+      "Shared linkers across C020-C023: same linked_accounts CHK-020 and SAV-020",
+      "Name variants across C020-C023: R. Alvarez, Rafael Alvarez, R Alvarez, Rafael A. Alvarez",
+      "Cash deposits just under $10,000: $9,200 on 2026-10-06, $9,450 on 2026-10-07, $9,700 on 2026-10-07, $9,850 on 2026-10-08 aggregating $38,200",
+      "A23 cash deposit $9,850 at Oak Cliff branch, wages expected only ~$2,800/mo for C023"
+    ],
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "This just-under-$10,000 cash deposit is part of a same-person split pattern aggregating $38,200 and must be escalated as one structuring case."
+  },
+  {
+    "alert_id": "A24",
+    "disposition": "CLEAR",
+    "rule_cited": "P-5",
+    "evidence_fields": [
+      "C024 business: Laundromat chain (cash business)",
+      "C024 expected_activity: Daily cash deposits $7,000-$10,500 across 3 locations, documented since 2019, deposits often split by location/shift",
+      "A24 cash deposit $9,300 Location 2 shift deposit at Garland",
+      "Ledger C024: $9,100 Location 1 on 2026-07-28, $9,600 Location 2 on 2026-08-27, $9,450 Location 3 on 2026-09-26, all documented laundromat pattern since 2019",
+      "C024 is distinct from C020-C023 with address 1200 Jupiter Rd, Garland, phone 214-555-0124, account CHK-024"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "The $9,300 Location 2 shift deposit matches Golden Laundry's documented since-2019 multi-location cash pattern and is not part of the Alvarez case."
+  },
+  {
+    "alert_id": "A25",
+    "disposition": "ESCALATE",
+    "rule_cited": "P-4",
+    "evidence_fields": [
+      "C025 kyc_status: expired 2026-06-30",
+      "Ledger 2026-09-10 C025 ACH credit $4,210 wages with note KYC expired 2026-06-30",
+      "A25 ACH credit $4,380 from Employer + side jobs",
+      "C025 expected_activity: Wages and side-job payments $3,000-$5,000/mo"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Expired KYC requires escalation for information under P-4 without clearing or accusing the customer."
+  }
+]

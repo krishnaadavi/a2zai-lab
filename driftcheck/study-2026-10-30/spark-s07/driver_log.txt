@@ -1,0 +1,6 @@
+NOTE: MODEL_API_KEY not set — using the Secure Vault connection (custom.meta-model-api) via surrogate credential exchange.
+finish_reason: length
+
+--- STDERR ---
+ERROR: could not parse a decisions array from the model response: Expecting ',' delimiter: line 1 column 5466 (char 5465)
+Raw response saved to /home/hatch/workspace/a2zai-lab/drivers/last_raw_response.txt

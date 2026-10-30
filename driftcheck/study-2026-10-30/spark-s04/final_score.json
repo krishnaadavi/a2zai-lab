@@ -1,0 +1,12 @@
+{
+  "run": "spark-trial1-study-2026-10-30-s04",
+  "model": "muse-spark-1.3",
+  "subtotal_of_95": 91.8,
+  "cost_time_points": 5.0,
+  "total_of_100": 96.8,
+  "run_cost_usd": 0.0462,
+  "median_cost_usd": 0.0548,
+  "median_basis": "pinned to the published board median for comparability (DriftCheck watch re-run; board not repriced)",
+  "rule": "5 x min(1, median run cost / run cost), costs from published per-token rates",
+  "ratified": "Krish, 2026-10-26"
+}

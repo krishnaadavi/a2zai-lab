@@ -1,0 +1,777 @@
+{
+  "study": "DriftCheck hardening study \u2014 Trial #1 re-sittings",
+  "date": "2026-10-30",
+  "examiner_side_only": true,
+  "conditions": {
+    "driver": "drivers/meta_driver.py (same code path as the original runs and the Oct 28 DriftCheck run)",
+    "prompt_sources": [
+      "trial README contestant brief",
+      "task-pack/alerts.csv",
+      "task-pack/customers.json",
+      "task-pack/ledger_90d.csv",
+      "task-pack/policy_excerpt.md"
+    ],
+    "temperature": 0.2,
+    "max_tokens": 16000,
+    "output_path": "--no-schema (JSON-only instruction)",
+    "pinned_median_usd": 0.0548
+  },
+  "spark": {
+    "baseline_run": "spark-trial1-run1",
+    "baseline_dispositions": {
+      "A01": "CLEAR",
+      "A02": "CLEAR",
+      "A03": "CLEAR",
+      "A04": "CLEAR",
+      "A05": "CLEAR",
+      "A06": "CLEAR",
+      "A07": "CLEAR",
+      "A08": "CLEAR",
+      "A09": "CLEAR",
+      "A10": "CLEAR",
+      "A11": "CLEAR",
+      "A12": "CLEAR",
+      "A13": "CLEAR",
+      "A14": "CLEAR",
+      "A15": "MONITOR",
+      "A16": "ESCALATE",
+      "A17": "MONITOR",
+      "A18": "MONITOR",
+      "A19": "MONITOR",
+      "A20": "ESCALATE",
+      "A21": "ESCALATE",
+      "A22": "ESCALATE",
+      "A23": "ESCALATE",
+      "A24": "CLEAR",
+      "A25": "ESCALATE"
+    },
+    "attempted": 10,
+    "scored_count": 9,
+    "failed": [
+      {
+        "sitting": "s07",
+        "run_name": "spark-trial1-study-2026-10-30-s07",
+        "status": "FAILED",
+        "driver_exit_code": 1
+      }
+    ],
+    "sittings": [
+      {
+        "sitting": "s01",
+        "run_name": "spark-trial1-study-2026-10-30-s01",
+        "raw_of_95": 91.8,
+        "final_of_100": 95.7,
+        "cost_usd": 0.0697,
+        "prompt_tokens": 5936,
+        "completion_tokens": 14657,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "MONITOR",
+          "A16": "ESCALATE",
+          "A17": "MONITOR",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      },
+      {
+        "sitting": "s02",
+        "run_name": "spark-trial1-study-2026-10-30-s02",
+        "raw_of_95": 91.8,
+        "final_of_100": 96.2,
+        "cost_usd": 0.0619,
+        "prompt_tokens": 5936,
+        "completion_tokens": 12811,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "MONITOR",
+          "A16": "ESCALATE",
+          "A17": "MONITOR",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      },
+      {
+        "sitting": "s03",
+        "run_name": "spark-trial1-study-2026-10-30-s03",
+        "raw_of_95": 91.8,
+        "final_of_100": 96.8,
+        "cost_usd": 0.0539,
+        "prompt_tokens": 5936,
+        "completion_tokens": 10933,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "MONITOR",
+          "A16": "ESCALATE",
+          "A17": "MONITOR",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      },
+      {
+        "sitting": "s04",
+        "run_name": "spark-trial1-study-2026-10-30-s04",
+        "raw_of_95": 91.8,
+        "final_of_100": 96.8,
+        "cost_usd": 0.0462,
+        "prompt_tokens": 5936,
+        "completion_tokens": 9127,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "MONITOR",
+          "A16": "ESCALATE",
+          "A17": "MONITOR",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      },
+      {
+        "sitting": "s05",
+        "run_name": "spark-trial1-study-2026-10-30-s05",
+        "raw_of_95": 91.8,
+        "final_of_100": 96.4,
+        "cost_usd": 0.0597,
+        "prompt_tokens": 5936,
+        "completion_tokens": 12302,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "MONITOR",
+          "A16": "ESCALATE",
+          "A17": "MONITOR",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      },
+      {
+        "sitting": "s06",
+        "run_name": "spark-trial1-study-2026-10-30-s06",
+        "raw_of_95": 91.8,
+        "final_of_100": 96.8,
+        "cost_usd": 0.0418,
+        "prompt_tokens": 5936,
+        "completion_tokens": 8078,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "MONITOR",
+          "A16": "ESCALATE",
+          "A17": "MONITOR",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      },
+      {
+        "sitting": "s08",
+        "run_name": "spark-trial1-study-2026-10-30-s08",
+        "raw_of_95": 94.2,
+        "final_of_100": 99.2,
+        "cost_usd": 0.05,
+        "prompt_tokens": 5936,
+        "completion_tokens": 10024,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "ESCALATE",
+          "A16": "ESCALATE",
+          "A17": "ESCALATE",
+          "A18": "MONITOR",
+          "A19": "ESCALATE",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": [
+          "A15",
+          "A17",
+          "A19"
+        ]
+      },
+      {
+        "sitting": "s09",
+        "run_name": "spark-trial1-study-2026-10-30-s09",
+        "raw_of_95": 93.4,
+        "final_of_100": 98.3,
+        "cost_usd": 0.0559,
+        "prompt_tokens": 5936,
+        "completion_tokens": 11401,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "ESCALATE",
+          "A16": "ESCALATE",
+          "A17": "ESCALATE",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": [
+          "A15",
+          "A17"
+        ]
+      },
+      {
+        "sitting": "s10",
+        "run_name": "spark-trial1-study-2026-10-30-s10",
+        "raw_of_95": 91.8,
+        "final_of_100": 96.8,
+        "cost_usd": 0.0398,
+        "prompt_tokens": 5936,
+        "completion_tokens": 7630,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "MONITOR",
+          "A16": "ESCALATE",
+          "A17": "MONITOR",
+          "A18": "MONITOR",
+          "A19": "MONITOR",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      }
+    ],
+    "per_alert_distribution": {
+      "A01": {
+        "CLEAR": 9
+      },
+      "A02": {
+        "CLEAR": 9
+      },
+      "A03": {
+        "CLEAR": 9
+      },
+      "A04": {
+        "CLEAR": 9
+      },
+      "A05": {
+        "CLEAR": 9
+      },
+      "A06": {
+        "CLEAR": 9
+      },
+      "A07": {
+        "CLEAR": 9
+      },
+      "A08": {
+        "CLEAR": 9
+      },
+      "A09": {
+        "CLEAR": 9
+      },
+      "A10": {
+        "CLEAR": 9
+      },
+      "A11": {
+        "CLEAR": 9
+      },
+      "A12": {
+        "CLEAR": 9
+      },
+      "A13": {
+        "CLEAR": 9
+      },
+      "A14": {
+        "CLEAR": 9
+      },
+      "A15": {
+        "MONITOR": 7,
+        "ESCALATE": 2
+      },
+      "A16": {
+        "ESCALATE": 9
+      },
+      "A17": {
+        "MONITOR": 7,
+        "ESCALATE": 2
+      },
+      "A18": {
+        "MONITOR": 9
+      },
+      "A19": {
+        "MONITOR": 8,
+        "ESCALATE": 1
+      },
+      "A20": {
+        "ESCALATE": 9
+      },
+      "A21": {
+        "ESCALATE": 9
+      },
+      "A22": {
+        "ESCALATE": 9
+      },
+      "A23": {
+        "ESCALATE": 9
+      },
+      "A24": {
+        "CLEAR": 9
+      },
+      "A25": {
+        "ESCALATE": 9
+      }
+    },
+    "raw_scores": [
+      91.8,
+      91.8,
+      91.8,
+      91.8,
+      91.8,
+      91.8,
+      94.2,
+      93.4,
+      91.8
+    ],
+    "raw_mean": 92.24,
+    "raw_min": 91.8,
+    "raw_max": 94.2,
+    "total_cost_usd": 0.4789,
+    "costs": [
+      0.0697,
+      0.0619,
+      0.0539,
+      0.0462,
+      0.0597,
+      0.0418,
+      0.05,
+      0.0559,
+      0.0398
+    ]
+  },
+  "wonder": {
+    "baseline_run": "wonder-trial1-run1",
+    "baseline_dispositions": {
+      "A01": "CLEAR",
+      "A02": "CLEAR",
+      "A03": "CLEAR",
+      "A04": "CLEAR",
+      "A05": "CLEAR",
+      "A06": "CLEAR",
+      "A07": "CLEAR",
+      "A08": "CLEAR",
+      "A09": "CLEAR",
+      "A10": "CLEAR",
+      "A11": "CLEAR",
+      "A12": "CLEAR",
+      "A13": "CLEAR",
+      "A14": "CLEAR",
+      "A15": "ESCALATE",
+      "A16": "ESCALATE",
+      "A17": "ESCALATE",
+      "A18": "MONITOR",
+      "A19": "ESCALATE",
+      "A20": "ESCALATE",
+      "A21": "ESCALATE",
+      "A22": "ESCALATE",
+      "A23": "ESCALATE",
+      "A24": "CLEAR",
+      "A25": "ESCALATE"
+    },
+    "attempted": 3,
+    "scored_count": 3,
+    "failed": [],
+    "sittings": [
+      {
+        "sitting": "w01",
+        "run_name": "wonder-trial1-study-2026-10-30-w01",
+        "raw_of_95": 94.2,
+        "final_of_100": 95.3,
+        "cost_usd": 0.2525,
+        "prompt_tokens": 5936,
+        "completion_tokens": 11440,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "ESCALATE",
+          "A16": "ESCALATE",
+          "A17": "ESCALATE",
+          "A18": "MONITOR",
+          "A19": "ESCALATE",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      },
+      {
+        "sitting": "w02",
+        "run_name": "wonder-trial1-study-2026-10-30-w02",
+        "raw_of_95": 95.0,
+        "final_of_100": 96.4,
+        "cost_usd": 0.2019,
+        "prompt_tokens": 5936,
+        "completion_tokens": 8909,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "ESCALATE",
+          "A16": "ESCALATE",
+          "A17": "ESCALATE",
+          "A18": "ESCALATE",
+          "A19": "ESCALATE",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": [
+          "A18"
+        ]
+      },
+      {
+        "sitting": "w03",
+        "run_name": "wonder-trial1-study-2026-10-30-w03",
+        "raw_of_95": 94.2,
+        "final_of_100": 95.2,
+        "cost_usd": 0.2857,
+        "prompt_tokens": 5936,
+        "completion_tokens": 13098,
+        "dispositions": {
+          "A01": "CLEAR",
+          "A02": "CLEAR",
+          "A03": "CLEAR",
+          "A04": "CLEAR",
+          "A05": "CLEAR",
+          "A06": "CLEAR",
+          "A07": "CLEAR",
+          "A08": "CLEAR",
+          "A09": "CLEAR",
+          "A10": "CLEAR",
+          "A11": "CLEAR",
+          "A12": "CLEAR",
+          "A13": "CLEAR",
+          "A14": "CLEAR",
+          "A15": "ESCALATE",
+          "A16": "ESCALATE",
+          "A17": "ESCALATE",
+          "A18": "MONITOR",
+          "A19": "ESCALATE",
+          "A20": "ESCALATE",
+          "A21": "ESCALATE",
+          "A22": "ESCALATE",
+          "A23": "ESCALATE",
+          "A24": "CLEAR",
+          "A25": "ESCALATE"
+        },
+        "flips_vs_published_baseline": []
+      }
+    ],
+    "per_alert_distribution": {
+      "A01": {
+        "CLEAR": 3
+      },
+      "A02": {
+        "CLEAR": 3
+      },
+      "A03": {
+        "CLEAR": 3
+      },
+      "A04": {
+        "CLEAR": 3
+      },
+      "A05": {
+        "CLEAR": 3
+      },
+      "A06": {
+        "CLEAR": 3
+      },
+      "A07": {
+        "CLEAR": 3
+      },
+      "A08": {
+        "CLEAR": 3
+      },
+      "A09": {
+        "CLEAR": 3
+      },
+      "A10": {
+        "CLEAR": 3
+      },
+      "A11": {
+        "CLEAR": 3
+      },
+      "A12": {
+        "CLEAR": 3
+      },
+      "A13": {
+        "CLEAR": 3
+      },
+      "A14": {
+        "CLEAR": 3
+      },
+      "A15": {
+        "ESCALATE": 3
+      },
+      "A16": {
+        "ESCALATE": 3
+      },
+      "A17": {
+        "ESCALATE": 3
+      },
+      "A18": {
+        "MONITOR": 2,
+        "ESCALATE": 1
+      },
+      "A19": {
+        "ESCALATE": 3
+      },
+      "A20": {
+        "ESCALATE": 3
+      },
+      "A21": {
+        "ESCALATE": 3
+      },
+      "A22": {
+        "ESCALATE": 3
+      },
+      "A23": {
+        "ESCALATE": 3
+      },
+      "A24": {
+        "CLEAR": 3
+      },
+      "A25": {
+        "ESCALATE": 3
+      }
+    },
+    "raw_scores": [
+      94.2,
+      95.0,
+      94.2
+    ],
+    "raw_mean": 94.47,
+    "raw_min": 94.2,
+    "raw_max": 95.0,
+    "total_cost_usd": 0.7401,
+    "costs": [
+      0.2525,
+      0.2019,
+      0.2857
+    ]
+  },
+  "key_alerts_spark": {
+    "A15": {
+      "counts": {
+        "MONITOR": 7,
+        "ESCALATE": 2
+      },
+      "escalate": 2,
+      "monitor": 7,
+      "of_scored": 9
+    },
+    "A17": {
+      "counts": {
+        "MONITOR": 7,
+        "ESCALATE": 2
+      },
+      "escalate": 2,
+      "monitor": 7,
+      "of_scored": 9
+    },
+    "A19": {
+      "counts": {
+        "MONITOR": 8,
+        "ESCALATE": 1
+      },
+      "escalate": 1,
+      "monitor": 8,
+      "of_scored": 9
+    }
+  },
+  "total_study_cost_usd": 1.219
+}

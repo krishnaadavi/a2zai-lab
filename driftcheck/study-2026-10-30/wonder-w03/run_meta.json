@@ -1,0 +1,11 @@
+{
+  "trial": "trial1-structuring-split",
+  "model": "muse-wonder-1.0",
+  "agent": "Muse Wonder (Meta Model API)",
+  "model_wall_time_s": 96.2,
+  "prompt_tokens": 5936,
+  "completion_tokens": 13098,
+  "total_tokens": 19034,
+  "est_cost_usd": 0.2857,
+  "note": "wall time covers API call(s) plus local parse; cost from published per-token rates"
+}

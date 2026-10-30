@@ -1,0 +1,11 @@
+DRY RUN — no network call made.
+Trial: trial1-structuring-split
+Prompt assembled from exactly these contestant-visible sources:
+  - trial README — contestant brief (operator folder map excluded): /home/hatch/workspace/a2zai-lab/trial1-structuring-split/README.md (4313 chars)
+  - task-pack/alerts.csv: /home/hatch/workspace/a2zai-lab/trial1-structuring-split/task-pack/alerts.csv (2489 chars)
+  - task-pack/customers.json: /home/hatch/workspace/a2zai-lab/trial1-structuring-split/task-pack/customers.json (9082 chars)
+  - task-pack/ledger_90d.csv: /home/hatch/workspace/a2zai-lab/trial1-structuring-split/task-pack/ledger_90d.csv (2889 chars)
+  - task-pack/policy_excerpt.md: /home/hatch/workspace/a2zai-lab/trial1-structuring-split/task-pack/policy_excerpt.md (811 chars)
+System prompt: 507 chars (driver boilerplate)
+Total prompt: 20271 chars, ~5068 tokens (chars/4 estimate)
+Written to: /home/hatch/workspace/a2zai-lab/drivers/last_prompt.txt

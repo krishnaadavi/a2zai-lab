@@ -1,0 +1,14 @@
+{
+  "arm": "wonder",
+  "sitting": "w02",
+  "run_name": "wonder-trial1-study-2026-10-30-w02",
+  "model": "muse-wonder-1.0",
+  "started_utc": "2026-10-30T14:03:51Z",
+  "driver_exit_code": 0,
+  "wall_s": 58.5,
+  "attest_output": "wonder-trial1-study-2026-10-30-w02: final 96.4  attestation 249cebaf06ef336cf07e70f706d2396072c6198ec5cb37bb33461518b7e8c578",
+  "status": "SCORED",
+  "raw_of_95": 95.0,
+  "final_of_100": 96.4,
+  "cost_usd": 0.2019
+}

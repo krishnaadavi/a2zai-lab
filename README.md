@@ -71,6 +71,23 @@ Exit code 0 means every attested file matches; a mismatch fails and names
 the file. How the scheme works — and what it does and doesn't prove — is in
 [ATTESTATION.md](ATTESTATION.md).
 
+## DriftCheck
+
+The Lab re-seats published entrants on the same exams, under the same
+conditions, and records what changes — a model can change after its score
+is published. A single re-sitting is an observation, not a verdict: on
+Oct 28 one Spark re-run flipped three alerts against its published
+baseline, so on Oct 30 the watch ran a hardening study — Spark ×10
+sittings, Wonder ×3 as a control, $1.2190 in total. Verdict: **no
+persistent drift**. Seven of nine scored Spark sittings reproduced the
+published board exactly, and the flip is a sporadic draw (ESCALATE counts:
+A15 2/9, A17 2/9, A19 1/9). Drift verdicts now come only from
+distributions over repeated sittings, against thresholds set before the
+runs. The full record is in [driftcheck/LEDGER.md](driftcheck/LEDGER.md);
+the study report and per-sitting artifacts are in
+`driftcheck/study-2026-10-30/` and verify with the same receipt tool
+above.
+
 ## Results — Trial #1
 
 | Run | Model | Score | Notes |

@@ -1,0 +1,16 @@
+{
+  "attestation_version": 1,
+  "type": "scored",
+  "run": "wonder-trial1-study-2026-10-30-w03",
+  "model": "muse-wonder-1.0",
+  "status": "SCORED",
+  "final_score": 95.2,
+  "files": {
+    "decisions.json": "3f4555b9a0f14bacbb1a9b8c6ca6fa55db00f6f45fd232ec435074750f6e1272",
+    "score.json": "c2621912028ad22dfe6230f9343041b89ddfb0b2cb97a166ee2d7d0acce56244",
+    "final_score.json": "8223a0797b929e5c5612f26206f8a9ee686f5598d9c4471681708a7dd2a19089",
+    "run_meta.json": "61ab38f11dd984ec023058b82be65d916c7661056a99d27bdc3c9c409f27b678"
+  },
+  "attestation_hash": "360f2d2df6f3a37e763e19aaf1f95cf8c4d6425fb22e13f6f07b9a807be49fee",
+  "timestamp": "2026-10-30T14:06:26.462701+00:00"
+}

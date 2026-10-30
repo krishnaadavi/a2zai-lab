@@ -1,0 +1,12 @@
+{
+  "arm": "spark",
+  "sitting": "s07",
+  "run_name": "spark-trial1-study-2026-10-30-s07",
+  "model": "muse-spark-1.3",
+  "started_utc": "2026-10-30T13:59:16Z",
+  "driver_exit_code": 1,
+  "wall_s": 73.6,
+  "status": "FAILED",
+  "raw_response_preserved": true,
+  "log_tail": "NOTE: MODEL_API_KEY not set \u2014 using the Secure Vault connection (custom.meta-model-api) via surrogate credential exchange.\nfinish_reason: length\nERROR: could not parse a decisions array from the model response: Expecting ',' delimiter: line 1 column 5466 (char 5465)\nRaw response saved to /home/hatch/workspace/a2zai-lab/drivers/last_raw_response.txt\n"
+}

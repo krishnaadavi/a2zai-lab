@@ -1,0 +1,12 @@
+{
+  "subtotal_of_95": 95.0,
+  "cost_time_5pts": "UNSCORED (needs median across runs)",
+  "components": {
+    "disposition_40": 40.0,
+    "trap_20": 20.0,
+    "citation_15": 15.0,
+    "evidence_10": 10.0,
+    "calibration_10": 10
+  },
+  "hard_gates_triggered": []
+}

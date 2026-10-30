@@ -1,0 +1,16 @@
+{
+  "attestation_version": 1,
+  "type": "scored",
+  "run": "spark-trial1-study-2026-10-30-s05",
+  "model": "muse-spark-1.3",
+  "status": "SCORED",
+  "final_score": 96.4,
+  "files": {
+    "decisions.json": "4d4b8ed3321df9c9db52512322093a460c5f032b41f15455eb9eb3267a8abf81",
+    "score.json": "82be441012787ebdb74b09bbc304fbfe50c0a79cbfa735cf4426576e3500a1e9",
+    "final_score.json": "2e910b78ffe729228530f3dfcf416b72f0f25c106b1bd3c108f69c4673aed730",
+    "run_meta.json": "5f5f0114fb00f95153c0ecb7c996ce116fb9801a415a46f7a23bdf0c48d5437c"
+  },
+  "attestation_hash": "9895db20e59055634a6e8d04121bff8f93a009d00e953e85bd4f7c0c3646722d",
+  "timestamp": "2026-10-30T13:58:42.140477+00:00"
+}

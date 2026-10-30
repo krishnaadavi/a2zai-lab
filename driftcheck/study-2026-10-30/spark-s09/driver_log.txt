@@ -1,0 +1,36 @@
+NOTE: MODEL_API_KEY not set — using the Secure Vault connection (custom.meta-model-api) via surrogate credential exchange.
+finish_reason: stop
+Scoring with runner.py (agent=Muse Spark (Meta Model API), model=muse-spark-1.3, tokens=17337) ...
+{
+  "ok": true,
+  "agent": "Muse Spark (Meta Model API)",
+  "score": {
+    "subtotal_of_95": 93.4,
+    "cost_time_5pts": "UNSCORED (needs median across runs)",
+    "components": {
+      "disposition_40": 38.4,
+      "trap_20": 20.0,
+      "citation_15": 15.0,
+      "evidence_10": 10.0,
+      "calibration_10": 10
+    },
+    "hard_gates_triggered": []
+  },
+  "trace": "runs/spark-trial1-study-2026-10-30-s09/trace.json"
+}
+Run meta:         wall=46.3s est_cost=$0.0559
+
+===== RUN COMPLETE =====
+Trial:            trial1-structuring-split
+Model:            muse-spark-1.3
+Run directory:    /home/hatch/workspace/a2zai-lab/trial1-structuring-split/harness/runs/spark-trial1-study-2026-10-30-s09
+Tokens (API):     prompt=5936 completion=11401 total=17337
+Score:            93.4/95 (cost/time: UNSCORED (needs median across runs))
+  disposition_40: 38.4
+  trap_20: 20.0
+  citation_15: 15.0
+  evidence_10: 10.0
+  calibration_10: 10
+Hard gates hit:   none
+
+--- STDERR ---

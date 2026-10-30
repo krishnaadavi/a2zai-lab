@@ -1,0 +1,14 @@
+{
+  "arm": "spark",
+  "sitting": "s08",
+  "run_name": "spark-trial1-study-2026-10-30-s08",
+  "model": "muse-spark-1.3",
+  "started_utc": "2026-10-30T14:00:29Z",
+  "driver_exit_code": 0,
+  "wall_s": 43.7,
+  "attest_output": "spark-trial1-study-2026-10-30-s08: final 99.2  attestation 94c133a7117d6150e07ea8532dbf09bae299000da949e26f040d4c5f7dad644c",
+  "status": "SCORED",
+  "raw_of_95": 94.2,
+  "final_of_100": 99.2,
+  "cost_usd": 0.05
+}

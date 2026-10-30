@@ -1,0 +1,36 @@
+NOTE: MODEL_API_KEY not set — using the Secure Vault connection (custom.meta-model-api) via surrogate credential exchange.
+finish_reason: stop
+Scoring with runner.py (agent=Muse Wonder (Meta Model API), model=muse-wonder-1.0, tokens=17376) ...
+{
+  "ok": true,
+  "agent": "Muse Wonder (Meta Model API)",
+  "score": {
+    "subtotal_of_95": 94.2,
+    "cost_time_5pts": "UNSCORED (needs median across runs)",
+    "components": {
+      "disposition_40": 39.2,
+      "trap_20": 20.0,
+      "citation_15": 15.0,
+      "evidence_10": 10.0,
+      "calibration_10": 10
+    },
+    "hard_gates_triggered": []
+  },
+  "trace": "runs/wonder-trial1-study-2026-10-30-w01/trace.json"
+}
+Run meta:         wall=78.9s est_cost=$0.2525
+
+===== RUN COMPLETE =====
+Trial:            trial1-structuring-split
+Model:            muse-wonder-1.0
+Run directory:    /home/hatch/workspace/a2zai-lab/trial1-structuring-split/harness/runs/wonder-trial1-study-2026-10-30-w01
+Tokens (API):     prompt=5936 completion=11440 total=17376
+Score:            94.2/95 (cost/time: UNSCORED (needs median across runs))
+  disposition_40: 39.2
+  trap_20: 20.0
+  citation_15: 15.0
+  evidence_10: 10.0
+  calibration_10: 10
+Hard gates hit:   none
+
+--- STDERR ---

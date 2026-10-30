@@ -1,0 +1,11 @@
+{
+  "trial": "trial1-structuring-split",
+  "model": "muse-spark-1.3",
+  "agent": "Muse Spark (Meta Model API)",
+  "model_wall_time_s": 43.1,
+  "prompt_tokens": 5936,
+  "completion_tokens": 9127,
+  "total_tokens": 15063,
+  "est_cost_usd": 0.0462,
+  "note": "wall time covers API call(s) plus local parse; cost from published per-token rates"
+}
