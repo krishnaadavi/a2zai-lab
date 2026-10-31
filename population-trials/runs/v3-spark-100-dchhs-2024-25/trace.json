@@ -1,0 +1,3201 @@
+{
+ "params": {
+  "n_agents": 100,
+  "seed_ili_pct": 0.028,
+  "n_weeks": 15,
+  "base_transmission": 0.002,
+  "reporting_fraction": 0.3,
+  "seed": 42,
+  "import_rate": 1.0,
+  "waning_weeks": 8,
+  "intervention": null,
+  "model": "<__main__.SparkPlannerV3 object at 0x72c798a238f0>"
+ },
+ "design": {
+  "information_set": {
+   "target_seed_window_epiweeks": [
+    202440,
+    202441,
+    202442,
+    202443
+   ],
+   "target_seed_window_values": [
+    0.035,
+    0.038,
+    0.082,
+    0.028
+   ],
+   "past_seasons_full_curves": [
+    "2018-19",
+    "2022-23",
+    "2023-24"
+   ],
+   "holdout": "2024-25 observed weeks after the seed window \u2014 read by nobody (not the fit, not the planner); used only to score"
+  },
+  "flagged_points_dropped_as_gaps": {
+   "2018-19": [],
+   "2022-23": [
+    {
+     "epiweek": 202305,
+     "cdc_week": 5,
+     "plotted_pct": 0.002
+    },
+    {
+     "epiweek": 202311,
+     "cdc_week": 11,
+     "plotted_pct": 0.0
+    }
+   ],
+   "2023-24": [
+    {
+     "epiweek": 202347,
+     "cdc_week": 47,
+     "plotted_pct": 0.0
+    },
+    {
+     "epiweek": 202352,
+     "cdc_week": 52,
+     "plotted_pct": 0.0
+    },
+    {
+     "epiweek": 202411,
+     "cdc_week": 11,
+     "plotted_pct": 0.0
+    }
+   ],
+   "2024-25": [
+    {
+     "epiweek": 202511,
+     "cdc_week": 11,
+     "plotted_pct": 0.0
+    }
+   ]
+  },
+  "grid_convention": "one sim step = one reported week, in file order; no-report gaps are never filled"
+ },
+ "fit": {
+  "per_season": {
+   "2018-19": {
+    "best_base_transmission": 0.002,
+    "sse": 1.658959,
+    "top5": [
+     {
+      "base_transmission": 0.002,
+      "sse": 1.658959
+     },
+     {
+      "base_transmission": 0.003,
+      "sse": 1.658959
+     },
+     {
+      "base_transmission": 0.004,
+      "sse": 1.658959
+     },
+     {
+      "base_transmission": 0.005,
+      "sse": 2.778559
+     },
+     {
+      "base_transmission": 0.006,
+      "sse": 2.993359
+     }
+    ],
+    "grid_size": 59,
+    "season_weeks_fit": 27
+   },
+   "2022-23": {
+    "best_base_transmission": 0.002,
+    "sse": 1.480643,
+    "top5": [
+     {
+      "base_transmission": 0.002,
+      "sse": 1.480643
+     },
+     {
+      "base_transmission": 0.003,
+      "sse": 1.480643
+     },
+     {
+      "base_transmission": 0.004,
+      "sse": 1.480643
+     },
+     {
+      "base_transmission": 0.005,
+      "sse": 2.680643
+     },
+     {
+      "base_transmission": 0.006,
+      "sse": 2.891843
+     }
+    ],
+    "grid_size": 59,
+    "season_weeks_fit": 25
+   },
+   "2023-24": {
+    "best_base_transmission": 0.002,
+    "sse": 1.479875,
+    "top5": [
+     {
+      "base_transmission": 0.002,
+      "sse": 1.479875
+     },
+     {
+      "base_transmission": 0.003,
+      "sse": 1.479875
+     },
+     {
+      "base_transmission": 0.004,
+      "sse": 1.479875
+     },
+     {
+      "base_transmission": 0.005,
+      "sse": 2.660075
+     },
+     {
+      "base_transmission": 0.006,
+      "sse": 2.803475
+     }
+    ],
+    "grid_size": 59,
+    "season_weeks_fit": 25
+   }
+  },
+  "beta_v3_median": 0.002,
+  "objective": "per past season: SSE of kernel sim vs the season's full remaining curve (mock behavior as fitting instrument, seeded from the season's first observed week); beta_v3 = median of the per-season winners",
+  "fit_data": "past seasons only (2018-19, 2022-23, 2023-24) \u2014 the 2024-25 holdout was not read by the fit"
+ },
+ "weeks": [
+  {
+   "week": 0,
+   "new_cases": 1,
+   "prevalence": 0.01,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.979,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.906,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.977,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.005,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.119,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.152,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.908,
+      "attend_school": true,
+      "care_seek": 0.75
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.804,
+      "attend_school": true,
+      "care_seek": 0.75
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 0,
+      "local_ili_pct": 0.028,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.088,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 1,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.008,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.978,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.664,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.022,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.066,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.852,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.683,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.962,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 1,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.027,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.036,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.182,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.058,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.943,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.837,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.687,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.665,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.756,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 2,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.852,
+      "attend_school": false,
+      "care_seek": 0.37
+     }
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.942,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.86,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.538,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.754,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.931,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.052,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.772,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.835,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 3,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.898,
+      "attend_school": true,
+      "care_seek": 0.37
+     }
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.897,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.981,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.282,
+      "attend_school": false,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.067,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.993,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.2,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.781,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.537,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 4,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.145,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.047,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.833,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.99,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.049,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.843,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.057,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.859,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.784,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 5,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.019,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.965,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.864,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.2,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.976,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.943,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.824,
+      "attend_school": false,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.077,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.74,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 6,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.93,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.837,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.794,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.704,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.868,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.913,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.872,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.82,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.761,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 7,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.047,
+      "attend_school": true,
+      "care_seek": 0.36
+     }
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.846,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.086,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.044,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.997,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.959,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.124,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.762,
+      "attend_school": true,
+      "care_seek": 0.75
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.615,
+      "attend_school": true,
+      "care_seek": 0.75
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 8,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.882,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.728,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.896,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.778,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.156,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.977,
+      "attend_school": false,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.951,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.897,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.688,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 9,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.775,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.98,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.058,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.743,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.965,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.099,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.888,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.628,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.792,
+      "attend_school": true,
+      "care_seek": 0.78
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 10,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.916,
+      "attend_school": true,
+      "care_seek": 0.38
+     }
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.906,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.017,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.949,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.073,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.851,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.828,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.55,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.868,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 11,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.092,
+      "attend_school": true,
+      "care_seek": 0.38
+     }
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.827,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.826,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.989,
+      "attend_school": true,
+      "care_seek": 0.6
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.915,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.983,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.948,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.061,
+      "attend_school": true,
+      "care_seek": 0.77
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.047,
+      "attend_school": true,
+      "care_seek": 0.77
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 12,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 1.002,
+      "attend_school": true,
+      "care_seek": 0.35
+     }
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.979,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.702,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.863,
+      "attend_school": true,
+      "care_seek": 0.55
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.928,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.87,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.873,
+      "attend_school": true,
+      "care_seek": 0.4
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.75,
+      "attend_school": true,
+      "care_seek": 0.77
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.677,
+      "attend_school": true,
+      "care_seek": 0.77
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 13,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.821,
+      "attend_school": true,
+      "care_seek": 0.37
+     }
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "new_cases": 1,
+   "prevalence": 0.0,
+   "sim_ili_pct": 0.3,
+   "sample_decisions": [
+    {
+     "agent": 0,
+     "cohort": "school_household",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.729,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 12,
+     "cohort": "school_household",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.876,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 24,
+     "cohort": "school_household",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.861,
+      "attend_school": true,
+      "care_seek": 0.58
+     }
+    },
+    {
+     "agent": 36,
+     "cohort": "working_adult",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.955,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 48,
+     "cohort": "working_adult",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.858,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 60,
+     "cohort": "working_adult",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.962,
+      "attend_school": true,
+      "care_seek": 0.42
+     }
+    },
+    {
+     "agent": 72,
+     "cohort": "elder",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.741,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 84,
+     "cohort": "elder",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.889,
+      "attend_school": true,
+      "care_seek": 0.8
+     }
+    },
+    {
+     "agent": 96,
+     "cohort": "essential_worker",
+     "card": {
+      "week": 14,
+      "local_ili_pct": 0.3,
+      "school_open": true
+     },
+     "decision": {
+      "contact_factor": 0.92,
+      "attend_school": true,
+      "care_seek": 0.38
+     }
+    }
+   ]
+  }
+ ],
+ "planner_trace": [
+  {
+   "week": 0,
+   "cohort": "school_household",
+   "card": {
+    "week": 0,
+    "local_ili_pct": 0.028,
+    "prevalence_pct": 1.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 1.0,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.98,
+    "care_seek": 0.55,
+    "rationale": "Absences at 0.028% are within the normal fall 0-0.15% range with schools open so no behavior change is warranted."
+   }
+  },
+  {
+   "week": 0,
+   "cohort": "working_adult",
+   "card": {
+    "week": 0,
+    "local_ili_pct": 0.028,
+    "prevalence_pct": 1.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 1.0,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.98,
+    "care_seek": 0.4,
+    "rationale": "Absence ILI at 0.028% remains within normal fall range with schools open so working adults maintain baseline contacts and attendance."
+   }
+  },
+  {
+   "week": 0,
+   "cohort": "elder",
+   "card": {
+    "week": 0,
+    "local_ili_pct": 0.028,
+    "prevalence_pct": 1.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.98,
+    "care_seek": 0.75,
+    "rationale": "Early-season ILI remains very low at 0.028% so elders continue near-normal activity with baseline care-seeking."
+   }
+  },
+  {
+   "week": 0,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 0,
+    "local_ili_pct": 0.028,
+    "prevalence_pct": 1.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 1.0,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.35,
+    "rationale": "With very low ILI at 0.028% in week 44 essential workers maintain near-baseline contacts and school attendance with baseline care-seeking."
+   }
+  },
+  {
+   "week": 1,
+   "cohort": "school_household",
+   "card": {
+    "week": 1,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.97,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.96,
+    "care_seek": 0.58,
+    "rationale": "Absences are elevated for fall but pool prevalence is zero and schools are open so near-normal contacts and attendance with baseline care-seeking is appropriate"
+   }
+  },
+  {
+   "week": 1,
+   "cohort": "working_adult",
+   "card": {
+    "week": 1,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.98,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.95,
+    "care_seek": 0.4,
+    "rationale": "With schools open and zero pool prevalence despite elevated 0.30% absences, working adults stay near baseline with minimal precaution."
+   }
+  },
+  {
+   "week": 1,
+   "cohort": "elder",
+   "card": {
+    "week": 1,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.85,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.8,
+    "rationale": "Local ILI at 0.30% is double typical fall levels and near historic peaks so cautious elders modestly reduce contacts and raise care-seeking while attendance remains high."
+   }
+  },
+  {
+   "week": 1,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 1,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 1.0,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.98,
+    "care_seek": 0.35,
+    "rationale": "At 0.30% absences above typical fall levels but still low absolute with zero pool prevalence and schools open, essential workers stay near baseline contacts and attendance."
+   }
+  },
+  {
+   "week": 2,
+   "cohort": "school_household",
+   "card": {
+    "week": 2,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.98,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.975,
+    "care_seek": 0.55,
+    "rationale": "Week 46 absence at 0.30% is high for fall but pool prevalence is zero and schools remain open so school households stay near baseline."
+   }
+  },
+  {
+   "week": 2,
+   "cohort": "working_adult",
+   "card": {
+    "week": 2,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.95,
+    "care_seek": 0.42,
+    "rationale": "Community ILI at 0.30% exceeds typical fall range but pool prevalence is zero and schools remain open so working adults maintain near-normal contacts and attendance with baseline care-seeking."
+   }
+  },
+  {
+   "week": 2,
+   "cohort": "elder",
+   "card": {
+    "week": 2,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.75,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.8,
+    "rationale": "With week 45 at 0.30% double the typical fall ceiling and matching prior peaks, risk-aware elders trim contacts slightly while keeping high care-seeking."
+   }
+  },
+  {
+   "week": 2,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 2,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.97,
+    "care_seek": 0.37,
+    "rationale": "Local ILI at 0.30% exceeds typical fall levels but absolute risk remains low and essential work limits distancing while schools stay open."
+   }
+  },
+  {
+   "week": 3,
+   "cohort": "school_household",
+   "card": {
+    "week": 3,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.9,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.92,
+    "care_seek": 0.6,
+    "rationale": "Last week 0.30% exceeds typical fall 0.00-0.15% and matches a prior seasonal peak, warranting modest caution while schools stay open and pool prevalence is zero."
+   }
+  },
+  {
+   "week": 3,
+   "cohort": "working_adult",
+   "card": {
+    "week": 3,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.4,
+    "rationale": "0.30% absences exceeds typical fall 0.00-0.15% suggesting early-season risk like 2022-23, but with 0.0% pool prevalence, open schools and work constraints working adults maintain near-baseline contacts and attendance with baseline care-seek"
+   }
+  },
+  {
+   "week": 3,
+   "cohort": "elder",
+   "card": {
+    "week": 3,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.85,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.78,
+    "rationale": "Community ILI at 0.30% is unusually high for week 47 so vulnerable elders modestly reduce contacts while maintaining care-seeking with schools open and no pool illness."
+   }
+  },
+  {
+   "week": 3,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 3,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.94,
+    "care_seek": 0.37,
+    "rationale": "With week 46 absences at 0.30% above typical fall range yet zero prevalence in pool, essential workers maintain near-baseline contacts and attendance with only slight caution."
+   }
+  },
+  {
+   "week": 4,
+   "cohort": "school_household",
+   "card": {
+    "week": 4,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.97,
+    "care_seek": 0.58,
+    "rationale": "Local ILI absences at 0.30% exceed typical fall 0.00-0.15% levels but with zero pool prevalence and schools open behavior stays near baseline with slight caution."
+   }
+  },
+  {
+   "week": 4,
+   "cohort": "working_adult",
+   "card": {
+    "week": 4,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 1.0,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "With school ILI absences elevated at 0.30% but zero prevalence in the pool and schools open, working adults show no precautionary change from baseline."
+   }
+  },
+  {
+   "week": 4,
+   "cohort": "elder",
+   "card": {
+    "week": 4,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.75,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.78,
+    "rationale": "Elevated school ILI at recent peak levels prompts cautious contact reduction while maintaining high care-seeking in vulnerable elders."
+   }
+  },
+  {
+   "week": 4,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 4,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.97,
+    "care_seek": 0.35,
+    "rationale": "With local ILI elevated at 0.30% but zero cohort prevalence and essential work constraints, near-baseline mixing and attendance with baseline care-seeking is warranted."
+   }
+  },
+  {
+   "week": 5,
+   "cohort": "school_household",
+   "card": {
+    "week": 5,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.97,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.97,
+    "care_seek": 0.58,
+    "rationale": "Week 50 ILI at 0.30% is elevated versus typical fall 0.00-0.15% but absolute risk remains low with open schools and zero pool prevalence so behavior stays near baseline with slight caution."
+   }
+  },
+  {
+   "week": 5,
+   "cohort": "working_adult",
+   "card": {
+    "week": 5,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "With absenteeism elevated at 0.30% but zero prevalence in pool and schools open, working adults maintain near-normal contacts and attendance with baseline care-seeking."
+   }
+  },
+  {
+   "week": 5,
+   "cohort": "elder",
+   "card": {
+    "week": 5,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.8,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 1.0,
+    "care_seek": 0.78,
+    "rationale": "Community ILI at 0.30% equals a prior-season peak and exceeds normal fall levels, so vulnerable elders modestly trim contacts while maintaining high care-seeking despite zero pool prevalence."
+   }
+  },
+  {
+   "week": 5,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 5,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.98,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.95,
+    "care_seek": 0.35,
+    "rationale": "Essential workers maintain near-baseline contacts and attendance with baseline care-seeking because immediate pool prevalence is zero despite elevated community ILI."
+   }
+  },
+  {
+   "week": 6,
+   "cohort": "school_household",
+   "card": {
+    "week": 6,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.95,
+    "care_seek": 0.55,
+    "rationale": "With local ILI absences elevated at 0.30% but zero prevalence in pool and schools open, maintain near-baseline contacts and attendance with baseline care-seeking."
+   }
+  },
+  {
+   "week": 6,
+   "cohort": "working_adult",
+   "card": {
+    "week": 6,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "Elevated 0.30% ILI with zero pool prevalence and open schools warrants near-normal contacts and attendance with baseline care-seeking for working adults in holiday week 51."
+   }
+  },
+  {
+   "week": 6,
+   "cohort": "elder",
+   "card": {
+    "week": 6,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.82,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.96,
+    "care_seek": 0.78,
+    "rationale": "Local ILI at 0.30% matches a prior seasonal peak so vulnerable elders modestly trim contacts and stay care-seeking while schools remain open"
+   }
+  },
+  {
+   "week": 6,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 6,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.98,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.95,
+    "care_seek": 0.35,
+    "rationale": "With zero pool prevalence and essential work constraints, behavior stays near baseline despite elevated 0.30% community absences."
+   }
+  },
+  {
+   "week": 7,
+   "cohort": "school_household",
+   "card": {
+    "week": 7,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.92,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.97,
+    "care_seek": 0.58,
+    "rationale": "Local ILI at 0.30% matches prior peak levels during the post-New Year rise with schools open and zero pool prevalence so maintain near-baseline contacts and attendance with slightly elevated care-seeking."
+   }
+  },
+  {
+   "week": 7,
+   "cohort": "working_adult",
+   "card": {
+    "week": 7,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "With local ILI at 0.30% near historical peak levels but zero prevalence in this cohort and schools open, maintain near-normal contacts and attendance at baseline care-seeking."
+   }
+  },
+  {
+   "week": 7,
+   "cohort": "elder",
+   "card": {
+    "week": 7,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.8,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.9,
+    "care_seek": 0.8,
+    "rationale": "Elders modestly reduce contacts and maintain high care-seeking as community ILI sits at prior seasonal peak levels in early January despite zero cases in their immediate pool."
+   }
+  },
+  {
+   "week": 7,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 7,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.94,
+    "care_seek": 0.36,
+    "rationale": "Essential workers show limited contact reduction at 0.30% ILI with zero pool prevalence while maintaining high school attendance due to work constraints."
+   }
+  },
+  {
+   "week": 8,
+   "cohort": "school_household",
+   "card": {
+    "week": 8,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.98,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.96,
+    "care_seek": 0.55,
+    "rationale": "With schools open and no illness seen in the immediate pool despite elevated county ILI, families maintain near-normal contacts and attendance with baseline care seeking"
+   }
+  },
+  {
+   "week": 8,
+   "cohort": "working_adult",
+   "card": {
+    "week": 8,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "Local ILI is at prior-season peak level but pool prevalence is zero so maintain near-baseline contacts and attendance with baseline care-seeking"
+   }
+  },
+  {
+   "week": 8,
+   "cohort": "elder",
+   "card": {
+    "week": 8,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.75,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 1.0,
+    "care_seek": 0.75,
+    "rationale": "Local absences at 0.30 percent match last season peak level heading into week 4-6 peak window so elders modestly trim contacts while maintaining baseline care-seeking"
+   }
+  },
+  {
+   "week": 8,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 8,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.97,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.97,
+    "care_seek": 0.35,
+    "rationale": "Essential workers sustain near-baseline contacts and school attendance with baseline care-seeking since pool prevalence is zero despite community ILI at 0.30% near historical peak."
+   }
+  },
+  {
+   "week": 9,
+   "cohort": "school_household",
+   "card": {
+    "week": 9,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.92,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.94,
+    "care_seek": 0.58,
+    "rationale": "With ILI absences at 0.30% near historical peak levels and schools open, households show only modest precaution while largely maintaining normal routines."
+   }
+  },
+  {
+   "week": 9,
+   "cohort": "working_adult",
+   "card": {
+    "week": 9,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.96,
+    "care_seek": 0.42,
+    "rationale": "At observed seasonal-peak ILI with schools open and no active cases in this cohort, working adults make only minor contact and attendance reductions while care-seeking stays near baseline."
+   }
+  },
+  {
+   "week": 9,
+   "cohort": "elder",
+   "card": {
+    "week": 9,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.75,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 1.0,
+    "care_seek": 0.8,
+    "rationale": "With ILI absences at 0.30% matching a prior seasonal peak in week 4, cautious elders trim contacts slightly while maintaining high care-seeking"
+   }
+  },
+  {
+   "week": 9,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 9,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.997,
+    "care_seek": 0.35,
+    "rationale": "With ILI absences at peak-season level but no illness in cohort and schools open, essential workers sustain near-baseline contacts and high attendance with baseline care-seeking"
+   }
+  },
+  {
+   "week": 10,
+   "cohort": "school_household",
+   "card": {
+    "week": 10,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.87,
+    "contact_factor_sd": 0.14,
+    "attend_prob": 0.973,
+    "care_seek": 0.6,
+    "rationale": "Elevated absences near historical peak levels during the typical peak window prompt modest contact reduction while zero household illness keeps attendance high"
+   }
+  },
+  {
+   "week": 10,
+   "cohort": "working_adult",
+   "card": {
+    "week": 10,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "At CDC week 5 with absences at 0.30% matching historical peak levels but zero prevalence in working adults and schools open, keep behavior near baseline."
+   }
+  },
+  {
+   "week": 10,
+   "cohort": "elder",
+   "card": {
+    "week": 10,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.75,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 1.0,
+    "care_seek": 0.78,
+    "rationale": "Elders trim contacts modestly on elevated 0.30% ILI with zero pool prevalence while keeping high care-seeking and full attendance with schools open."
+   }
+  },
+  {
+   "week": 10,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 10,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.92,
+    "care_seek": 0.38,
+    "rationale": "With ILI at peak-like 0.30% in week 5 but schools open, essential workers stay near baseline contacts and attendance with slightly raised care-seeking."
+   }
+  },
+  {
+   "week": 11,
+   "cohort": "school_household",
+   "card": {
+    "week": 11,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.9,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.96,
+    "care_seek": 0.6,
+    "rationale": "With absences at 0.30 percent matching recent peak levels in typical peak week with schools open and zero pool prevalence, keep contacts slightly reduced and attendance high with care-seeking near baseline"
+   }
+  },
+  {
+   "week": 11,
+   "cohort": "working_adult",
+   "card": {
+    "week": 11,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.98,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "With zero pool prevalence and 0.30% absences near recent seasonal peaks, working adults maintain near-baseline mixing and attendance."
+   }
+  },
+  {
+   "week": 11,
+   "cohort": "elder",
+   "card": {
+    "week": 11,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.75,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 1.0,
+    "care_seek": 0.8,
+    "rationale": "Elders modestly reduce contacts and sustain high care-seeking as 0.30% absenteeism matches a prior season peak despite zero pool prevalence."
+   }
+  },
+  {
+   "week": 11,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 11,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.95,
+    "care_seek": 0.38,
+    "rationale": "With local absences at 0.30% equal to a prior peak during historical peak week 6 but zero pool prevalence, essential workers maintain near-baseline contacts and high attendance."
+   }
+  },
+  {
+   "week": 12,
+   "cohort": "school_household",
+   "card": {
+    "week": 12,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.9,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.97,
+    "care_seek": 0.6,
+    "rationale": "With absences at 0.30 percent matching recent peak levels but no current pool cases and schools open, maintain near-normal contacts and attendance with slightly raised care-seeking."
+   }
+  },
+  {
+   "week": 12,
+   "cohort": "working_adult",
+   "card": {
+    "week": 12,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.96,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.97,
+    "care_seek": 0.42,
+    "rationale": "With community ILI at recent peak levels but zero prevalence in the immediate pool and schools open past the typical peak window, working adults maintain near-normal contacts and attendance with near-baseline care seeking."
+   }
+  },
+  {
+   "week": 12,
+   "cohort": "elder",
+   "card": {
+    "week": 12,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.88,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.77,
+    "rationale": "With absences at 0.30% matching the recent mild-season peak but zero cases in-pool, cautious elders trim contacts modestly while sustaining high care-seeking."
+   }
+  },
+  {
+   "week": 12,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 12,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 1.0,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.97,
+    "care_seek": 0.35,
+    "rationale": "With zero prevalence in pool and schools open past typical peak, essential workers maintain baseline contacts and attendance."
+   }
+  },
+  {
+   "week": 13,
+   "cohort": "school_household",
+   "card": {
+    "week": 13,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 1.0,
+    "contact_factor_sd": 0.1,
+    "attend_prob": 0.98,
+    "care_seek": 0.55,
+    "rationale": "Week 8 is past historical peaks in weeks 4-6 with 0.0% pool prevalence and schools open so behavior returns to near baseline despite 0.30% local ILI absences"
+   }
+  },
+  {
+   "week": 13,
+   "cohort": "working_adult",
+   "card": {
+    "week": 13,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.97,
+    "care_seek": 0.4,
+    "rationale": "Week 8 is past typical peaks with zero pool prevalence so working adults keep near-normal contacts and attendance at baseline care-seeking."
+   }
+  },
+  {
+   "week": 13,
+   "cohort": "elder",
+   "card": {
+    "week": 13,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.9,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.98,
+    "care_seek": 0.77,
+    "rationale": "With week 8 level at 0.30% matching prior peak amid post-peak decline and zero pool prevalence, vulnerable elders modestly reduce contacts while maintaining high care-seeking."
+   }
+  },
+  {
+   "week": 13,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 13,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.97,
+    "care_seek": 0.37,
+    "rationale": "At 0.30% matching prior peak with zero pool prevalence post-peak, essential workers keep near-baseline contacts and attendance with baseline care-seeking."
+   }
+  },
+  {
+   "week": 14,
+   "cohort": "school_household",
+   "card": {
+    "week": 14,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.92,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.94,
+    "care_seek": 0.58,
+    "rationale": "Local absences are at the recent-season peak of 0.30% but with zero cases in-pool and schools open past the typical peak weeks families show only modest caution"
+   }
+  },
+  {
+   "week": 14,
+   "cohort": "working_adult",
+   "card": {
+    "week": 14,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.96,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 0.94,
+    "care_seek": 0.42,
+    "rationale": "With CDC week 9 past typical peak weeks and zero prevalence in this pool despite 0.3% student ILI, near-normal mixing and attendance with baseline care-seeking is expected."
+   }
+  },
+  {
+   "week": 14,
+   "cohort": "elder",
+   "card": {
+    "week": 14,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.85,
+    "contact_factor_sd": 0.12,
+    "attend_prob": 1.0,
+    "care_seek": 0.8,
+    "rationale": "With week 9 ILI at 0.30% equaling the 2023-24 peak and past the typical week 4-6 peak window, risk-averse elders modestly trim contacts while sustaining high care-seeking."
+   }
+  },
+  {
+   "week": 14,
+   "cohort": "essential_worker",
+   "card": {
+    "week": 14,
+    "local_ili_pct": 0.3,
+    "prevalence_pct": 0.0,
+    "school_open": true
+   },
+   "params": {
+    "contact_factor_mean": 0.95,
+    "contact_factor_sd": 0.15,
+    "attend_prob": 0.96,
+    "care_seek": 0.38,
+    "rationale": "With week 9 past historical peaks but community ILI still elevated at 0.30 percent and zero illness in pool, essential workers maintain near-baseline contacts and high attendance with slightly heightened care-seeking"
+   }
+  }
+ ]
+}

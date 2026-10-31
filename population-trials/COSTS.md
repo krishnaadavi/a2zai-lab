@@ -44,3 +44,5 @@ cost, from receipts). Estimates never wear the clothes of actuals.
 Per-call token distribution once agents carry memory; API wall-clock at
 1,000-agent concurrency (per-agent design); Glimmer throughput on Modal.
 Each gets measured on its first real run and lands in this ledger.
+| Oct 31 | Population v3 — Spark, 100 agents, DCHHS Dallas 2024–25 | Muse Spark (Meta Model API) | **$0.6345** | calibration 20.6/100 — constant 0.300%/wk curve (no ignition at β floor), peak miss 10 wks, gate capped, what-ifs locked |
+| Oct 31 | Population v3 — Spark, 1,000 agents, DCHHS Dallas 2024–25 | Muse Spark (Meta Model API) | **$0.4239** | calibration 9.4/100 — constant 0.03%/wk floor curve, mass ratio 0.21, peak miss 10 wks, gate capped, what-ifs locked |

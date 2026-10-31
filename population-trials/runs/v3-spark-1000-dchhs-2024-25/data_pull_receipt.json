@@ -1,0 +1,318 @@
+{
+  "dataset": "dchhs_dallas_student_absence_ili",
+  "source": "Dallas County Health and Human Services (DCHHS), Influenza Surveillance Reports",
+  "endpoint": "dallascounty.org/Assets/uploads/docs/hhs/influenza-surveillance/",
+  "query": "Figure 4 (Percentage of Student Absences Due to ILI by Week), page 3, of the season-final (Week 16) reports for 2023-2024 and 2024-2025; 2023-2024 Week 49 report used for prose validation only",
+  "report_urls": [
+    "https://www.dallascounty.org/Assets/uploads/docs/hhs/influenza-surveillance/2025/Influenza-Weekly-Report-Week-16-Ending-4.19.2025.pdf",
+    "https://www.dallasCounty.org/Assets/uploads/docs/hhs/influenza-surveillance/2024/Influenza%20Weekly%20Report%20Week%20Ending%204-20-2024-1.pdf",
+    "https://www.dallascounty.org/Assets/uploads/docs/hhs/influenza-surveillance/2023/Influenza%20Weekly%20Report%20Week%20ending%2012-9-2023.pdf"
+  ],
+  "pulled_at": "2026-10-29T01:41:18+00:00",
+  "rows": 111,
+  "file": "data/dchhs_dallas_student_absence_ili.csv",
+  "per_season_files": {
+    "2018-2019": "dchhs_dallas_student_absence_ili_2018-19.csv",
+    "2022-2023": "dchhs_dallas_student_absence_ili_2022-23.csv",
+    "2023-2024": "dchhs_dallas_student_absence_ili_2023-24.csv",
+    "2024-2025": "dchhs_dallas_student_absence_ili_2024-25.csv"
+  },
+  "extraction_method": "Vector-coordinate extraction: Figure 4 is a native vector chart in the PDF (one stroked polyline per season). pdftocairo -svg recovers the polyline coordinates; pdftotext -bbox recovers the axis labels; each PDF is calibrated by least-squares fits of label value vs. label position (no hardcoded scale). Line breaks in a polyline are no-report weeks and are recorded as gaps, never filled. Precision is bounded by the chart's rendering quantization (~0.003 pct points on the 2024-2025 report's axis, ~0.007 on the coarser 2023-2024 axis) plus label-fit residual (in calibration).",
+  "calibration_by_report": {
+    "2024-2025": {
+      "y_fit": {
+        "slope_pct_per_pt": -0.0041652782405864714,
+        "intercept": 2.207484171942686,
+        "max_residual_pct_points": 2.7755575615628914e-16,
+        "n_labels": 7
+      },
+      "x_fit": {
+        "slope_ordinal_per_pt": 0.07369925991851763,
+        "intercept": -9.63866666592294,
+        "max_residual_ordinal": 0.0015722508782616273,
+        "n_labels": 15
+      },
+      "week_sequence_start": 40
+    },
+    "2023-2024": {
+      "y_fit": {
+        "slope_pct_per_pt": -0.008330750800585152,
+        "intercept": 4.501947896152193,
+        "max_residual_pct_points": 8.881784197001252e-16,
+        "n_labels": 7
+      },
+      "x_fit": {
+        "slope_ordinal_per_pt": 0.07370418133250091,
+        "intercept": -9.64250637983412,
+        "max_residual_ordinal": 0.0005950602823929785,
+        "n_labels": 15
+      },
+      "week_sequence_start": 40
+    }
+  },
+  "validation": {
+    "prose_checks": [
+      {
+        "report_season": "2024-2025",
+        "prose_pct": 0.05,
+        "week": 16,
+        "url": "https://www.dallascounty.org/Assets/uploads/docs/hhs/influenza-surveillance/2025/Influenza-Weekly-Report-Week-16-Ending-4.19.2025.pdf",
+        "extracted_pct": 0.048,
+        "abs_diff": 0.002,
+        "within_tolerance_0.01": true
+      },
+      {
+        "report_season": "2023-2024",
+        "prose_pct": 0.02,
+        "week": 16,
+        "url": "https://www.dallasCounty.org/Assets/uploads/docs/hhs/influenza-surveillance/2024/Influenza%20Weekly%20Report%20Week%20Ending%204-20-2024-1.pdf",
+        "extracted_pct": 0.018,
+        "abs_diff": 0.002,
+        "within_tolerance_0.01": true
+      },
+      {
+        "report_season": "2023-2024",
+        "prose_pct": 0.09,
+        "week": 49,
+        "url": "https://www.dallascounty.org/Assets/uploads/docs/hhs/influenza-surveillance/2023/Influenza%20Weekly%20Report%20Week%20ending%2012-9-2023.pdf",
+        "extracted_pct": 0.085,
+        "abs_diff": 0.005,
+        "within_tolerance_0.01": true
+      }
+    ],
+    "overlap_checks": [
+      {
+        "season": "2022-2023",
+        "reports_compared": [
+          "2024-2025",
+          "2023-2024"
+        ],
+        "common_weeks": 28,
+        "weeks_only_in_newer": [],
+        "weeks_only_in_older": [],
+        "max_abs_diff_pct_points": 0.007,
+        "mean_abs_diff_pct_points": 0.0042
+      },
+      {
+        "season": "2023-2024",
+        "reports_compared": [
+          "2024-2025",
+          "2023-2024"
+        ],
+        "common_weeks": 28,
+        "weeks_only_in_newer": [
+          17
+        ],
+        "weeks_only_in_older": [],
+        "max_abs_diff_pct_points": 0.006,
+        "mean_abs_diff_pct_points": 0.0043
+      }
+    ],
+    "sanity_by_season": {
+      "2018-2019": {
+        "rows": 28,
+        "weeks_present": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          52,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "gap_weeks_no_report": [
+          51
+        ],
+        "min_pct": 0.018,
+        "max_pct": 1.005,
+        "peak_week": 6,
+        "peak_in_plausible_flu_window_wk44_to_wk10": true,
+        "flagged_points": [],
+        "all_values_within_0_to_1_3_pct": true
+      },
+      "2022-2023": {
+        "rows": 28,
+        "weeks_present": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          52,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "gap_weeks_no_report": [
+          51
+        ],
+        "min_pct": 0.0,
+        "max_pct": 0.227,
+        "peak_week": 46,
+        "peak_in_plausible_flu_window_wk44_to_wk10": true,
+        "flagged_points": [
+          {
+            "week": 5,
+            "pct": 0.002,
+            "flag": "suspected_no_report_plotted_as_zero"
+          },
+          {
+            "week": 11,
+            "pct": 0.0,
+            "flag": "suspected_no_report_plotted_as_zero"
+          }
+        ],
+        "all_values_within_0_to_1_3_pct": true
+      },
+      "2023-2024": {
+        "rows": 29,
+        "weeks_present": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          48,
+          49,
+          50,
+          52,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17
+        ],
+        "gap_weeks_no_report": [
+          51
+        ],
+        "min_pct": 0.0,
+        "max_pct": 0.297,
+        "peak_week": 4,
+        "peak_in_plausible_flu_window_wk44_to_wk10": true,
+        "flagged_points": [
+          {
+            "week": 47,
+            "pct": 0.0,
+            "flag": "suspected_no_report_plotted_as_zero"
+          },
+          {
+            "week": 52,
+            "pct": 0.0,
+            "flag": "suspected_no_report_plotted_as_zero"
+          },
+          {
+            "week": 11,
+            "pct": 0.0,
+            "flag": "suspected_no_report_plotted_as_zero"
+          }
+        ],
+        "all_values_within_0_to_1_3_pct": true
+      },
+      "2024-2025": {
+        "rows": 26,
+        "weeks_present": [
+          40,
+          41,
+          42,
+          43,
+          44,
+          45,
+          46,
+          47,
+          49,
+          50,
+          51,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16
+        ],
+        "gap_weeks_no_report": [
+          48,
+          52,
+          1
+        ],
+        "min_pct": 0.0,
+        "max_pct": 0.512,
+        "peak_week": 5,
+        "peak_in_plausible_flu_window_wk44_to_wk10": true,
+        "flagged_points": [
+          {
+            "week": 11,
+            "pct": 0.0,
+            "flag": "suspected_no_report_plotted_as_zero"
+          }
+        ],
+        "all_values_within_0_to_1_3_pct": true
+      }
+    }
+  },
+  "ed_series_blocker": "Figure 3 (syndromic ED ILI visits, 18 Dallas County EDs via ESSENCE) is a single raster image of daily points (1519x637 px, 2024-2025 report) with no data table and no ED count in the report prose. A weekly ED series cannot be extracted to scored-run standard from the public reports; it requires a DCHHS/ESSENCE data export (data request to DCHHS, influenza.influenza@dallascounty.org per the reports).",
+  "coverage_note": "Student-absence series only. Seasons 2022-2023 and 2023-2024 are taken from the 2024-2025 report where available (latest revision); 2018-2019 exists only in the 2023-2024 report. 2024-2025 runs through CDC week 16 (report week ending 4/19/2025)."
+}
