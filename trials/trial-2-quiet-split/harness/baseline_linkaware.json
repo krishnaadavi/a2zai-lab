@@ -1,0 +1,372 @@
+[
+  {
+    "invoice_id": "I01",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $388 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-560 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Routine restock, all Q-1 conditions hold."
+  },
+  {
+    "invoice_id": "I02",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "same vendor Apex Facilities Maintenance",
+      "same project PRJ-204 (buildout phase B)",
+      "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+      "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+    ],
+    "linked_case_id": "CASE-SPLIT-1",
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I03",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "same vendor NorthPeak Analytics, same project PRJ-310",
+      "same purchase order PO-NA-410 \u2014 one engagement billed in three parts (this is billing 2 of 3 / 3 of 3)",
+      "part 1 already paid 2026-10-30 (prior PI-08, $2,150) inside the same rolling 7-day window",
+      "aggregate $11,800 over the $10,000 Q-3 threshold"
+    ],
+    "linked_case_id": "CASE-HALF-1",
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I04",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $2,860 in $1,001-$5,000 band",
+      "PO PO-AF-330 matches",
+      "approving manager Sofia Reyes (vendor record)",
+      "PRJ-205 preventive maintenance contract MNT-22 \u2014 a different project from the buildout; standalone"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I05",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,715 in $1,001-$5,000 band",
+      "PO PO-NA-411 matches",
+      "approving manager Devon Park (vendor record)",
+      "separate project PRJ-311, one-off engagement; no same-project aggregate"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I06",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $410 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-551 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I07",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $899 <= $1,000",
+      "vendor CloudServe Inc on approved list",
+      "PO PO-CS-2201 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I08",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "same vendor Apex Facilities Maintenance",
+      "same project PRJ-204 (buildout phase B)",
+      "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+      "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+    ],
+    "linked_case_id": "CASE-SPLIT-1",
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I09",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "same vendor NorthPeak Analytics, same project PRJ-310",
+      "same purchase order PO-NA-410 \u2014 one engagement billed in three parts (this is billing 2 of 3 / 3 of 3)",
+      "part 1 already paid 2026-10-30 (prior PI-08, $2,150) inside the same rolling 7-day window",
+      "aggregate $11,800 over the $10,000 Q-3 threshold"
+    ],
+    "linked_case_id": "CASE-HALF-1",
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I10",
+    "disposition": "HOLD_VERIFY",
+    "rule_cited": "Q-4",
+    "evidence_fields": [
+      "bank_detail_change = yes on the invoice row",
+      "vendor requests remittance bank update per attached letter",
+      "Q-4: never approve on the message alone; finance callback to Daniel Osei, 214-555-0134 on file"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I11",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "same vendor Apex Facilities Maintenance",
+      "same project PRJ-204 (buildout phase B)",
+      "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+      "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+    ],
+    "linked_case_id": "CASE-SPLIT-1",
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I12",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,925 in $1,001-$5,000 band",
+      "PO PO-NA-412 matches",
+      "approving manager Devon Park (vendor record)",
+      "separate project PRJ-312, standalone engagement; no same-project aggregate"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I13",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $615 <= $1,000",
+      "vendor Apex Facilities Maintenance on approved list",
+      "PO PO-AF-331 matches",
+      "PRJ-205 maintenance stores \u2014 standalone"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I14",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,600 in $1,001-$5,000 band",
+      "PO PO-HL-045 matches",
+      "approving manager Sofia Reyes (vendor record)"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I15",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "same vendor Apex Facilities Maintenance",
+      "same project PRJ-204 (buildout phase B)",
+      "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+      "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+    ],
+    "linked_case_id": "CASE-SPLIT-1",
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I16",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,180 in $1,001-$5,000 band",
+      "PO PO-DF-201 matches",
+      "approving manager Devon Park (vendor record)",
+      "project PRJ-101 under the master services agreement; the only same-project 7-day aggregate (with I24) is $8,120, under the $10,000 Q-3 line \u2014 not splitting"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I17",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $410 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-552 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I18",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $3,200 in $1,001-$5,000 band",
+      "PO PO-NA-311 matches",
+      "approving manager Devon Park (vendor record)"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I19",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $7,850 over the $5,000 single-invoice ceiling",
+      "PO PO-VS-100 matches; Q-2 sends a single invoice over $5,000 to finance"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I20",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $180 <= $1,000",
+      "vendor Metro Couriers on approved list",
+      "PO PO-MC-090 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I21",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $1,340 in $1,001-$5,000 band",
+      "PO PO-CS-2207 matches",
+      "approving manager Priya Nair (vendor record)"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I22",
+    "disposition": "REJECT",
+    "rule_cited": "Q-5",
+    "evidence_fields": [
+      "same vendor OfficeMart, same PO PO-OM-552, same $410 amount and description as I17",
+      "note admits resubmission; Q-5: pay the first, kill the second"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I23",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-7",
+    "evidence_fields": [
+      "amount $2,200 billed vs PO PO-NA-312 issued for $2,100 = 4.8% variance, within the 10% Q-7 tolerance",
+      "approving manager Devon Park (vendor record)"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I24",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $3,940 in $1,001-$5,000 band",
+      "PO PO-DF-202 matches",
+      "approving manager Devon Park (vendor record)",
+      "project PRJ-101 under the master services agreement; same-project 7-day aggregate with I16 is $8,120, under the Q-3 line \u2014 not splitting"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I25",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-6",
+    "evidence_fields": [
+      "amount $860 <= $1,000 but no PO on file",
+      "vendor QuickPrint Studio is NOT on the approved vendor list",
+      "Q-6 exception path: manager approval, never auto-approve"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I26",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $275 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-558 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I27",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $940 <= $1,000",
+      "vendor Vantage Software on approved list",
+      "PO PO-VS-101 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I28",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $1,020 in $1,001-$5,000 band",
+      "PO PO-MC-121 matches",
+      "approving manager Priya Nair (vendor record)"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I29",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,460 in $1,001-$5,000 band",
+      "PO PO-DF-203 matches",
+      "approving manager Devon Park (vendor record)",
+      "separate project PRJ-103 under the master services agreement; not part of any same-project 7-day aggregate over $10,000"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  },
+  {
+    "invoice_id": "I30",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $1,150 in $1,001-$5,000 band",
+      "PO PO-HL-046 matches",
+      "approving manager Sofia Reyes (vendor record)"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": ""
+  }
+]

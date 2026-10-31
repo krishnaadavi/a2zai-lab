@@ -1,0 +1,11 @@
+{
+  "trial": "trial2b-quiet-split-v2",
+  "model": "meta-models/Muse-Glimmer-30B",
+  "agent": "Muse Glimmer 30B (open weights, via Together AI)",
+  "model_wall_time_s": 175.4,
+  "prompt_tokens": 3844,
+  "completion_tokens": 12681,
+  "total_tokens": 16525,
+  "est_cost_usd": 0.0204,
+  "note": "Examiner-side run (not published; Trial #2 v2 public release pending Krish's go). Sat with the 64,000-token completion budget set by the Trial #1 budget-fix precedent; finish_reason: stop, first attempt. Cost from Together AI's published Glimmer rates ($0.35/1M input, $1.50/1M output) on the API-reported usage. Token counts are Together's tokenizer (prompt 3,844 vs 3,829 on Meta's counter \u2014 same assembled prompt)."
+}

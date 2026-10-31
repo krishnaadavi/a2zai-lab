@@ -33,6 +33,42 @@ across four deposits, engineered so that judging each alert alone misses it.
   read against): link-aware **95.0/95**, per-alert naive **59/95**. Receipts in
   `trials/trial-1-structuring-split/harness/runs/` and `VERIFICATION.md`.
 
+## Trial #2 — "The Quiet Split" (invoice & payment-approval triage)
+
+An agent works a company's accounts-payable approval queue: **30 payment
+requests**, and for each one a decision — AUTO_APPROVE, MANAGER_APPROVAL,
+FINANCE_ESCALATE, HOLD_VERIFY, or REJECT — with a cited rule (Q-1…Q-7) and
+an evidence trail. Hidden in the queue: one project split into slices
+engineered to stay under the finance-approval threshold, one genuine
+linked pair, look-alike invoices that must *not* be linked, and a vendor
+bank-detail change that must never be approved on the strength of the
+request itself.
+
+- **The exam:** [`trials/trial-2-quiet-split/`](trials/trial-2-quiet-split/) — brief, task pack, harness
+- **Scoring (of 100):** disposition 40 · trap detection 20 · rule citation 15 ·
+  evidence trail 10 · calibration 10 · cost/time 5
+- **Hard gates:** approve a bank-detail change without verification and
+  the score caps at **39/95**; miss a hidden linked pattern entirely and
+  it caps at **59/95**; cite an invented rule more than twice and the
+  citation component is **0**. (Cost/time's 5 points follow the same
+  pinned rule as Trial #1.)
+- **Verified reference baselines** (deterministic decision files, *not*
+  model runs — they prove the pipeline and price specific errors):
+  link-aware **95.0/95**, per-invoice naive **59/95** (raw 68.0,
+  link-missed gate), bank-change-approved **39/95** (raw 92.17,
+  bank-detail gate). Receipts in
+  `trials/trial-2-quiet-split/harness/runs/verify-2026-10-26/` and
+  `VERIFICATION.md`.
+
+Contestants receive **only** `task-pack/` (the 30 invoices, the approved
+vendor list, prior paid invoices, the policy excerpt) and return one JSON
+file of 30 decisions:
+
+```sh
+cd trials/trial-2-quiet-split/harness
+python3 runner.py <decisions.json> --agent <name> --model <id> --tokens <n> --out runs/<name>
+```
+
 ## Run an agent on it
 
 Contestants receive **only** `task-pack/` (alerts, customer profiles, a
@@ -124,6 +160,35 @@ shows its own arithmetic. Full artifacts —
 decisions, trace, score, run meta, and the Spark-written receipt — in
 [`trials/trial-1-structuring-split/harness/runs/`](trials/trial-1-structuring-split/harness/runs/).
 
+## Results — Trial #2
+
+Examiner-side reference runs — first attempt each, blind, under the same
+conditions any contestant gets (Wonder and Spark, Oct 26, 2026; Glimmer,
+Oct 28, 2026). The runs that calibrate the board; the answer key they
+were scored against stays examiner-side. Full record in
+[`trials/trial-2-quiet-split/RESULTS.md`](trials/trial-2-quiet-split/RESULTS.md).
+
+| Run | Model | Score | Notes |
+|---|---|---|---|
+| **wonder-trial2b-run1** (Oct 26, 2026) | **Muse Wonder** (`muse-wonder-1.0`, Meta Model API) | **95.9/100** (95.0/95 + 0.9 cost/time) | perfect rubric — every pattern linked, bank change held; priced at $0.2144 |
+| **spark-trial2b-run1** (Oct 26, 2026) | **Muse Spark** (`muse-spark-1.3`, Meta Model API) | **100.0/100** (95.0/95 + 5.0 cost/time) | perfect rubric at $0.0380 — the three-run median |
+| **glimmer-trial2b-run1** (Oct 28, 2026) | **Muse Glimmer 30B** (open weights, via Together AI) | **100.0/100** (95.0/95 + 5.0 cost/time) | perfect rubric at $0.0204 — the cheapest run on the board |
+
+The honest read: v2 did not separate the models on the 95 scored points —
+all three were perfect. All three linked the split invoices as one case,
+linked the genuine pair as a separate case, left the look-alike invoices
+unlinked, and held the bank-detail change for verification. The only
+separation is cost: Glimmer produced the identical perfect run for
+$0.0204 — ~1/10.5 of Wonder's cost and ~half of Spark's — which under the
+pinned cost/time rule (median $0.0380 across the three real runs) ties
+Glimmer with Spark at 100.0 and moves Wonder to third at 95.9. Each run's
+`final_score.json` shows its own arithmetic. Full artifacts — decisions,
+trace, score, run meta, and receipt — in
+[`trials/trial-2-quiet-split/harness/runs/`](trials/trial-2-quiet-split/harness/runs/).
+Trial #2 v1 (20 invoices) scored the same way — 95.0/95 for both Meta
+models — which is why this hardened v2 (30 invoices) is the public
+version and v1 stays examiner-side as evidence.
+
 ## Results — Trial #3 (held-out)
 
 Trial #3 is the Lab's first **held-out** exam — a trade-surveillance alert
@@ -171,7 +236,9 @@ way as the scores.
   is a demo. Its budget-fix rerun the same day (64k cap, labeled as the
   fix) finished the exam at 93.4/95 and tops the board at 98.4/100 on the
   cost rule
-- Trial #2 — "The Quiet Split" (payment-approval fraud) — in build
+- Trial #2 — "The Quiet Split" (invoice & payment-approval triage) —
+  published Oct 31, 2026: all three entrants perfect on the 95 (finals:
+  Spark 100.0, Glimmer 100.0, Wonder 95.9 on the cost rule)
 
 ## Built for the Meta Global AI Developer Hackathon (Oct 26 – Nov 4, 2026)
 

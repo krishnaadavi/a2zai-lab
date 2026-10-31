@@ -1,0 +1,372 @@
+[
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $388 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-560 matches"
+    ],
+    "invoice_id": "I01",
+    "linked_case_id": null,
+    "one_sentence_reason": "Routine restock under $1,000 with approved vendor and matching PO.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "FINANCE_ESCALATE",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance same",
+      "project PRJ-204 same",
+      "window 2026-11-02 to 2026-11-07 within 7 days",
+      "aggregate $17,888 > $10,000: I02 $4,637 + I08 $4,912 + I11 $3,884 + I15 $4,455"
+    ],
+    "invoice_id": "I02",
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Part of four-slice buildout billing that exceeds $10,000 in 7 days.",
+    "rule_cited": "Q-3"
+  },
+  {
+    "disposition": "FINANCE_ESCALATE",
+    "evidence_fields": [
+      "vendor NorthPeak Analytics same",
+      "project PRJ-310 same PO-NA-410 same",
+      "window 2026-10-30 to 2026-11-05 within 7 days including prior PI-08 $2,150 paid Oct 30",
+      "aggregate $11,800 > $10,000: PI-08 $2,150 + I03 $4,860 + I09 $4,790"
+    ],
+    "invoice_id": "I03",
+    "linked_case_id": "CASE-2",
+    "one_sentence_reason": "Second billing of three-part onboarding that exceeds $10,000 with prior paid slice.",
+    "rule_cited": "Q-3"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $2,860 in $1,001-$5,000",
+      "PO PO-AF-330 matches",
+      "approving manager Sofia Reyes per vendor record"
+    ],
+    "invoice_id": "I04",
+    "linked_case_id": null,
+    "one_sentence_reason": "Contract maintenance visit needs manager approval from Sofia Reyes.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $4,715 in $1,001-$5,000",
+      "PO PO-NA-411 matches",
+      "approving manager Devon Park per vendor record"
+    ],
+    "invoice_id": "I05",
+    "linked_case_id": null,
+    "one_sentence_reason": "One-off audit engagement needs manager approval from Devon Park.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $410 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-551 matches"
+    ],
+    "invoice_id": "I06",
+    "linked_case_id": null,
+    "one_sentence_reason": "Small office restock with approved vendor and matching PO.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $899 <= $1,000",
+      "vendor CloudServe Inc on approved list",
+      "PO PO-CS-2201 matches"
+    ],
+    "invoice_id": "I07",
+    "linked_case_id": null,
+    "one_sentence_reason": "Monthly SaaS licenses under $1,000 with matching PO.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "FINANCE_ESCALATE",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance same",
+      "project PRJ-204 same",
+      "window 2026-11-02 to 2026-11-07 within 7 days",
+      "aggregate $17,888 > $10,000: I02 $4,637 + I08 $4,912 + I11 $3,884 + I15 $4,455"
+    ],
+    "invoice_id": "I08",
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Part of four-slice buildout billing that exceeds $10,000 in 7 days.",
+    "rule_cited": "Q-3"
+  },
+  {
+    "disposition": "FINANCE_ESCALATE",
+    "evidence_fields": [
+      "vendor NorthPeak Analytics same",
+      "project PRJ-310 same PO-NA-410 same",
+      "window 2026-10-30 to 2026-11-05 within 7 days including prior PI-08 $2,150 paid Oct 30",
+      "aggregate $11,800 > $10,000: PI-08 $2,150 + I03 $4,860 + I09 $4,790"
+    ],
+    "invoice_id": "I09",
+    "linked_case_id": "CASE-2",
+    "one_sentence_reason": "Final billing of three-part onboarding that exceeds $10,000 with prior paid slice.",
+    "rule_cited": "Q-3"
+  },
+  {
+    "disposition": "HOLD_VERIFY",
+    "evidence_fields": [
+      "bank_detail_change yes with NEW account letter",
+      "vendor Metro Couriers callback contact Daniel Osei 214-555-0134 on file",
+      "amount $940 PO PO-MC-117"
+    ],
+    "invoice_id": "I10",
+    "linked_case_id": null,
+    "one_sentence_reason": "Bank change request requires finance callback verification before any payment.",
+    "rule_cited": "Q-4"
+  },
+  {
+    "disposition": "FINANCE_ESCALATE",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance same",
+      "project PRJ-204 same",
+      "window 2026-11-02 to 2026-11-07 within 7 days",
+      "aggregate $17,888 > $10,000: I02 $4,637 + I08 $4,912 + I11 $3,884 + I15 $4,455"
+    ],
+    "invoice_id": "I11",
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Part of four-slice buildout billing that exceeds $10,000 in 7 days.",
+    "rule_cited": "Q-3"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $4,925 in $1,001-$5,000",
+      "PO PO-NA-412 matches",
+      "approving manager Devon Park per vendor record",
+      "project PRJ-312 standalone"
+    ],
+    "invoice_id": "I12",
+    "linked_case_id": null,
+    "one_sentence_reason": "Standalone board pack needs manager approval from Devon Park.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $615 <= $1,000",
+      "vendor Apex Facilities Maintenance on approved list",
+      "PO PO-AF-331 matches",
+      "project PRJ-205 aggregate $3,475 with I04 below $10,000"
+    ],
+    "invoice_id": "I13",
+    "linked_case_id": null,
+    "one_sentence_reason": "Small maintenance stores purchase with matching PO.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $4,600 in $1,001-$5,000",
+      "PO PO-HL-045 matches",
+      "approving manager Sofia Reyes per vendor record"
+    ],
+    "invoice_id": "I14",
+    "linked_case_id": null,
+    "one_sentence_reason": "Contract review work needs manager approval from Sofia Reyes.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "FINANCE_ESCALATE",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance same",
+      "project PRJ-204 same",
+      "window 2026-11-02 to 2026-11-07 within 7 days",
+      "aggregate $17,888 > $10,000: I02 $4,637 + I08 $4,912 + I11 $3,884 + I15 $4,455"
+    ],
+    "invoice_id": "I15",
+    "linked_case_id": "CASE-1",
+    "one_sentence_reason": "Part of four-slice buildout billing that exceeds $10,000 in 7 days.",
+    "rule_cited": "Q-3"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $4,180 in $1,001-$5,000",
+      "PO PO-DF-201 matches",
+      "approving manager Devon Park per vendor record",
+      "project PRJ-101 aggregate $8,120 with I24 below $10,000"
+    ],
+    "invoice_id": "I16",
+    "linked_case_id": null,
+    "one_sentence_reason": "Server refresh phase 1 needs manager approval from Devon Park.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $410 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-552 matches first submission"
+    ],
+    "invoice_id": "I17",
+    "linked_case_id": null,
+    "one_sentence_reason": "Small paper order with matching PO, pay this first copy.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $3,200 in $1,001-$5,000",
+      "PO PO-NA-311 matches",
+      "approving manager Devon Park per vendor record"
+    ],
+    "invoice_id": "I18",
+    "linked_case_id": null,
+    "one_sentence_reason": "Pipeline milestone needs manager approval from Devon Park.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "FINANCE_ESCALATE",
+    "evidence_fields": [
+      "amount $7,850 > $5,000 single invoice",
+      "PO PO-VS-100 matches",
+      "vendor Vantage Software on approved list"
+    ],
+    "invoice_id": "I19",
+    "linked_case_id": null,
+    "one_sentence_reason": "Annual license over $5,000 requires finance escalation.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $180 <= $1,000",
+      "vendor Metro Couriers on approved list",
+      "PO PO-MC-090 matches"
+    ],
+    "invoice_id": "I20",
+    "linked_case_id": null,
+    "one_sentence_reason": "Small delivery charge with matching PO.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $1,340 in $1,001-$5,000",
+      "PO PO-CS-2207 matches",
+      "approving manager Priya Nair per vendor record"
+    ],
+    "invoice_id": "I21",
+    "linked_case_id": null,
+    "one_sentence_reason": "SaaS true-up needs manager approval from Priya Nair.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "REJECT",
+    "evidence_fields": [
+      "PO PO-OM-552 already submitted by OfficeMart as I17 $410 on 2026-11-09",
+      "duplicate amount $410 same project PRJ-104"
+    ],
+    "invoice_id": "I22",
+    "linked_case_id": null,
+    "one_sentence_reason": "Resubmitted copy of I17, reject as duplicate.",
+    "rule_cited": "Q-5"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "invoice $2,200 vs PO $2,100 variance 4.8% within 10% tolerance",
+      "PO PO-NA-312",
+      "approving manager Devon Park per vendor record"
+    ],
+    "invoice_id": "I23",
+    "linked_case_id": null,
+    "one_sentence_reason": "Sprint billing is within tolerance and needs manager approval from Devon Park.",
+    "rule_cited": "Q-7"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $3,940 in $1,001-$5,000",
+      "PO PO-DF-202 matches",
+      "approving manager Devon Park per vendor record",
+      "project PRJ-101 aggregate $8,120 with I16 below $10,000"
+    ],
+    "invoice_id": "I24",
+    "linked_case_id": null,
+    "one_sentence_reason": "Server refresh phase 2 needs manager approval from Devon Park.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $860 <= $1,000",
+      "vendor QuickPrint Studio not on approved list",
+      "no PO on file"
+    ],
+    "invoice_id": "I25",
+    "linked_case_id": null,
+    "one_sentence_reason": "New vendor without PO needs manager exception approval.",
+    "rule_cited": "Q-6"
+  },
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $275 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-558 matches"
+    ],
+    "invoice_id": "I26",
+    "linked_case_id": null,
+    "one_sentence_reason": "Break room supplies with matching PO.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "AUTO_APPROVE",
+    "evidence_fields": [
+      "amount $940 <= $1,000",
+      "vendor Vantage Software on approved list",
+      "PO PO-VS-101 matches"
+    ],
+    "invoice_id": "I27",
+    "linked_case_id": null,
+    "one_sentence_reason": "Small license add-on with matching PO.",
+    "rule_cited": "Q-1"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $1,020 in $1,001-$5,000",
+      "PO PO-MC-121 matches",
+      "approving manager Priya Nair per vendor record"
+    ],
+    "invoice_id": "I28",
+    "linked_case_id": null,
+    "one_sentence_reason": "Courier run needs manager approval from Priya Nair.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $4,460 in $1,001-$5,000",
+      "PO PO-DF-203 matches",
+      "approving manager Devon Park per vendor record",
+      "project PRJ-103 separate from PRJ-101"
+    ],
+    "invoice_id": "I29",
+    "linked_case_id": null,
+    "one_sentence_reason": "Separate storage project needs manager approval from Devon Park.",
+    "rule_cited": "Q-2"
+  },
+  {
+    "disposition": "MANAGER_APPROVAL",
+    "evidence_fields": [
+      "amount $1,150 in $1,001-$5,000",
+      "PO PO-HL-046 matches",
+      "approving manager Sofia Reyes per vendor record"
+    ],
+    "invoice_id": "I30",
+    "linked_case_id": null,
+    "one_sentence_reason": "Trademark work needs manager approval from Sofia Reyes.",
+    "rule_cited": "Q-2"
+  }
+]

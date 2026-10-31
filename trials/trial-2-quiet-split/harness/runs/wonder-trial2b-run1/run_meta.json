@@ -1,0 +1,11 @@
+{
+  "trial": "trial2b-quiet-split-v2",
+  "model": "muse-wonder-1.0",
+  "agent": "Muse Wonder (Meta Model API)",
+  "model_wall_time_s": 47.3,
+  "prompt_tokens": 3829,
+  "completion_tokens": 9956,
+  "total_tokens": 13785,
+  "est_cost_usd": 0.2144,
+  "note": "wall time covers API call(s) plus local parse; cost from published per-token rates"
+}

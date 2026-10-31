@@ -1,0 +1,9 @@
+invoice_id,date,vendor,amount,project_code,po_number,status
+PI-01,2026-08-19,DataCore Systems,4100,PRJ-101,PO-DF-099,paid
+PI-02,2026-09-08,DataCore Systems,3700,PRJ-102,PO-DF-100,paid
+PI-03,2026-09-21,DataCore Systems,4050,PRJ-101,PO-DF-105,paid
+PI-04,2026-09-30,Apex Facilities Maintenance,1980,PRJ-205,PO-AF-290,paid
+PI-05,2026-10-12,NorthPeak Analytics,2900,PRJ-106,PO-NA-300,paid
+PI-06,2026-10-19,OfficeMart,640,PRJ-104,PO-OM-540,paid
+PI-07,2026-10-22,Vantage Software,1200,PRJ-108,PO-VS-090,paid
+PI-08,2026-10-30,NorthPeak Analytics,2150,PRJ-310,PO-NA-410,paid

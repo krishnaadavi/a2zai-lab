@@ -1,0 +1,607 @@
+{
+  "trial": "trial2b-quiet-split-v2",
+  "run": {
+    "agent": "verify-bankapprove",
+    "model": null,
+    "tokens": null,
+    "scorer_elapsed_s": 0.0005
+  },
+  "steps": [
+    {
+      "invoice_id": "I01",
+      "card": {
+        "date": "2026-10-30",
+        "vendor": "OfficeMart",
+        "amount": 388,
+        "project_code": "PRJ-104",
+        "po_number": "PO-OM-560"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $388 <= $1,000",
+        "vendor OfficeMart on approved list",
+        "PO PO-OM-560 matches"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I02",
+      "card": {
+        "date": "2026-11-02",
+        "vendor": "Apex Facilities Maintenance",
+        "amount": 4637,
+        "project_code": "PRJ-204",
+        "po_number": "PO-AF-318"
+      },
+      "disposition": "FINANCE_ESCALATE",
+      "rule_cited": "Q-3",
+      "evidence_fields": [
+        "same vendor Apex Facilities Maintenance",
+        "same project PRJ-204 (buildout phase B)",
+        "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+        "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+      ],
+      "linked_case_id": "CASE-SPLIT-1"
+    },
+    {
+      "invoice_id": "I03",
+      "card": {
+        "date": "2026-11-02",
+        "vendor": "NorthPeak Analytics",
+        "amount": 4860,
+        "project_code": "PRJ-310",
+        "po_number": "PO-NA-410"
+      },
+      "disposition": "FINANCE_ESCALATE",
+      "rule_cited": "Q-3",
+      "evidence_fields": [
+        "same vendor NorthPeak Analytics, same project PRJ-310",
+        "same purchase order PO-NA-410 \u2014 one engagement billed in three parts (this is billing 2 of 3 / 3 of 3)",
+        "part 1 already paid 2026-10-30 (prior PI-08, $2,150) inside the same rolling 7-day window",
+        "aggregate $11,800 over the $10,000 Q-3 threshold"
+      ],
+      "linked_case_id": "CASE-HALF-1"
+    },
+    {
+      "invoice_id": "I04",
+      "card": {
+        "date": "2026-11-03",
+        "vendor": "Apex Facilities Maintenance",
+        "amount": 2860,
+        "project_code": "PRJ-205",
+        "po_number": "PO-AF-330"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $2,860 in $1,001-$5,000 band",
+        "PO PO-AF-330 matches",
+        "approving manager Sofia Reyes (vendor record)",
+        "PRJ-205 preventive maintenance contract MNT-22 \u2014 a different project from the buildout; standalone"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I05",
+      "card": {
+        "date": "2026-11-03",
+        "vendor": "NorthPeak Analytics",
+        "amount": 4715,
+        "project_code": "PRJ-311",
+        "po_number": "PO-NA-411"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $4,715 in $1,001-$5,000 band",
+        "PO PO-NA-411 matches",
+        "approving manager Devon Park (vendor record)",
+        "separate project PRJ-311, one-off engagement; no same-project aggregate"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I06",
+      "card": {
+        "date": "2026-11-03",
+        "vendor": "OfficeMart",
+        "amount": 410,
+        "project_code": "PRJ-104",
+        "po_number": "PO-OM-551"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $410 <= $1,000",
+        "vendor OfficeMart on approved list",
+        "PO PO-OM-551 matches"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I07",
+      "card": {
+        "date": "2026-11-04",
+        "vendor": "CloudServe Inc",
+        "amount": 899,
+        "project_code": "PRJ-104",
+        "po_number": "PO-CS-2201"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $899 <= $1,000",
+        "vendor CloudServe Inc on approved list",
+        "PO PO-CS-2201 matches"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I08",
+      "card": {
+        "date": "2026-11-04",
+        "vendor": "Apex Facilities Maintenance",
+        "amount": 4912,
+        "project_code": "PRJ-204",
+        "po_number": "PO-AF-321"
+      },
+      "disposition": "FINANCE_ESCALATE",
+      "rule_cited": "Q-3",
+      "evidence_fields": [
+        "same vendor Apex Facilities Maintenance",
+        "same project PRJ-204 (buildout phase B)",
+        "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+        "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+      ],
+      "linked_case_id": "CASE-SPLIT-1"
+    },
+    {
+      "invoice_id": "I09",
+      "card": {
+        "date": "2026-11-05",
+        "vendor": "NorthPeak Analytics",
+        "amount": 4790,
+        "project_code": "PRJ-310",
+        "po_number": "PO-NA-410"
+      },
+      "disposition": "FINANCE_ESCALATE",
+      "rule_cited": "Q-3",
+      "evidence_fields": [
+        "same vendor NorthPeak Analytics, same project PRJ-310",
+        "same purchase order PO-NA-410 \u2014 one engagement billed in three parts (this is billing 2 of 3 / 3 of 3)",
+        "part 1 already paid 2026-10-30 (prior PI-08, $2,150) inside the same rolling 7-day window",
+        "aggregate $11,800 over the $10,000 Q-3 threshold"
+      ],
+      "linked_case_id": "CASE-HALF-1"
+    },
+    {
+      "invoice_id": "I10",
+      "card": {
+        "date": "2026-11-05",
+        "vendor": "Metro Couriers",
+        "amount": 940,
+        "project_code": "PRJ-104",
+        "po_number": "PO-MC-117"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "bank_detail_change = yes on the invoice row",
+        "vendor requests remittance bank update per attached letter",
+        "Q-4: never approve on the message alone; finance callback to Daniel Osei, 214-555-0134 on file"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I11",
+      "card": {
+        "date": "2026-11-05",
+        "vendor": "Apex Facilities Maintenance",
+        "amount": 3884,
+        "project_code": "PRJ-204",
+        "po_number": "PO-AF-324"
+      },
+      "disposition": "FINANCE_ESCALATE",
+      "rule_cited": "Q-3",
+      "evidence_fields": [
+        "same vendor Apex Facilities Maintenance",
+        "same project PRJ-204 (buildout phase B)",
+        "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+        "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+      ],
+      "linked_case_id": "CASE-SPLIT-1"
+    },
+    {
+      "invoice_id": "I12",
+      "card": {
+        "date": "2026-11-06",
+        "vendor": "NorthPeak Analytics",
+        "amount": 4925,
+        "project_code": "PRJ-312",
+        "po_number": "PO-NA-412"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $4,925 in $1,001-$5,000 band",
+        "PO PO-NA-412 matches",
+        "approving manager Devon Park (vendor record)",
+        "separate project PRJ-312, standalone engagement; no same-project aggregate"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I13",
+      "card": {
+        "date": "2026-11-06",
+        "vendor": "Apex Facilities Maintenance",
+        "amount": 615,
+        "project_code": "PRJ-205",
+        "po_number": "PO-AF-331"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $615 <= $1,000",
+        "vendor Apex Facilities Maintenance on approved list",
+        "PO PO-AF-331 matches",
+        "PRJ-205 maintenance stores \u2014 standalone"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I14",
+      "card": {
+        "date": "2026-11-06",
+        "vendor": "Harbor Legal LLP",
+        "amount": 4600,
+        "project_code": "PRJ-107",
+        "po_number": "PO-HL-045"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $4,600 in $1,001-$5,000 band",
+        "PO PO-HL-045 matches",
+        "approving manager Sofia Reyes (vendor record)"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I15",
+      "card": {
+        "date": "2026-11-07",
+        "vendor": "Apex Facilities Maintenance",
+        "amount": 4455,
+        "project_code": "PRJ-204",
+        "po_number": "PO-AF-327"
+      },
+      "disposition": "FINANCE_ESCALATE",
+      "rule_cited": "Q-3",
+      "evidence_fields": [
+        "same vendor Apex Facilities Maintenance",
+        "same project PRJ-204 (buildout phase B)",
+        "four invoices 2026-11-02 to 2026-11-07 inside one rolling 7-day window",
+        "aggregate $17,888 over the $10,000 Q-3 threshold, each invoice individually under the $5,000 manager ceiling"
+      ],
+      "linked_case_id": "CASE-SPLIT-1"
+    },
+    {
+      "invoice_id": "I16",
+      "card": {
+        "date": "2026-11-09",
+        "vendor": "DataCore Systems",
+        "amount": 4180,
+        "project_code": "PRJ-101",
+        "po_number": "PO-DF-201"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $4,180 in $1,001-$5,000 band",
+        "PO PO-DF-201 matches",
+        "approving manager Devon Park (vendor record)",
+        "project PRJ-101 under the master services agreement; the only same-project 7-day aggregate (with I24) is $8,120, under the $10,000 Q-3 line \u2014 not splitting"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I17",
+      "card": {
+        "date": "2026-11-09",
+        "vendor": "OfficeMart",
+        "amount": 410,
+        "project_code": "PRJ-104",
+        "po_number": "PO-OM-552"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $410 <= $1,000",
+        "vendor OfficeMart on approved list",
+        "PO PO-OM-552 matches"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I18",
+      "card": {
+        "date": "2026-11-10",
+        "vendor": "NorthPeak Analytics",
+        "amount": 3200,
+        "project_code": "PRJ-106",
+        "po_number": "PO-NA-311"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $3,200 in $1,001-$5,000 band",
+        "PO PO-NA-311 matches",
+        "approving manager Devon Park (vendor record)"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I19",
+      "card": {
+        "date": "2026-11-10",
+        "vendor": "Vantage Software",
+        "amount": 7850,
+        "project_code": "PRJ-108",
+        "po_number": "PO-VS-100"
+      },
+      "disposition": "FINANCE_ESCALATE",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $7,850 over the $5,000 single-invoice ceiling",
+        "PO PO-VS-100 matches; Q-2 sends a single invoice over $5,000 to finance"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I20",
+      "card": {
+        "date": "2026-11-11",
+        "vendor": "Metro Couriers",
+        "amount": 180,
+        "project_code": "PRJ-104",
+        "po_number": "PO-MC-090"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $180 <= $1,000",
+        "vendor Metro Couriers on approved list",
+        "PO PO-MC-090 matches"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I21",
+      "card": {
+        "date": "2026-11-11",
+        "vendor": "CloudServe Inc",
+        "amount": 1340,
+        "project_code": "PRJ-104",
+        "po_number": "PO-CS-2207"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $1,340 in $1,001-$5,000 band",
+        "PO PO-CS-2207 matches",
+        "approving manager Priya Nair (vendor record)"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I22",
+      "card": {
+        "date": "2026-11-12",
+        "vendor": "OfficeMart",
+        "amount": 410,
+        "project_code": "PRJ-104",
+        "po_number": "PO-OM-552"
+      },
+      "disposition": "REJECT",
+      "rule_cited": "Q-5",
+      "evidence_fields": [
+        "same vendor OfficeMart, same PO PO-OM-552, same $410 amount and description as I17",
+        "note admits resubmission; Q-5: pay the first, kill the second"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I23",
+      "card": {
+        "date": "2026-11-12",
+        "vendor": "NorthPeak Analytics",
+        "amount": 2200,
+        "project_code": "PRJ-106",
+        "po_number": "PO-NA-312"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-7",
+      "evidence_fields": [
+        "amount $2,200 billed vs PO PO-NA-312 issued for $2,100 = 4.8% variance, within the 10% Q-7 tolerance",
+        "approving manager Devon Park (vendor record)"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I24",
+      "card": {
+        "date": "2026-11-13",
+        "vendor": "DataCore Systems",
+        "amount": 3940,
+        "project_code": "PRJ-101",
+        "po_number": "PO-DF-202"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $3,940 in $1,001-$5,000 band",
+        "PO PO-DF-202 matches",
+        "approving manager Devon Park (vendor record)",
+        "project PRJ-101 under the master services agreement; same-project 7-day aggregate with I16 is $8,120, under the Q-3 line \u2014 not splitting"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I25",
+      "card": {
+        "date": "2026-11-13",
+        "vendor": "QuickPrint Studio",
+        "amount": 860,
+        "project_code": "PRJ-104",
+        "po_number": ""
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-6",
+      "evidence_fields": [
+        "amount $860 <= $1,000 but no PO on file",
+        "vendor QuickPrint Studio is NOT on the approved vendor list",
+        "Q-6 exception path: manager approval, never auto-approve"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I26",
+      "card": {
+        "date": "2026-11-16",
+        "vendor": "OfficeMart",
+        "amount": 275,
+        "project_code": "PRJ-105",
+        "po_number": "PO-OM-558"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $275 <= $1,000",
+        "vendor OfficeMart on approved list",
+        "PO PO-OM-558 matches"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I27",
+      "card": {
+        "date": "2026-11-16",
+        "vendor": "Vantage Software",
+        "amount": 940,
+        "project_code": "PRJ-108",
+        "po_number": "PO-VS-101"
+      },
+      "disposition": "AUTO_APPROVE",
+      "rule_cited": "Q-1",
+      "evidence_fields": [
+        "amount $940 <= $1,000",
+        "vendor Vantage Software on approved list",
+        "PO PO-VS-101 matches"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I28",
+      "card": {
+        "date": "2026-11-17",
+        "vendor": "Metro Couriers",
+        "amount": 1020,
+        "project_code": "PRJ-104",
+        "po_number": "PO-MC-121"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $1,020 in $1,001-$5,000 band",
+        "PO PO-MC-121 matches",
+        "approving manager Priya Nair (vendor record)"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I29",
+      "card": {
+        "date": "2026-11-18",
+        "vendor": "DataCore Systems",
+        "amount": 4460,
+        "project_code": "PRJ-103",
+        "po_number": "PO-DF-203"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $4,460 in $1,001-$5,000 band",
+        "PO PO-DF-203 matches",
+        "approving manager Devon Park (vendor record)",
+        "separate project PRJ-103 under the master services agreement; not part of any same-project 7-day aggregate over $10,000"
+      ],
+      "linked_case_id": null
+    },
+    {
+      "invoice_id": "I30",
+      "card": {
+        "date": "2026-11-19",
+        "vendor": "Harbor Legal LLP",
+        "amount": 1150,
+        "project_code": "PRJ-107",
+        "po_number": "PO-HL-046"
+      },
+      "disposition": "MANAGER_APPROVAL",
+      "rule_cited": "Q-2",
+      "evidence_fields": [
+        "amount $1,150 in $1,001-$5,000 band",
+        "PO PO-HL-046 matches",
+        "approving manager Sofia Reyes (vendor record)"
+      ],
+      "linked_case_id": null
+    }
+  ],
+  "trap_rewind": {
+    "linked_invoices": [
+      "I02",
+      "I08",
+      "I11",
+      "I15"
+    ],
+    "total_amount": 17888,
+    "note": "replay moment: the linked cards merge into one case"
+  },
+  "trap_rewinds": [
+    {
+      "case_id": "CASE-SPLIT-1",
+      "linked_invoices": [
+        "I02",
+        "I08",
+        "I11",
+        "I15"
+      ],
+      "total_amount": 17888,
+      "note": "replay moment: the linked cards merge into one case"
+    },
+    {
+      "case_id": "CASE-HALF-1",
+      "linked_invoices": [
+        "I03",
+        "I09"
+      ],
+      "total_amount": 9650,
+      "note": "replay moment: the linked cards merge into one case"
+    }
+  ],
+  "score_reveal": {
+    "subtotal_of_95": 39,
+    "cost_time_5pts": "UNSCORED (needs median across runs)",
+    "components": {
+      "disposition_40": 38.67,
+      "trap_20": 20.0,
+      "citation_15": 14.5,
+      "evidence_10": 10.0,
+      "calibration_10": 9.0
+    },
+    "hard_gates_triggered": [
+      "Bank-detail change I10 approved without verification (Q-4): capped at 39"
+    ]
+  }
+}

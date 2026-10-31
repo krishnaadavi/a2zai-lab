@@ -1,0 +1,387 @@
+[
+  {
+    "invoice_id": "I01",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $388 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-560 matches",
+      "project PRJ-104"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Routine restock, all Q-1 conditions hold."
+  },
+  {
+    "invoice_id": "I02",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance",
+      "project PRJ-204",
+      "date 2026-11-02 amount $4,637",
+      "aggregates with I08 $4,912, I11 $3,884, I15 $4,455 within 7-day window total $17,888 > $10,000",
+      "approving manager Sofia Reyes per vendor record"
+    ],
+    "linked_case_id": "CASE-APEX-204",
+    "one_sentence_reason": "Change orders aggregate over $10k in 7 days, Q-3 requires finance escalation."
+  },
+  {
+    "invoice_id": "I03",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "vendor NorthPeak Analytics",
+      "project PRJ-310",
+      "date 2026-11-02 amount $4,860",
+      "aggregates with prior paid PI-08 $2,150 on 2026-10-30 and I09 $4,790 on 2026-11-05 within 7-day window total $11,800 > $10,000",
+      "PO PO-NA-410 matches"
+    ],
+    "linked_case_id": "CASE-NP-310",
+    "one_sentence_reason": "Onboarding billing split across three parts exceeds $10k in rolling window."
+  },
+  {
+    "invoice_id": "I04",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $2,860 between $1,001\u2013$5,000",
+      "vendor Apex Facilities Maintenance on approved list",
+      "PO PO-AF-330 matches",
+      "approving manager Sofia Reyes"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Preventive maintenance within manager approval band."
+  },
+  {
+    "invoice_id": "I05",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,715 between $1,001\u2013$5,000",
+      "vendor NorthPeak Analytics on approved list",
+      "PO PO-NA-411 matches",
+      "approving manager Devon Park"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "One-off data quality audit requires manager approval."
+  },
+  {
+    "invoice_id": "I06",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $410 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-551 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Routine office supplies restock meets auto-approve criteria."
+  },
+  {
+    "invoice_id": "I07",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $899 <= $1,000",
+      "vendor CloudServe Inc on approved list",
+      "PO PO-CS-2201 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Monthly SaaS licenses within auto-approve threshold."
+  },
+  {
+    "invoice_id": "I08",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance",
+      "project PRJ-204",
+      "date 2026-11-04 amount $4,912",
+      "aggregates with I02, I11, I15 within 7-day window total > $10,000",
+      "approving manager Sofia Reyes"
+    ],
+    "linked_case_id": "CASE-APEX-204",
+    "one_sentence_reason": "Buildout change order part of aggregated spend triggering Q-3."
+  },
+  {
+    "invoice_id": "I09",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "vendor NorthPeak Analytics",
+      "project PRJ-310",
+      "date 2026-11-05 amount $4,790",
+      "aggregates with I03 and prior paid PI-08 within 7-day window total $11,800 > $10,000",
+      "PO PO-NA-410 matches"
+    ],
+    "linked_case_id": "CASE-NP-310",
+    "one_sentence_reason": "Third billing installment completes split engagement over $10k."
+  },
+  {
+    "invoice_id": "I10",
+    "disposition": "HOLD_VERIFY",
+    "rule_cited": "Q-4",
+    "evidence_fields": [
+      "bank_detail_change yes",
+      "vendor Metro Couriers",
+      "vendor notes DO NOT update bank details from a letter",
+      "finance callback contact Daniel Osei 214-555-0134 on file"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Bank detail change requires finance verification before payment."
+  },
+  {
+    "invoice_id": "I11",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance",
+      "project PRJ-204",
+      "date 2026-11-05 amount $3,884",
+      "aggregates with I02, I08, I15 within 7-day window total > $10,000"
+    ],
+    "linked_case_id": "CASE-APEX-204",
+    "one_sentence_reason": "Change order aggregated with others exceeds $10k threshold."
+  },
+  {
+    "invoice_id": "I12",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,925 between $1,001\u2013$5,000",
+      "vendor NorthPeak Analytics on approved list",
+      "PO PO-NA-412 matches",
+      "approving manager Devon Park"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Standalone board reporting pack requires manager approval."
+  },
+  {
+    "invoice_id": "I13",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $615 <= $1,000",
+      "vendor Apex Facilities Maintenance on approved list",
+      "PO PO-AF-331 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Maintenance stores purchase within auto-approve limits."
+  },
+  {
+    "invoice_id": "I14",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,600 between $1,001\u2013$5,000",
+      "vendor Harbor Legal LLP on approved list",
+      "PO PO-HL-045 matches",
+      "approving manager Sofia Reyes"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Contract review legal fees require manager approval."
+  },
+  {
+    "invoice_id": "I15",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-3",
+    "evidence_fields": [
+      "vendor Apex Facilities Maintenance",
+      "project PRJ-204",
+      "date 2026-11-07 amount $4,455",
+      "aggregates with I02, I08, I11 within 7-day window total > $10,000"
+    ],
+    "linked_case_id": "CASE-APEX-204",
+    "one_sentence_reason": "Fourth change order completes aggregated spend over $10k."
+  },
+  {
+    "invoice_id": "I16",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,180 between $1,001\u2013$5,000",
+      "vendor DataCore Systems on approved list",
+      "PO PO-DF-201 matches",
+      "approving manager Devon Park"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Server refresh phase 1 within manager approval band."
+  },
+  {
+    "invoice_id": "I17",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $410 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-552 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Printer paper restock meets auto-approve criteria."
+  },
+  {
+    "invoice_id": "I18",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $3,200 between $1,001\u2013$5,000",
+      "vendor NorthPeak Analytics on approved list",
+      "PO PO-NA-311 matches",
+      "approving manager Devon Park"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Data pipeline consulting milestone requires manager approval."
+  },
+  {
+    "invoice_id": "I19",
+    "disposition": "FINANCE_ESCALATE",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $7,850 > $5,000",
+      "vendor Vantage Software on approved list",
+      "PO PO-VS-100 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Annual platform license exceeds $5,000 single-invoice threshold."
+  },
+  {
+    "invoice_id": "I20",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $180 <= $1,000",
+      "vendor Metro Couriers on approved list",
+      "PO PO-MC-090 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Same-day delivery within auto-approve limits."
+  },
+  {
+    "invoice_id": "I21",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $1,340 between $1,001\u2013$5,000",
+      "vendor CloudServe Inc on approved list",
+      "PO PO-CS-2207 matches",
+      "approving manager Priya Nair"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "SaaS seat true-up requires manager approval."
+  },
+  {
+    "invoice_id": "I22",
+    "disposition": "REJECT",
+    "rule_cited": "Q-5",
+    "evidence_fields": [
+      "vendor OfficeMart",
+      "PO PO-OM-552 duplicate of I17 dated 2026-11-09 amount $410",
+      "notes indicate resubmitted"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Duplicate submission of same PO and amount rejected."
+  },
+  {
+    "invoice_id": "I23",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $2,200 between $1,001\u2013$5,000",
+      "vendor NorthPeak Analytics on approved list",
+      "PO PO-NA-312 matches",
+      "price variance $100 vs PO issued $2,100 = 4.8% within 10% tolerance per Q-7",
+      "approving manager Devon Park"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Ad-hoc analysis within manager band with acceptable price variance."
+  },
+  {
+    "invoice_id": "I24",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $3,940 between $1,001\u2013$5,000",
+      "vendor DataCore Systems on approved list",
+      "PO PO-DF-202 matches",
+      "approving manager Devon Park"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Server refresh phase 2 requires manager approval."
+  },
+  {
+    "invoice_id": "I25",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-6",
+    "evidence_fields": [
+      "amount $860 <= $1,000",
+      "vendor QuickPrint Studio not on approved vendor list",
+      "PO missing"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Non-approved vendor with missing PO requires manager approval via exception."
+  },
+  {
+    "invoice_id": "I26",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $275 <= $1,000",
+      "vendor OfficeMart on approved list",
+      "PO PO-OM-558 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Break room supplies within auto-approve criteria."
+  },
+  {
+    "invoice_id": "I27",
+    "disposition": "AUTO_APPROVE",
+    "rule_cited": "Q-1",
+    "evidence_fields": [
+      "amount $940 <= $1,000",
+      "vendor Vantage Software on approved list",
+      "PO PO-VS-101 matches"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "License add-on within auto-approve threshold."
+  },
+  {
+    "invoice_id": "I28",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $1,020 between $1,001\u2013$5,000",
+      "vendor Metro Couriers on approved list",
+      "PO PO-MC-121 matches",
+      "approving manager Priya Nair"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Dedicated courier run requires manager approval."
+  },
+  {
+    "invoice_id": "I29",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $4,460 between $1,001\u2013$5,000",
+      "vendor DataCore Systems on approved list",
+      "PO PO-DF-203 matches",
+      "approving manager Devon Park"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Storage expansion project within manager approval band."
+  },
+  {
+    "invoice_id": "I30",
+    "disposition": "MANAGER_APPROVAL",
+    "rule_cited": "Q-2",
+    "evidence_fields": [
+      "amount $1,150 between $1,001\u2013$5,000",
+      "vendor Harbor Legal LLP on approved list",
+      "PO PO-HL-046 matches",
+      "approving manager Sofia Reyes"
+    ],
+    "linked_case_id": null,
+    "one_sentence_reason": "Trademark filing review requires manager approval."
+  }
+]

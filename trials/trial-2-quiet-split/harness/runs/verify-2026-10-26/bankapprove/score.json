@@ -1,0 +1,14 @@
+{
+  "subtotal_of_95": 39,
+  "cost_time_5pts": "UNSCORED (needs median across runs)",
+  "components": {
+    "disposition_40": 38.67,
+    "trap_20": 20.0,
+    "citation_15": 14.5,
+    "evidence_10": 10.0,
+    "calibration_10": 9.0
+  },
+  "hard_gates_triggered": [
+    "Bank-detail change I10 approved without verification (Q-4): capped at 39"
+  ]
+}
