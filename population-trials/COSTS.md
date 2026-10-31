@@ -38,6 +38,7 @@ cost, from receipts). Estimates never wear the clothes of actuals.
 | Oct 28 | Population v2 — mock, 100 agents, TX fall 2025 | local kernel | **$0.00** | seed-window fit froze base_transmission at 0.025 (seed weeks only); calibration 18.5/100 |
 | Oct 28 | Population v2 — Spark, batched, 100 agents, TX fall 2025 | cohort-week calls | **$0.3158** | 52 calls, 0 fallbacks; 12,077 in / 70,746 out tokens; fitted β=0.025 frozen; calibration 17.2/100 |
 | Oct 28 | Population v2 — Spark, batched, 1,000 agents, TX fall 2025 | cohort-week calls | **$0.3286** | 52 calls, 0 fallbacks; 12,077 in / 73,767 out tokens; fitted β=0.022 frozen (fit is pool-size-specific); calibration 17.3/100 |
+| Oct 31 | Population v3 — mock, 100 agents, DCHHS Dallas 2024–25 | local kernel | **$0.00** | history fit (full past-season curves) froze β at the grid floor 0.002 — every past season, both pool sizes; calibration 20.6/100, gate applied, what-ifs locked. Spark runs pending: the executing session's API POSTs were policy-blocked (403 proactivity_read_only_preparation); see RESULTS-v3.md §5 |
 
 ## What we still don't know (measure, don't guess)
 Per-call token distribution once agents carry memory; API wall-clock at
